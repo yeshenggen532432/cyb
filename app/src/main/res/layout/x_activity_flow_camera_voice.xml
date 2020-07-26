@@ -1,0 +1,258 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/x_layout_head" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:orientation="vertical">
+
+                <!--定位-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp_3"
+                        android:src="@drawable/icon_dw" />
+
+                    <TextView
+                        android:id="@+id/tv_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="定位中..."
+                        android:textColor="@color/gray_6"
+                        android:textSize="@dimen/sp_13" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_refresh"
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ProgressBar
+                            android:id="@+id/pb_refresh"
+                            style="?android:attr/progressBarStyleSmall"
+                            android:layout_width="@dimen/dp_15"
+                            android:layout_height="@dimen/dp_15"
+                            android:indeterminateDrawable="@drawable/customs_progress"
+                            android:indeterminateDuration="500"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/iv_refresh"
+                            android:layout_width="@dimen/dp_15"
+                            android:layout_height="@dimen/dp_15"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/shuaxin_weizi" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_35"
+                    android:layout_marginTop="@dimen/dp_5">
+
+                    <!--位置命名（临时客户）-->
+                    <com.xw.repo.XEditText
+                        android:id="@+id/et_customer_tmp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/shape_kuang_gray"
+                        android:gravity="center_vertical"
+                        android:hint="位置命名"
+                        android:lines="1"
+                        android:paddingLeft="@dimen/dp_10"
+                        android:paddingRight="@dimen/dp_70"
+                        android:textColor="@color/gray_6"
+                        android:textColorHint="@color/gray_9"
+                        android:textSize="@dimen/sp_12"
+                        app:x_clearDrawable="@mipmap/login_icon_close" />
+
+                    <Button
+                        android:id="@+id/btn_dtbz"
+                        android:layout_width="60dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/select_login_btn_blue"
+                        android:layout_alignParentRight="true"
+                        android:text="地图标注"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_13"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+
+                <!--备注-->
+                <com.xw.repo.XEditText
+                    android:id="@+id/et_bz"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:background="@drawable/shape_kuang_gray"
+                    android:gravity="top"
+                    android:hint="请输入备注内容"
+                    android:lines="3"
+                    android:padding="@dimen/dp_10"
+                    android:textColor="@color/gray_6"
+                    android:textColorHint="@color/gray_9"
+                    android:textSize="@dimen/sp_12"
+                    app:x_clearDrawable="@mipmap/login_icon_close" />
+
+            </LinearLayout>
+
+            <!--拍照-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_10">
+
+                    <ImageView
+                        android:id="@+id/iv_add_pic"
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/icon_photo" />
+
+                    <ImageView
+                        android:id="@+id/iv_del_pic"
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/icon_delete_photo"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerview_pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:overScrollMode="never" />
+
+            </LinearLayout>
+
+            <!--语音-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/layout_voice"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:gravity="center_vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/layout_play_voice"
+                        android:layout_width="@dimen/dp_60"
+                        android:layout_height="@dimen/dp_25"
+                        android:background="@drawable/shape_kuang_gray"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/iv_voice"
+                            android:layout_width="@dimen/dp_10"
+                            android:layout_height="@dimen/dp_15"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:background="@drawable/animation_left" />
+
+                        <TextView
+                            android:id="@+id/tv_voice_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:textColor="@color/gray_9"
+                            android:textSize="@dimen/sp_10"
+                            tools:text="3s" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_del_voice"
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_25"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_15"
+                            android:layout_height="@dimen/dp_15"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/bf_delvoice" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <com.deadline.statebutton.StateButton
+                    android:id="@+id/btn_voice"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_gravity="bottom"
+                    android:text="按下录制语音"
+                    android:textColor="@color/gray_3"
+                    android:textSize="@dimen/sp_13"
+                    android:textStyle="normal"
+                    app:normalBackgroundColor="@color/white"
+                    app:pressedBackgroundColor="@color/gray_e" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--语音控件-->
+        <com.ilike.voicerecorder.widget.VoiceRecorderView
+            android:id="@+id/voice_recorder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

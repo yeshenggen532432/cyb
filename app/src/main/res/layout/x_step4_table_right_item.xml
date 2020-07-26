@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+    android:background="#ffffff"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <include layout="@layout/line1_v_match"/>
+    <EditText
+        android:id="@+id/tv_table_content_right_item1"
+        style="@style/TextView_Table_Right_60"
+        android:selectAllOnFocus="true"
+        android:inputType="numberDecimal"
+        android:background="@null"
+        android:hint="点击输入"
+        tools:text="到货量"/>
+
+    <include layout="@layout/line1_v_match"/>
+
+    <EditText
+        android:id="@+id/tv_table_content_right_item2"
+        style="@style/TextView_Table_Right_60"
+        android:selectAllOnFocus="true"
+        android:inputType="numberDecimal"
+        android:background="@null"
+        android:hint="点击输入"
+        tools:text="实销量"/>
+
+    <include layout="@layout/line1_v_match"/>
+
+    <EditText
+        android:id="@+id/tv_table_content_right_item3"
+        style="@style/TextView_Table_Right_60"
+        android:selectAllOnFocus="true"
+        android:inputType="numberDecimal"
+        android:background="@null"
+        android:hint="点击输入"
+        tools:text="库存量"/>
+
+    <include layout="@layout/line1_v_match"/>
+
+    <EditText
+        android:id="@+id/tv_table_content_right_item4"
+        style="@style/TextView_Table_Right_60"
+        android:selectAllOnFocus="true"
+        android:background="@null"
+        android:hint="点击输入"
+        android:inputType="numberDecimal"
+        android:gravity="center"
+        tools:text="订单"/>
+
+    <include layout="@layout/line1_v_match"/>
+
+    <TextView
+        android:id="@+id/tv_table_content_right_item5"
+        style="@style/TextView_Table_Right_70"
+        tools:text="销售类型"/>
+
+    <include layout="@layout/line1_v_match"/>
+
+    <TextView
+        android:id="@+id/tv_table_content_right_item6"
+        style="@style/TextView_Table_Right_70"
+        tools:text="新鲜值"/>
+
+    <include layout="@layout/line1_v_match"/>
+
+    <TextView
+        android:id="@+id/tv_table_content_right_item7"
+        style="@style/TextView_Table_Right_60"
+        tools:text="规格"/>
+
+    <include layout="@layout/line1_v_match"/>
+
+    <EditText
+        android:id="@+id/tv_table_content_right_item8"
+        style="@style/TextView_Table_Right"
+        android:selectAllOnFocus="true"
+        android:background="@null"
+        android:hint="点击输入"
+        android:inputType="text"
+        android:gravity="center"
+        tools:text="备注"/>
+
+    <include layout="@layout/line1_v_match"/>
+
+    <TextView
+        android:id="@+id/tv_table_content_right_item9"
+        style="@style/TextView_Table_Right_40"
+        android:textColor="@color/x_main_color"
+        tools:text="删除"/>
+
+    <include layout="@layout/line1_v_match"/>
+
+
+
+</LinearLayout>

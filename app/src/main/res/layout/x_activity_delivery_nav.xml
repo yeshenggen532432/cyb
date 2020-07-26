@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/x_layout_head_delivery_nav"/>
+
+    <FrameLayout
+        android:id="@+id/fl_manager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </FrameLayout>
+
+    <!--<include layout="@layout/y_layout_head_base" />-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/dp_30"-->
+        <!--android:background="@color/layout_bg"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:visibility="gone">-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="center"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_choose_delivery"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center"-->
+                <!--android:text="+选择配送单"-->
+                <!--android:textColor="@color/gray_6"-->
+                <!--android:textSize="@dimen/sp_15" />-->
+        <!--</LinearLayout>-->
+
+        <!--<View-->
+            <!--android:layout_width="@dimen/dp_0_5"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginBottom="@dimen/dp_5"-->
+            <!--android:layout_marginTop="@dimen/dp_5"-->
+            <!--android:background="@color/gray_9" />-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="center"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_choose_customer"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center"-->
+                <!--android:text="+选择客户"-->
+                <!--android:textColor="@color/gray_6"-->
+                <!--android:textSize="@dimen/sp_15" />-->
+        <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+
+    <!--<include layout="@layout/line1" />-->
+
+    <!--&lt;!&ndash;<com.scwang.smartrefresh.layout.SmartRefreshLayout&ndash;&gt;-->
+    <!--&lt;!&ndash;android:id="@+id/refreshLayout"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;app:srlEnableFooterFollowWhenLoadFinished="true"&ndash;&gt;-->
+    <!--&lt;!&ndash;app:srlEnableScrollContentWhenLoaded="true">&ndash;&gt;-->
+    <!--&lt;!&ndash;srlAccentColor srlPrimaryColor 将会改变 Header 和 Footer 的主题颜色&ndash;&gt;-->
+    <!--&lt;!&ndash;<com.scwang.smartrefresh.layout.header.ClassicsHeader&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;app:srlAccentColor="@color/gray_6"&ndash;&gt;-->
+    <!--&lt;!&ndash;app:srlClassicsSpinnerStyle="FixedBehind"&ndash;&gt;-->
+    <!--&lt;!&ndash;app:srlPrimaryColor="@color/layout_bg" />&ndash;&gt;-->
+    <!--&lt;!&ndash;FixedBehind可以让Header固定在内容的背后，下拉的时候效果同微信浏览器的效果&ndash;&gt;-->
+    <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:id="@+id/recyclerView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:fadingEdge="none" />-->
+
+    <!--&lt;!&ndash;<com.scwang.smartrefresh.layout.footer.ClassicsFooter&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;app:srlClassicsSpinnerStyle="Translate" />&ndash;&gt;-->
+    <!--&lt;!&ndash;</com.scwang.smartrefresh.layout.SmartRefreshLayout>&ndash;&gt;-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:background="@color/x_tab_bg"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<LinearLayout-->
+            <!--android:visibility="gone"-->
+            <!--android:id="@+id/layout_all_select"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="center">-->
+
+            <!--<CheckBox-->
+                <!--android:id="@+id/cb_all_select"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:button="@drawable/selector_cb_cx"-->
+                <!--android:text="全选"-->
+                <!--android:textColor="@color/gray_6"-->
+                <!--android:textSize="12sp"-->
+                <!--android:textStyle="bold"-->
+                <!--android:visibility="visible" />-->
+
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/layout_delete"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="center">-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="@dimen/dp_15"-->
+                <!--android:layout_height="@dimen/dp_15"-->
+                <!--android:scaleType="fitXY"-->
+                <!--android:src="@mipmap/ic_delete_gray_666" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="删除"-->
+                <!--android:textColor="@color/gray_6"-->
+                <!--android:textSize="@dimen/sp_12"-->
+                <!--android:textStyle="bold" />-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/layout_choose_delivery"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="center">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="+配送单客户"-->
+                <!--android:textColor="@color/gray_6"-->
+                <!--android:textSize="@dimen/sp_12"-->
+                <!--android:textStyle="bold" />-->
+
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/layout_choose_customer"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="center">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="+我的客户"-->
+                <!--android:textColor="@color/gray_6"-->
+                <!--android:textSize="@dimen/sp_12"-->
+                <!--android:textStyle="bold" />-->
+
+        <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+
+
+</LinearLayout>
+

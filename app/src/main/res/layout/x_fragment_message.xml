@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout_fenlei"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView_categroy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/layout_bg"
+            android:fadingEdge="none"/>
+
+        <!--<include layout="@layout/x_layout_message_fenlei" />-->
+
+    </LinearLayout>
+
+    <com.kennyc.view.MultiStateView
+        android:id="@+id/multiStateView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:msv_animateViewChanges="true"
+        app:msv_emptyView="@layout/x_layout_empty_view_message"
+        app:msv_errorView="@layout/x_layout_error_view"
+        app:msv_loadingView="@layout/x_layout_loading_view"
+        app:msv_viewState="content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/x_layout_search" />
+
+            <include layout="@layout/line0_5" />
+
+            <include layout="@layout/x_layout_recyclerview" />
+        </LinearLayout>
+    </com.kennyc.view.MultiStateView>
+
+</LinearLayout>
+

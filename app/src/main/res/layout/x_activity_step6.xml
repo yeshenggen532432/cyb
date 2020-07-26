@@ -1,0 +1,473 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_e"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <include layout="@layout/y_layout_head_base" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:background="@color/gray_e"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="6.道谢并告知下次拜访日期"
+                android:textColor="@color/gray_3"
+                android:textSize="@dimen/sp_13" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="签到时间:"
+                android:textColor="@color/yellow"
+                android:textSize="@dimen/sp_13" />
+
+            <TextView
+                android:id="@+id/tv_callOnDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:paddingBottom="@dimen/dp_10"
+                android:paddingTop="@dimen/dp_10"
+                android:text="2016-01-19"
+                android:textColor="@color/yellow"
+                android:textSize="@dimen/sp_13" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <com.baidu.mapapi.map.MapView
+                android:id="@+id/bmapView"
+                android:layout_width="match_parent"
+                android:layout_height="100dip"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:background="#ffffff"
+                android:gravity="center_vertical"
+                android:paddingRight="@dimen/dp_5" >
+
+                <TextView
+                    android:id="@+id/tv_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/icon_dw"
+                    android:drawablePadding="3dp"
+                    android:text=""
+                    android:textColor="@color/gray_9"
+                    android:textSize="@dimen/sp_13" />
+
+                <ProgressBar
+                    android:id="@+id/pb_refresh"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:indeterminateDrawable="@drawable/customs_progress"
+                    android:indeterminateDuration="500"
+                    android:padding="@dimen/dp_5"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/ckin_bnt_refadr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_5"
+                    android:src="@drawable/shuaxin_weizi" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_5"
+            android:background="#eeeeee" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical" >
+
+                    <CheckBox
+                        android:id="@+id/tv_khzt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:drawableRight="@drawable/selector_cb_rizhi_shaixuan"
+                        android:padding="@dimen/dp_10"
+                        android:text="客户状态"
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/sp_15" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_khzt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:padding="@dimen/dp_10"
+                        android:visibility="gone" >
+
+                        <RadioButton
+                            android:id="@+id/rd1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dp_10"
+                            android:button="@null"
+                            android:checked="false"
+                            android:drawableRight="@drawable/selector_cb_cx"
+                            android:text="新增开立"
+                            android:textColor="@color/gray_6"
+                            android:textSize="@dimen/sp_13" />
+
+                        <include layout="@layout/line1" />
+
+                        <RadioButton
+                            android:id="@+id/rd2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dp_10"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:button="@null"
+                            android:checked="false"
+                            android:drawableRight="@drawable/selector_cb_cx"
+                            android:text="跟进拜访"
+                            android:textColor="@color/gray_6"
+                            android:textSize="@dimen/sp_13" />
+
+                        <include layout="@layout/line1" />
+
+                        <RadioButton
+                            android:id="@+id/rd3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dp_10"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:button="@null"
+                            android:checked="false"
+                            android:drawableRight="@drawable/selector_cb_cx"
+                            android:text="意向签约"
+                            android:textColor="@color/gray_6"
+                            android:textSize="@dimen/sp_13" />
+
+                        <include layout="@layout/line1" />
+
+                        <RadioButton
+                            android:id="@+id/rd4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dp_10"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:button="@null"
+                            android:checked="false"
+                            android:drawableRight="@drawable/selector_cb_cx"
+                            android:text="订货下单"
+                            android:textColor="@color/gray_6"
+                            android:textSize="@dimen/sp_13" />
+
+                        <include layout="@layout/line1" />
+
+                        <RadioButton
+                            android:id="@+id/rd5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:button="@null"
+                            android:checked="false"
+                            android:drawableRight="@drawable/selector_cb_cx"
+                            android:text="流失"
+                            android:textColor="@color/gray_6"
+                            android:textSize="@dimen/sp_13" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:background="@color/white"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical" >
+
+                    <CheckBox
+                        android:id="@+id/tv_bffl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:checked="false"
+                        android:drawableRight="@drawable/selector_cb_rizhi_shaixuan"
+                        android:padding="@dimen/dp_10"
+                        android:text="拜访分类"
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/sp_15" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_bffl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:padding="@dimen/dp_10"
+                        android:visibility="gone" >
+
+                        <RadioButton
+                            android:id="@+id/rd6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dp_10"
+                            android:button="@null"
+                            android:checked="false"
+                            android:drawableRight="@drawable/selector_cb_cx"
+                            android:text="按计划拜访"
+                            android:textColor="@color/gray_6"
+                            android:textSize="@dimen/sp_13" />
+
+                        <include layout="@layout/line1" />
+
+                        <RadioButton
+                            android:id="@+id/rd7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dp_10"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:button="@null"
+                            android:checked="false"
+                            android:drawableRight="@drawable/selector_cb_cx"
+                            android:text="临时拜访"
+                            android:textColor="@color/gray_6"
+                            android:textSize="@dimen/sp_13" />
+
+                        <include layout="@layout/line1" />
+
+                        <RadioButton
+                            android:id="@+id/rd8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:button="@null"
+                            android:checked="false"
+                            android:drawableRight="@drawable/selector_cb_cx"
+                            android:text="新开立拜访"
+                            android:textColor="@color/gray_6"
+                            android:textSize="@dimen/sp_13" />
+                    </RadioGroup>
+
+                    <EditText
+                        android:id="@+id/edit_bfzj"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_60"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:background="@drawable/shape_headblue_rectangle"
+                        android:ems="10"
+                        android:gravity="top"
+                        android:hint="本次拜访总结"
+                        android:padding="@dimen/dp_5"
+                        android:textColor="@color/gray_6"
+                        android:textColorHint="@color/gray_9"
+                        android:textSize="@dimen/sp_13" >
+                    </EditText>
+
+                    <EditText
+                        android:id="@+id/edit_dbsx"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_60"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:background="@drawable/shape_headblue_rectangle"
+                        android:ems="10"
+                        android:gravity="top"
+                        android:hint="待办事项"
+                        android:padding="@dimen/dp_5"
+                        android:textColor="@color/gray_6"
+                        android:textColorHint="@color/gray_9"
+                        android:textSize="@dimen/sp_13" >
+                    </EditText>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_30"
+                        android:layout_margin="@dimen/dp_10"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="下次日期："
+                            android:textColor="@color/gray_6"
+                            android:textSize="@dimen/sp_15" />
+
+                        <TextView
+                            android:id="@+id/tv_choiceDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_headblue_rectangle"
+                            android:gravity="center"
+                            android:text="点击选择"
+                            android:textColor="@color/yellow"
+                            android:textSize="@dimen/sp_13" />
+                    </LinearLayout>
+
+                    <!--拍照-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dp_10">
+
+                            <ImageView
+                                android:id="@+id/iv_add_pic"
+                                android:layout_width="@dimen/dp_40"
+                                android:layout_height="@dimen/dp_40"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/icon_photo" />
+
+                            <ImageView
+                                android:visibility="gone"
+                                android:id="@+id/iv_del_pic"
+                                android:layout_width="@dimen/dp_40"
+                                android:layout_height="@dimen/dp_40"
+                                android:scaleType="fitXY"
+                                android:layout_marginLeft="@dimen/dp_10"
+                                android:src="@drawable/icon_delete_photo"/>
+                        </LinearLayout>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recyclerview_pic"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:layout_marginRight="@dimen/dp_10"
+                            android:overScrollMode="never"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/layout_bg"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_5" >
+
+            <LinearLayout
+                android:id="@+id/ll_voice"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_marginRight="@dimen/dp_5"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="录制总结"
+                    android:textColor="@color/yellow"
+                    android:textSize="@dimen/sp_15" />
+
+                <ImageView
+                    android:id="@+id/iv_voice"
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="@dimen/dp_30"
+                    android:background="@drawable/chat_bg_arrow_left"
+                    android:paddingRight="@dimen/dp_10"
+                    android:src="@drawable/voice_from_playing_s0" />
+
+                <TextView
+                    android:id="@+id/tv_voicetime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:gravity="center"
+                    android:text="3&apos;"
+                    android:textColor="@color/gray_6" />
+
+                <ImageView
+                    android:id="@+id/iv_delvoice"
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                    android:layout_margin="@dimen/dp_20"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/bf_delvoice" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/record"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_marginRight="@dimen/dp_5"
+                android:background="@drawable/selector_blue"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_35"
+                    android:drawableLeft="@drawable/ht_ly_2"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:gravity="center"
+                    android:text="按住录制语音拜访总结"
+                    android:textColor="@color/yellow"
+                    android:textSize="@dimen/sp_13" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_recode"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_100"
+        android:layout_gravity="center"
+        android:background="@drawable/luyin_bg"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/iv_voiceProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/record_animate_03" />
+    </RelativeLayout>
+
+</FrameLayout>

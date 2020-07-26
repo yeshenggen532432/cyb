@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparency" >
+
+    <LinearLayout
+        android:layout_width="150dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/paopao_backg"
+        android:orientation="vertical"
+        android:paddingTop="13dp"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tv_creat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:drawableLeft="@drawable/zuzhi_gongsi"
+            android:text="  创建公司" />
+
+        <TextView
+            android:id="@+id/tv_creat_line"
+            android:layout_width="match_parent"
+            android:background="@color/hale_light_gray"
+            android:layout_height="0.5dp"
+             />
+
+        <TextView
+            android:id="@+id/tv_addcompany"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/search_hui"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="  加入公司" />
+ 
+
+        <TextView
+            android:id="@+id/tv_add_line"
+            android:layout_width="match_parent"
+             android:background="@color/hale_light_gray"
+            android:layout_height="0.5dp"
+             />
+        <TextView
+            android:id="@+id/tv_sao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/zuzhi_bumen"
+            android:text="  创建部门" />
+
+        <TextView
+            android:id="@+id/tv_bumen_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/hale_light_gray" />
+
+        <TextView
+            android:id="@+id/tv_yaoqing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:drawableLeft="@drawable/zuzhiu_yaoqing"
+            android:padding="8dp"
+            android:text="  邀请人　" />
+
+    </LinearLayout>
+
+</RelativeLayout>

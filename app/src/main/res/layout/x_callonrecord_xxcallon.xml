@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:id="@+id/ll_count6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" 
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
+            android:background="@color/gray_e"
+            android:text="6.道歉并告知下次拜访日期"
+            android:textColor="@color/gray_6"
+            android:textSize="@dimen/textsize_15" />
+
+   
+
+        <com.xmsx.cnlife.widget.ComputeHeightGridView
+            android:id="@+id/gridview_count6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:layout_marginBottom="5dip"
+            android:layout_marginLeft="8dip"
+            android:layout_marginRight="8dip"
+            android:numColumns="3" >
+        </com.xmsx.cnlife.widget.ComputeHeightGridView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                 android:layout_marginTop="5dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dip"
+                    android:layout_weight="1"
+                    android:gravity="top"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="客户状态："
+                        android:layout_weight="1"
+                        android:textColor="#444444"
+                        android:textSize="@dimen/textsize_13" />
+
+                    <TextView
+                        android:id="@+id/tv_khState"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="top"
+                        android:text=""
+                        android:textColor="#444444"
+                        android:textSize="@dimen/textsize_13" />
+                </LinearLayout>
+
+                <include layout="@layout/line1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dip"
+                    android:layout_marginTop="5dip"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="拜访分类："
+                        android:layout_weight="1"
+                        android:textColor="#444444"
+                        android:textSize="@dimen/textsize_13" />
+
+                    <TextView
+                        android:id="@+id/tv_callonfenlei"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="top"
+                        android:text=""
+                        android:textColor="#444444"
+                        android:textSize="@dimen/textsize_13" />
+                </LinearLayout>
+
+                <include layout="@layout/line1" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dip"
+                    android:layout_marginTop="5dip"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="下次拜访日期:"
+                        android:layout_weight="1"
+                        android:textColor="#444444"
+                        android:textSize="@dimen/textsize_13" />
+
+                    <TextView
+                        android:id="@+id/tv_xcdate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="top"
+                        android:text=""
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/textsize_13" />
+                </LinearLayout>
+
+                <include layout="@layout/line1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dip"
+                    android:layout_marginTop="5dip"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="总结及代办事件:"
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/textsize_13" />
+
+                </LinearLayout>
+                 <TextView
+                        android:id="@+id/tv_zj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="10dip"
+                        android:gravity="top"
+                        android:text=""
+                        android:textColor="#444444"
+                        android:textSize="@dimen/textsize_13" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

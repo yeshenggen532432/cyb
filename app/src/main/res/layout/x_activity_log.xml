@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <FrameLayout
+        android:id="@+id/fl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+    </FrameLayout>
+    
+    <include layout="@layout/line1"/>
+
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:background="@color/layout_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+         <RadioButton
+            android:id="@+id/rb0"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/rizhi_rb_xierizhi"
+            android:text="写汇报"
+            android:gravity="center"
+            android:textSize="@dimen/sp_8"
+            android:textColor="@color/selector_gp_rizhi"/>
+         <RadioButton
+            android:id="@+id/rb1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/rizhi_rb_kanrizhi"
+            android:text="看汇报"
+            android:gravity="center"
+            android:textSize="@dimen/sp_8"
+            android:textColor="@color/selector_gp_rizhi" />
+    </RadioGroup>
+
+</LinearLayout>

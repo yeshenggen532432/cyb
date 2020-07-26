@@ -1,0 +1,91 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/dp_160"
+    android:layout_height="match_parent"
+    android:paddingRight="@dimen/dp_10"
+    android:paddingBottom="@dimen/dp_10"
+    android:background="@drawable/shape_bg_yuanjiao"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_80"
+        android:orientation="horizontal" >
+
+        <RadioGroup
+            android:id="@+id/radioGroup1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <RadioButton
+                android:id="@+id/rb_linqi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:button="@drawable/selector_cb_cx"
+                android:checked="true"
+                android:padding="@dimen/dp_3"
+                android:text="临期"
+                android:textColor="@color/gray_6" />
+
+            <RadioButton
+                android:id="@+id/rb_zhengchang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:button="@drawable/selector_cb_cx"
+                android:padding="@dimen/dp_3"
+                android:text="正常"
+                android:textColor="@color/gray_6" />
+        </RadioGroup>
+
+
+        <EditText
+            android:id="@+id/edit_linqi"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/shape_headblue_rectangle"
+            android:gravity="center"
+            android:ems="10"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textColor="@color/gray_6"
+            android:textSize="@dimen/sp_13" >
+        </EditText>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_quxiao"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_alignParentLeft="true"
+            android:background="@color/light_blue"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_15"
+            android:text="取消" />
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_30"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:background="@color/light_blue"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_15"
+            android:text="确定" />
+    </RelativeLayout>
+
+</LinearLayout>

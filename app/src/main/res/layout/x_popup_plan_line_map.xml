@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/map_hint"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/dp_30" >
+
+        <TextView
+            style="@style/tv_cblue_s13"
+            android:id="@+id/tv_khNm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_5"
+            android:gravity="center"
+            tools:text="测试客户" />
+
+        <com.deadline.statebutton.StateButton
+            android:visibility="gone"
+            android:id="@+id/sb_add"
+            android:layout_width="25dp"
+            android:layout_height="15dp"
+            android:textSize="8sp"
+            android:textColor="@color/white"
+            android:padding="@dimen/dp_0"
+            app:normalBackgroundColor="@color/x_main_color"
+            app:pressedBackgroundColor="@color/x_main_color_dirk"
+            app:radius="@dimen/dp_3"
+            android:text="添加"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,143 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/x_layout_head_blue" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/bmapView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true" />
+
+        <LinearLayout
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@drawable/shape_bg_yuanjiao"
+            android:orientation="vertical" >
+
+<!--            <Button-->
+<!--                android:id="@+id/btn_member"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="@dimen/dp_30"-->
+<!--                android:background="@drawable/icon_member_up" />-->
+            <com.deadline.statebutton.StateButton
+                android:id="@+id/btn_member"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:padding="@dimen/dp_0"
+                android:text="地图中心点"
+                android:textColor="@color/white"
+                app:normalBackgroundColor="@color/x_main_color"
+                app:pressedBackgroundColor="@color/x_main_color_dirk"
+                app:radius="@dimen/dp_3"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_member"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_200"
+                android:paddingBottom="@dimen/dp_10"
+                android:visibility="gone"
+                android:fadingEdge="none"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="match_parent"
+            android:layout_gravity="right" >
+
+            <CheckBox
+                android:id="@+id/cb_weixingtu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_40"
+                android:button="@drawable/selecter_weixingtu" />
+
+            <CheckBox
+                android:id="@+id/cb_lukuangtu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cb_weixingtu"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_10"
+                android:button="@drawable/selecter_lukuangtu" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_upAndDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_marginBottom="@dimen/dp_120"
+            android:layout_marginRight="@dimen/dp_10"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/btn_up"
+                android:layout_width="@dimen/dp_33"
+                android:layout_height="@dimen/dp_38"
+                android:background="@drawable/selector_btn_up" />
+
+            <Button
+                android:id="@+id/btn_down"
+                android:layout_width="@dimen/dp_33"
+                android:layout_height="@dimen/dp_38"
+                android:background="@drawable/selector_btn_down" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <include layout="@layout/line1" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dp_2"
+        android:paddingTop="@dimen/dp_2" >
+
+        <RadioButton
+            android:id="@+id/rb_bfhf"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/selecter_3_bfhf"
+            android:gravity="center" />
+
+        <RadioButton
+            android:id="@+id/rb_ygfbt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/selecter_3_ygfbt"
+            android:gravity="center" />
+
+        <RadioButton
+            android:id="@+id/rb_gjhf"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/selecter_3_gjhf"
+            android:gravity="center" />
+    </RadioGroup>
+
+</LinearLayout>

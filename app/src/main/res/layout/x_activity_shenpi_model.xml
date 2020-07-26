@@ -1,0 +1,196 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_e"
+    android:orientation="vertical" >
+
+    <include layout="@layout/y_layout_head" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="自定义名称"
+            android:textColor="@color/gray_3"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/edit_name"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_headblue_rectangle"
+            android:ems="10"
+            android:hint="请输入名称"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/gray_3"
+            android:textSize="15sp" >
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:gravity="center_vertical" >
+
+        <CheckBox
+            android:id="@+id/cb_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:button="@drawable/selector_cb_cx"
+            android:paddingLeft="20dp"
+            android:textColor="@color/gray_3"
+            android:textSize="15sp"
+            android:text="类 型" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:gravity="center_vertical" >
+
+        <CheckBox
+            android:id="@+id/cb_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:button="@drawable/selector_cb_cx"
+            android:paddingLeft="20dp"
+            android:textColor="@color/gray_3"
+            android:textSize="15sp"
+            android:text="时间" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:gravity="center_vertical" >
+
+        <CheckBox
+            android:id="@+id/cb_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:button="@drawable/selector_cb_cx"
+            android:paddingLeft="20dp"
+            android:textColor="@color/gray_3"
+            android:textSize="15sp"
+            android:text="详情" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:gravity="center_vertical" >
+
+        <CheckBox
+            android:id="@+id/cb_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:button="@drawable/selector_cb_cx"
+            android:paddingLeft="20dp"
+            android:textColor="@color/gray_3"
+            android:textSize="15sp"
+            android:text="金额" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:gravity="center_vertical" >
+
+        <CheckBox
+            android:id="@+id/cb_remo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:button="@drawable/selector_cb_cx"
+            android:paddingLeft="20dp"
+            android:textColor="@color/gray_3"
+            android:textSize="15sp"
+            android:text="备注" />
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_privateOrPublic"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <RadioButton
+            android:id="@+id/rd_private"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:checked="true"
+            android:button="@drawable/selector_cb_cx"
+            android:paddingLeft="5dp"
+            android:textColor="@color/gray_3"
+            android:textSize="15sp"
+            android:text="私用" />
+
+        <RadioButton
+            android:id="@+id/rd_public"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:button="@drawable/selector_cb_cx"
+            android:paddingLeft="5dp"
+            android:textColor="@color/gray_3"
+            android:textSize="15sp"
+            android:text="公用" />
+    </RadioGroup>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/tv_shenpiRen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/gray_3"
+            android:textSize="15sp"
+            android:text="审批人" />
+
+        <com.xmsx.cnlife.widget.ComputeHeightGridView
+            android:id="@+id/gv_person"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_shenpiRen"
+            android:numColumns="4" >
+        </com.xmsx.cnlife.widget.ComputeHeightGridView>
+    </RelativeLayout>
+
+</LinearLayout>

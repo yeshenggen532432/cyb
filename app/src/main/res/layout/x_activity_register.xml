@@ -1,0 +1,83 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_bg_white"
+    android:orientation="vertical">
+
+    <include layout="@layout/x_layout_head" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp_36"
+        android:paddingRight="@dimen/dp_36">
+
+
+        <!--新用户注册-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_100"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="新用户注册"
+                android:textColor="#ff333333"
+                android:textSize="@dimen/sp_20" />
+        </LinearLayout>
+
+        <!--手机号-->
+        <include layout="@layout/x_layout_login_phone"/>
+        <!--验证码-->
+        <include layout="@layout/x_layout_login_code"/>
+
+        <!--进入企微宝-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_44"
+            android:layout_marginTop="@dimen/dp_60">
+
+            <com.deadline.statebutton.StateButton
+                android:id="@+id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="进入企微宝"
+                android:textSize="@dimen/sp_18"
+                app:radius="@dimen/dp_2"
+                app:animationDuration="200"
+                app:normalStrokeColor="@android:color/white"
+                app:pressedStrokeColor="@android:color/white"
+                app:unableStrokeColor="@android:color/white"
+                app:normalTextColor="@android:color/white"
+                app:pressedTextColor="@android:color/white"
+                app:normalBackgroundColor="@color/x_main_color"
+                app:pressedBackgroundColor="@color/x_main_color_dirk"
+                app:unableBackgroundColor="@color/gray_b"
+                />
+
+        </LinearLayout>
+
+        <!--继续完善信息-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_20"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_next"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="继续完善信息"
+                android:textColor="@color/x_main_color"
+                android:textSize="@dimen/sp_15"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

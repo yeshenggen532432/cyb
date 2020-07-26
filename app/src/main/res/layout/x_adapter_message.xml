@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/layout_bg_white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_72">
+
+        <!--左-->
+        <LinearLayout
+            android:id="@+id/left"
+            android:layout_width="@dimen/dp_72"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/item_iv"
+                android:layout_width="@dimen/dp_68"
+                android:layout_height="@dimen/dp_68"
+                android:padding="@dimen/dp_10"
+                android:src="@mipmap/home_tab_ybs" />
+        </LinearLayout>
+
+        <!--右上-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_12"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_toRightOf="@+id/left"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/item_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="系统通知"
+                android:textColor="#ff2b2424"
+                android:textSize="@dimen/sp_16" />
+
+            <TextView
+                android:id="@+id/item_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="13:23"
+                android:textColor="#B3B3B3"
+                android:textSize="@dimen/sp_12" />
+        </LinearLayout>
+
+        <!--右下-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/left"
+            android:layout_marginBottom="@dimen/dp_12"
+            android:layout_marginRight="@dimen/dp_12"
+            android:orientation="horizontal">
+
+            <com.xmsx.cnlife.widget.emoji.CCPTextView
+                android:id="@+id/item_subTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="企微宝V2.0上线啦！！！"
+                android:textColor="#9F9F9F"
+                android:textSize="@dimen/sp_13" />
+
+            <com.deadline.statebutton.StateButton
+                android:visibility="gone"
+                android:id="@+id/item_agree"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_20"
+                android:padding="@dimen/dp_0"
+                android:enabled="true"
+                android:text="是否同意"
+                android:textSize="@dimen/sp_10"
+                android:textColor="@color/white"
+                app:radius="@dimen/dp_3"
+                app:normalBackgroundColor="@color/x_main_color"
+                app:pressedBackgroundColor="@color/x_main_color_dirk"
+                app:unableBackgroundColor="@color/gray_e"
+                app:unableTextColor="@color/gray_9"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/rl_comm_addpic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:background="@color/white"
+        android:paddingBottom="5dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:text="图片"
+            android:textColor="@color/gray_3"
+            android:textStyle="bold"
+            android:textSize="15sp" />
+
+        <com.xmsx.cnlife.widget.ComputeHeightGridView
+            android:id="@+id/gv_pic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:numColumns="4" >
+        </com.xmsx.cnlife.widget.ComputeHeightGridView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_fujian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#FFFFFF" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="附件"
+                android:textColor="@color/gray_3"
+                android:textStyle="bold"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/img_fujian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingBottom="10dp"
+                android:paddingLeft="100dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:src="@drawable/icon_fujian" />
+        </RelativeLayout>
+
+        <com.xmsx.cnlife.widget.ComputeHeightListView
+            android:id="@+id/listview_fujian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </com.xmsx.cnlife.widget.ComputeHeightListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:background="@color/white"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/tv_shenpiRen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="审核人"
+            android:textColor="@color/gray_3"
+            android:textStyle="bold"
+            android:textSize="15sp" />
+
+        <com.xmsx.cnlife.widget.ComputeHeightGridView
+            android:id="@+id/gv_person"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="4" >
+        </com.xmsx.cnlife.widget.ComputeHeightGridView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/view_approver"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:background="@color/white"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/tv_approver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="最终审批人"
+            android:textColor="@color/gray_3"
+            android:textStyle="bold"
+            android:textSize="15sp" />
+
+        <com.xmsx.cnlife.widget.ComputeHeightGridView
+            android:id="@+id/gv_approver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="4" >
+        </com.xmsx.cnlife.widget.ComputeHeightGridView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/view_exec"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:background="@color/white"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="执行人(没选默认自己)"
+            android:textColor="@color/gray_3"
+            android:textStyle="bold"
+            android:textSize="15sp" />
+
+        <com.xmsx.cnlife.widget.ComputeHeightGridView
+            android:id="@+id/gv_exec_person"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="4" >
+        </com.xmsx.cnlife.widget.ComputeHeightGridView>
+    </LinearLayout>
+
+</LinearLayout>

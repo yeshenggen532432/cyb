@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/item_tv_memberNm"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_5"
+            android:layout_gravity="center_vertical|right"
+            android:textColor="@color/gray_6"
+            android:textSize="@dimen/sp_13"
+            tools:text="小王" />
+
+        <!--<TextView-->
+            <!--android:layout_width="@dimen/dp_70"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="@dimen/dp_10"-->
+            <!--android:text="线路名称："-->
+            <!--android:textColor="@color/gray_3"-->
+            <!--android:textSize="@dimen/sp_13" />-->
+
+
+        <LinearLayout
+            android:id="@+id/item_layout_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/dp_10"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/item_tv_xlNm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_5"
+                android:textColor="@color/gray_6"
+                android:textSize="@dimen/sp_13"
+                tools:text="线路一" />
+
+
+            <ImageView
+                android:id="@+id/item_iv_arrow"
+                android:layout_width="@dimen/dp_15"
+                android:layout_height="@dimen/dp_15"
+                android:scaleType="fitXY"
+                android:src="@drawable/y_icon_xl" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <com.xmsx.cnlife.view.widget.MyRecyclerView
+        android:visibility="gone"
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/layout_bg"
+        tools:listitem="@layout/x_adapter_plan_underling_sub"/>
+
+
+</LinearLayout>

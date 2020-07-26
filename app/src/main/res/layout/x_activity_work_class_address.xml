@@ -1,0 +1,166 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_bg"
+    android:id="@+id/parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/x_layout_head_blue" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:background="@color/white"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="考勤地址:"
+            android:textColor="@color/gray_3"
+            android:textSize="@dimen/sp_13" />
+
+        <EditText
+            android:id="@+id/et_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/dp_5"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:background="@null"
+            android:hint="请点击标注"
+            android:textColor="@color/gray_6"
+            android:textSize="@dimen/sp_12" />
+
+        <Button
+            android:id="@+id/btn_location"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_25"
+            android:background="@drawable/select_login_btn_blue"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_10"
+            android:text="标注"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"/>
+    </LinearLayout>
+
+    <include layout="@layout/line1" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_height="@dimen/dp_40" >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="是否可超出有效范围"
+                android:textColor="@color/gray_3"
+                android:textSize="@dimen/sp_11" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/selector_cb_cx"
+                    android:padding="@dimen/dp_3"
+                    android:text="可"
+                    android:textSize="@dimen/sp_11"
+                    android:textColor="@color/gray_6" />
+
+                <RadioButton
+                    android:id="@+id/rb_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/selector_cb_cx"
+                    android:padding="@dimen/dp_3"
+                    android:checked="true"
+                    android:text="否"
+                    android:textSize="@dimen/sp_11"
+                    android:textColor="@color/gray_6" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:text="有效范围300米"
+            android:textColor="@color/gray_6"
+            android:textSize="@dimen/sp_11" />
+
+        <ImageView
+            android:id="@+id/iv_youxiaohanwei"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_10"
+            android:src="@drawable/icon_kaoqin_bianji" />
+    </LinearLayout>
+
+    <!--<LinearLayout-->
+        <!--android:visibility="gone"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:background="@color/white"-->
+        <!--android:layout_height="@dimen/dp_30" >-->
+
+
+        <!--<EditText-->
+            <!--android:id="@+id/et_address"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="@drawable/shape_headblue_rectangle"-->
+            <!--android:layout_marginLeft="@dimen/dp_10"-->
+            <!--android:layout_marginRight="@dimen/dp_10"-->
+            <!--android:paddingLeft="@dimen/dp_10"-->
+            <!--android:paddingRight="@dimen/dp_10"-->
+            <!--android:hint="请点击'添加或修改考勤位置'来修改考勤地址"-->
+            <!--android:textColor="@color/gray_3"-->
+            <!--android:textSize="@dimen/sp_13" />-->
+    <!--</LinearLayout>-->
+
+    <!---->
+
+    <!--<LinearLayout-->
+        <!--android:visibility="gone"-->
+        <!--android:id="@+id/ll_add_address"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:background="@color/white"-->
+        <!--android:gravity="center"-->
+        <!--android:layout_marginTop="@dimen/dp_1"-->
+        <!--android:layout_height="@dimen/dp_40" >-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="添加或修改考勤位置"-->
+            <!--android:textColor="@color/blue"-->
+            <!--android:textSize="@dimen/sp_13" />-->
+    <!--</LinearLayout>-->
+
+
+
+
+</LinearLayout>

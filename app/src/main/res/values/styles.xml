@@ -1,0 +1,439 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--<item name="android:windowAnimationStyle">@style/activityAnimation</item>-->
+    </style>
+
+    <style name="MyPopAnimation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/popleft_in</item>
+        <item name="android:windowExitAnimation">@anim/popright_out</item>
+    </style>
+
+    <!-- popwindow style -->
+    <style name="MyPopAnimation3" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in_2</item>
+        <item name="android:windowExitAnimation">@anim/dismiss_bottom_out</item>
+    </style>
+    <!-- popwindow style -->
+    <style name="menuanimation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/popleft_in</item>
+        <item name="android:windowExitAnimation">@anim/popright_out</item>
+    </style>
+
+    <!-- 员工姓名 风格 -->
+    <style name="nameStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#666666</item>
+    </style>
+
+    <!-- 任务名称风格黑色 -->
+    <style name="gongsinamehei">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#333333</item>
+    </style>
+
+    <!-- 任务名称风格蓝色 -->
+    <style name="gongsinamelan">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#3ba6dd</item>
+    </style>
+    <!-- ProgressBar风格 -->
+    <style name="prgStyle">
+        <item name="android:height">10dp</item>
+    </style>
+
+    <!-- 统计字体风格白色 -->
+    <style name="countStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+    <!-- 自定义的dialo -->
+    <style name="mydlgstyle" parent="android:Theme.Holo.Dialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="Translucent_NoTitle" parent="android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:background">#00000000</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:gravity">center</item>s
+    </style>
+
+    <!-- 右上角弹出对话框 -->
+    <style name="MyDialogStyleTop" parent="android:Theme.Dialog">
+        <item name="android:windowAnimationStyle">@style/AnimTop2</item>
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">false</item>
+        <!-- 模糊 -->
+    </style>
+
+    <!-- 弹出动画 -->
+    <style name="AnimTop2" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/push_top_in2</item>
+        <item name="android:windowExitAnimation">@anim/push_top_out2</item>
+    </style>
+
+    <style name="myProgressBarStyle">
+        　　
+        <item name="android:indeterminateDrawable">@drawable/customs_progress</item>
+    </style>
+
+    <!-- 启动页的风格：app刚启动的时候出现空白的解决方案 Theme.NoTitleBar-->
+    <style name="splash_style" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/icon_welcome_bg</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="Widget.SeekBar.Normal" parent="@android:style/Widget.SeekBar">
+        <item name="android:maxHeight">8.0dip</item>
+        <item name="android:minHeight">8.0dip</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+        <item name="android:progressDrawable">@drawable/seekbar_horizontal</item>
+        <item name="android:thumb">@null</item>
+        <item name="android:thumbOffset">10.0dip</item>
+    </style>
+
+    <!--1像素Activity风格 @android:color/transparent-->
+    <style name="SingleActivityStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowNoDisplay">false</item>
+    </style>
+
+    <!--修改DatePicker,TimePicker的字体大小，颜色  -->
+    <style name="Theme.picker" parent="android:Theme.Holo.Light.Dialog.NoActionBar">
+        <item name="android:editTextStyle">@style/Widget.EditText.White</item>
+    </style>
+
+    <style name="Widget.EditText.White" parent="@android:style/Widget.EditText">
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:textColor">@color/gray_6</item>
+    </style>
+
+    <!--表格的item的风格-->
+    <style name="TextView_Table_Right">
+        <item name="android:layout_width">@dimen/dp_100</item>
+        <item name="android:layout_height">@dimen/dp_35</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:paddingLeft">@dimen/dp_2</item>
+        <item name="android:paddingRight">@dimen/dp_2</item>
+        <item name="android:textColor">@color/gray_3</item>
+    </style>
+
+    <!--表格的item的风格-->
+    <style name="TextView_Table_Right_10">
+        <item name="android:layout_width">@dimen/dp_10</item>
+        <item name="android:layout_height">@dimen/dp_35</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:paddingLeft">@dimen/dp_3</item>
+        <item name="android:paddingRight">@dimen/dp_3</item>
+        <item name="android:textColor">@color/gray_3</item>
+    </style>
+    <!--表格的item的风格-->
+    <style name="TextView_Table_Right_40">
+        <item name="android:layout_width">@dimen/dp_40</item>
+        <item name="android:layout_height">@dimen/dp_35</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:paddingLeft">@dimen/dp_3</item>
+        <item name="android:paddingRight">@dimen/dp_3</item>
+        <item name="android:textColor">@color/gray_3</item>
+    </style>
+    <!--表格的item的风格-->
+    <style name="TextView_Table_Right_50">
+        <item name="android:layout_width">@dimen/dp_50</item>
+        <item name="android:layout_height">@dimen/dp_35</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:paddingLeft">@dimen/dp_3</item>
+        <item name="android:paddingRight">@dimen/dp_3</item>
+        <item name="android:textColor">@color/gray_3</item>
+    </style>
+    <!--表格的item的风格-->
+    <style name="TextView_Table_Right_60">
+        <item name="android:layout_width">@dimen/dp_60</item>
+        <item name="android:layout_height">@dimen/dp_35</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:paddingLeft">@dimen/dp_3</item>
+        <item name="android:paddingRight">@dimen/dp_3</item>
+        <item name="android:textColor">@color/gray_3</item>
+    </style>
+    <!--表格的item的风格-->
+    <style name="TextView_Table_Right_70">
+        <item name="android:layout_width">@dimen/dp_70</item>
+        <item name="android:layout_height">@dimen/dp_35</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:paddingLeft">@dimen/dp_3</item>
+        <item name="android:paddingRight">@dimen/dp_3</item>
+        <item name="android:textColor">@color/gray_3</item>
+    </style>
+
+    <!--表格的item的风格-->
+    <style name="TextView_Table_Right_80">
+        <item name="android:layout_width">@dimen/dp_80</item>
+        <item name="android:layout_height">@dimen/dp_35</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:paddingLeft">@dimen/dp_3</item>
+        <item name="android:paddingRight">@dimen/dp_3</item>
+        <item name="android:textColor">@color/gray_3</item>
+    </style>
+    <!--表格的item的风格-->
+    <style name="TextView_Table_Right_100">
+        <item name="android:layout_width">@dimen/dp_100</item>
+        <item name="android:layout_height">@dimen/dp_35</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:paddingLeft">@dimen/dp_3</item>
+        <item name="android:paddingRight">@dimen/dp_3</item>
+        <item name="android:textColor">@color/gray_3</item>
+    </style>
+    <!--表格的标题的风格-->
+    <style name="TextView_Table_title">
+        <item name="android:layout_width">@dimen/dp_100</item>
+        <item name="android:layout_height">@dimen/dp_35</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:paddingLeft">@dimen/dp_2</item>
+        <item name="android:paddingRight">@dimen/dp_2</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:textColor">@color/gray_3</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- animation 样式 -->
+    <style name="activityAnimation" parent="@android:style/Animation">
+        <item name="android:activityOpenEnterAnimation">@anim/push_right_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/push_left_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/push_left_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/push_right_out</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--自定义网络加载对话框样式-->
+    <style name="LoadingDialog" parent="@android:style/Theme.Holo.Dialog.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="record_voice_dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowBackground">@drawable/x_round_background</item>
+    </style>
+
+    <!--自定义语音搜索对话框样式-->
+    <style name="voiceDialog" parent="@android:style/Theme.Holo.Dialog.NoActionBar">
+        <item name="android:windowBackground">@color/x_black_00_a</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <!--xEditText-->
+    <style name="xEditText_base">
+        <item name="android:paddingRight">@dimen/dp_5</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:textColorHint">@color/gray_c</item>
+        <item name="android:textColor">@color/gray_6</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="x_WrapWrapTv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:onClick">onClick</item>
+        <item name="android:padding">4dp</item>
+    </style>
+
+    <style name="weekIndicatorStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#ff25adff</item>
+    </style>
+
+
+    <!--*************************************************字体风格：开始******************************************************-->
+    <style name="tv_cgray3_s22">
+        <item name="android:textSize">@dimen/sp_22</item>
+        <item name="android:textColor">@color/gray_3</item>
+        <item name="android:textColorHint">@color/gray_3</item>
+    </style>
+    <!--颜色是：gray_3-->
+    <style name="tv_cgray3_s15">
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:textColor">@color/gray_3</item>
+    </style>
+
+    <style name="tv_cgray3_s13">
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:textColor">@color/gray_3</item>
+    </style>
+
+    <style name="tv_cgray3_s11">
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:textColor">@color/gray_3</item>
+    </style>
+    <!--颜色是：gray_6-->
+    <style name="tv_cgray6_s15">
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:textColor">@color/gray_6</item>
+    </style>
+
+    <style name="tv_cgray6_s13">
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:textColor">@color/gray_6</item>
+    </style>
+
+    <style name="tv_cgray6_s11">
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:textColor">@color/gray_6</item>
+    </style>
+    <!--颜色是：gray_9-->
+    <style name="tv_cgray9_s15">
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:textColor">@color/gray_9</item>
+    </style>
+
+    <style name="tv_cgray9_s13">
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:textColor">@color/gray_9</item>
+    </style>
+
+    <style name="tv_cgray9_s11">
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:textColor">@color/gray_9</item>
+    </style>
+    <!--颜色是：yellow_FF6600-->
+    <style name="tv_cyellow_s15">
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:textColor">@color/yellow</item>
+    </style>
+
+    <style name="tv_cyellow_s13">
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:textColor">@color/yellow</item>
+    </style>
+
+    <style name="tv_cyellow_s11">
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:textColor">@color/yellow</item>
+    </style>
+
+    <!--颜色是：blue_2597f0-->
+    <style name="tv_cblue_s15">
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:textColor">@color/x_blue</item>
+        <item name="android:textColorHint">@color/x_blue</item>
+    </style>
+
+    <style name="tv_cblue_s13">
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:textColor">@color/x_blue</item>
+        <item name="android:textColorHint">@color/x_blue</item>
+    </style>
+
+    <style name="tv_cblue_s11">
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:textColor">@color/x_blue</item>
+        <item name="android:textColorHint">@color/x_blue</item>
+    </style>
+
+    <!--颜色是：红色-->
+    <style name="tv_cred_s22">
+        <item name="android:textSize">@dimen/sp_22</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textColorHint">@color/red</item>
+    </style>
+    <style name="tv_cred_s18">
+        <item name="android:textSize">@dimen/sp_18</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textColorHint">@color/red</item>
+    </style>
+    <style name="tv_cred_s15">
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textColorHint">@color/red</item>
+    </style>
+
+    <style name="tv_cred_s13">
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textColorHint">@color/red</item>
+    </style>
+
+    <style name="tv_cred_s11">
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textColorHint">@color/red</item>
+    </style>
+
+    <!--颜色是：white-->
+    <style name="tv_cwhite_s15">
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">@color/red</item>
+    </style>
+
+    <style name="tv_cwhite_s13">
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="tv_cwhite_s11">
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+</resources>

@@ -1,0 +1,109 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_bg_white"
+    android:orientation="vertical">
+
+    <include layout="@layout/x_layout_head" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp_36"
+        android:paddingRight="@dimen/dp_36">
+
+
+        <!--新用户注册-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_100"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="填写基本信息"
+                android:textColor="#ff333333"
+                android:textSize="@dimen/sp_20" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:text="请务必填写真实姓名，方便内部同事与你联系"
+                android:textColor="#666666"
+                android:textSize="@dimen/sp_12"
+                />
+        </LinearLayout>
+
+        <!--用户名-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_36"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_19"
+                    android:layout_height="@dimen/dp_19"
+                    android:background="@mipmap/lianxiren" />
+
+                <com.xw.repo.XEditText
+                    android:id="@+id/et_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:hint="请输入您的真实姓名"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:textColor="#333333"
+                    android:textColorHint="#cdcdcd"
+                    android:textSize="@dimen/sp_13"
+                    app:x_clearDrawable="@mipmap/login_icon_close" />
+
+            </LinearLayout>
+
+            <include layout="@layout/line1" />
+        </LinearLayout>
+
+        <!--密码-->
+        <include layout="@layout/x_layout_login_pwd"/>
+
+        <!--密码2-->
+        <include layout="@layout/x_layout_login_pwd2"/>
+
+        <!--进入企微宝-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_44"
+            android:layout_marginTop="@dimen/dp_60">
+
+            <com.deadline.statebutton.StateButton
+                android:id="@+id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="进入企微宝"
+                android:textSize="@dimen/sp_18"
+                app:radius="@dimen/dp_2"
+                app:animationDuration="200"
+                app:normalStrokeColor="@android:color/white"
+                app:pressedStrokeColor="@android:color/white"
+                app:unableStrokeColor="@android:color/white"
+                app:normalTextColor="@android:color/white"
+                app:pressedTextColor="@android:color/white"
+                app:normalBackgroundColor="@color/x_main_color"
+                app:pressedBackgroundColor="@color/x_main_color_dirk"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

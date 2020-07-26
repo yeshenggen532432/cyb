@@ -1,0 +1,107 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue">
+
+    <include
+        android:id="@+id/ic_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/x_topbar_right_iv" />
+    
+    <LinearLayout
+        android:layout_below="@+id/ic_topbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/y_h_bg"
+            android:orientation="vertical" >
+
+            <HorizontalScrollView
+            android:id="@+id/hsv_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fadingEdge="@null"
+            android:scrollbars="none" >
+
+            <RelativeLayout
+                android:id="@+id/houseres_tab_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp" >
+
+                <LinearLayout
+                    android:id="@+id/hsv_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <CheckBox
+                        android:id="@+id/cb_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="常用"
+                        android:padding="5dp"
+                        android:button="@null"
+                        android:layout_weight="1"
+                         />
+
+                    <TextView
+                        android:layout_width="1dp"
+                        android:background="@color/light_gray"
+                        android:layout_height="15dp"
+                         />
+
+                    <CheckBox
+                        android:id="@+id/cb_2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:gravity="center"
+                        android:button="@null"
+                        android:text="组织"
+                        android:layout_weight="1"
+                         />
+                    
+                    
+                    
+                    <TextView
+                        android:layout_width="1dp"
+                        android:background="@color/light_gray"
+                        android:layout_height="15dp"
+                         />
+
+                    <CheckBox
+                        android:id="@+id/cb_3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="好友"
+                         />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="4dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/blue" />
+            </RelativeLayout>
+        </HorizontalScrollView>
+
+             <android.support.v4.view.ViewPager
+        android:id="@+id/houseres_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+        </LinearLayout>
+
+<!--     <include-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        layout="@layout/menu_layout" />-->
+</RelativeLayout>

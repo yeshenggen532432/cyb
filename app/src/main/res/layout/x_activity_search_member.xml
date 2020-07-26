@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+     >
+
+    <include
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/x_topbar_right_" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/imageView2"
+        android:background="@color/white" >
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+             android:id="@+id/search_resultsLt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relativeLayout2"
+            android:layout_centerHorizontal="true" >
+        </com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+        <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_alignParentRight="true"
+        >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ima_caogaosuosou"
+            android:background="@drawable/chat_line"
+            />
+
+  <ImageView
+            android:id="@+id/ima_caogaosuosou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/search_hui" />
+<!--   android:background="@drawable/shape_checkin_edit_bg" -->
+
+	<EditText
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+		 />
+
+        <com.xw.repo.XEditText
+            android:id="@+id/et_content"
+            style="@style/gongsinamehei"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:ems="12"
+            android:layout_toRightOf="@+id/ima_caogaosuosou"
+            android:background="@null"
+            android:inputType="text"
+            android:imeOptions="actionSearch"
+            android:hint="搜索"
+            android:lines="1"
+            android:maxLength="18" />
+        
+        <ImageView
+                    android:id="@+id/iv_clean"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:padding="10dp"
+                    android:src="@drawable/y_clean_ico"
+                    android:visibility="invisible" />
+       
+    </RelativeLayout>
+
+<ImageView
+    android:id="@+id/sec_show_whennodata"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/relativeLayout2"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="20dp"
+    android:src="@drawable/s_c" />
+
+
+    </RelativeLayout>
+      <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/top_bar"
+               android:scaleType="fitXY"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/y_h_bg" />
+</RelativeLayout>

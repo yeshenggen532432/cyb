@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_42"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/layout_company"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:bl_unPressed_drawable="@color/x_layout_normal_bg"
+            app:bl_pressed_drawable="@color/x_layout_press_bg">
+
+            <TextView
+                android:id="@+id/tv_company_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:text="直购猫"
+                android:textStyle="bold"
+                android:textColor="@color/gray_3"
+                android:textSize="@dimen/sp_17" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/layout_apply"
+            android:layout_width="@dimen/dp_42"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:bl_unPressed_drawable="@color/x_layout_normal_bg"
+            app:bl_pressed_drawable="@color/x_layout_press_bg">
+
+            <ImageView
+                android:layout_width="@dimen/dp_19"
+                android:layout_height="@dimen/dp_19"
+                android:src="@mipmap/home_apply" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_span"
+            android:layout_width="@dimen/dp_42"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:bl_unPressed_drawable="@color/x_layout_normal_bg"
+            app:bl_pressed_drawable="@color/x_layout_press_bg">
+
+            <ImageView
+                android:layout_width="@dimen/dp_17"
+                android:layout_height="@dimen/dp_17"
+                android:src="@mipmap/home_scan_b" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

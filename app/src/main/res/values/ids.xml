@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="tag_commbean"></item>
+    <item type="id" name="tag_rcbean"></item>
+    <item type="id" name="tag_copy"></item>
+    <item type="id" name="tag_voice"></item>
+</resources>

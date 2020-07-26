@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <!--搜索-->
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/view_search"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:paddingLeft="@dimen/dp_10"
+        android:orientation="horizontal">
+
+        <com.xw.repo.XEditText
+            android:id="@+id/et_search"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_kuang_gray"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:paddingRight="@dimen/dp_10"
+            android:gravity="center"
+            android:hint="请输入搜索关键字"
+            android:textColorHint="@color/gray_9"
+            android:textColor="@color/gray_3"
+            android:textSize="@dimen/sp_13"
+            app:x_clearDrawable="@mipmap/login_icon_close"
+            app:x_hidePwdDrawable=" @mipmap/login_icon_bukejian"
+            app:x_showPwdDrawable="@mipmap/login_icon_kejian">
+        </com.xw.repo.XEditText>
+
+        <LinearLayout
+            android:id="@+id/layout_search"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            app:bl_pressed_drawable="@color/x_layout_press_bg">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="搜索"
+                android:textColor="@color/gray_3"
+                android:textSize="@dimen/sp_13">
+            </TextView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,145 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_210"
+        android:background="@mipmap/banner"
+        android:scaleType="fitXY"/>
+
+
+    <LinearLayout
+        android:id="@+id/view_need_offset"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp_36"
+        android:paddingRight="@dimen/dp_36">
+
+        <!--手机号-->
+        <include layout="@layout/x_layout_login_phone"/>
+
+        <!--密码-->
+        <include layout="@layout/x_layout_login_pwd"/>
+
+        <!--验证码-->
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/layout_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_15"
+                    android:layout_height="@dimen/dp_18"
+                    android:background="@mipmap/login_icon_verification_code" />
+
+                <com.xw.repo.XEditText
+                    android:id="@+id/et_code"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:hint="请输入图片验证码"
+                    android:inputType="number"
+                    android:textSize="@dimen/sp_13"
+                    android:textColorHint="#cdcdcd"
+                    android:textColor="#333333"
+                    android:paddingLeft="@dimen/dp_10"
+                    app:x_hidePwdDrawable="@mipmap/login_icon_bukejian"
+                    app:x_showPwdDrawable="@mipmap/login_icon_kejian"
+                    app:x_clearDrawable="@mipmap/login_icon_close"/>
+
+                <com.xmsx.cnlife.view.widget.MyVerifyCodeView
+                    android:id="@+id/MyVerifyCodeView"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp_10"/>
+
+
+            </LinearLayout>
+
+            <include layout="@layout/line1" />
+        </LinearLayout>
+
+
+        <!--登录按钮-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_36"
+            android:orientation="vertical">
+
+            <com.deadline.statebutton.StateButton
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_42"
+                android:text="登录"
+                android:textSize="@dimen/sp_18"
+                app:radius="@dimen/dp_2"
+                app:animationDuration="200"
+                app:normalStrokeColor="@android:color/white"
+                app:pressedStrokeColor="@android:color/white"
+                app:unableBackgroundColor="@color/gray_b"
+                app:unableStrokeColor="@android:color/white"
+                app:normalTextColor="@android:color/white"
+                app:pressedTextColor="@android:color/white"
+                app:normalBackgroundColor="@color/x_main_color"
+                app:pressedBackgroundColor="@color/x_main_color_dirk"/>
+        </LinearLayout>
+
+        <!--忘记密码和立即注册-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_forget_pwd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="忘记密码"
+                    android:textSize="@dimen/sp_13"
+                    android:textColor="#999999"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/tv_regist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="立即注册"
+                    android:textSize="@dimen/sp_13"
+                    android:textColor="#333333"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

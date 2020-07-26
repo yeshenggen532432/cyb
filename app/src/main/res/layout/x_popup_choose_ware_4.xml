@@ -1,0 +1,218 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="@dimen/dp_280"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        app:bl_corners_radius="@dimen/dp_5"
+        app:bl_solid_color="@color/white">
+
+        <TextView
+            android:id="@+id/popup_tv_title_4"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:gravity="center"
+            android:textColor="@color/x_main_color"
+            android:textSize="@dimen/sp_15"
+            tools:text="青岛小优" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_marginBottom="@dimen/dp_5"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:gravity="center_vertical"
+                    android:text="到货量"
+                    android:textColor="@color/gray_3"
+                    android:textSize="@dimen/sp_13" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_marginBottom="@dimen/dp_5"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:gravity="center_vertical"
+                    android:text="实销量"
+                    android:textColor="@color/gray_3"
+                    android:textSize="@dimen/sp_13" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_marginBottom="@dimen/dp_5"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:gravity="center_vertical"
+                    android:text="库存量"
+                    android:textColor="@color/gray_3"
+                    android:textSize="@dimen/sp_13" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_marginBottom="@dimen/dp_5"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:gravity="center_vertical"
+                    android:text="订　单"
+                    android:textColor="@color/gray_3"
+                    android:textSize="@dimen/sp_13" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_marginBottom="@dimen/dp_5"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:gravity="center_vertical"
+                    android:text="备　注"
+                    android:textColor="@color/gray_3"
+                    android:textSize="@dimen/sp_13" />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_10"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/popup_et_dhl"
+                        android:selectAllOnFocus="true"
+                        android:inputType="numberDecimal"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_30"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        android:background="@drawable/shape_kuang_gray"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:textColor="@color/gray_6"
+                        android:textSize="@dimen/sp_13">
+
+                    </EditText>
+
+                    <EditText
+                        android:id="@+id/popup_et_sxl"
+                        android:selectAllOnFocus="true"
+                        android:inputType="numberDecimal"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_30"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        android:background="@drawable/shape_kuang_gray"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:textColor="@color/gray_6"
+                        android:textSize="@dimen/sp_13">
+
+                    </EditText>
+
+                    <EditText
+                        android:id="@+id/popup_et_kcl"
+                        android:selectAllOnFocus="true"
+                        android:inputType="numberDecimal"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_30"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        android:background="@drawable/shape_kuang_gray"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:textColor="@color/gray_6"
+                        android:textSize="@dimen/sp_13">
+
+                    </EditText>
+
+                    <EditText
+                        android:id="@+id/popup_et_dd"
+                        android:selectAllOnFocus="true"
+                        android:inputType="numberDecimal"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_30"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        android:background="@drawable/shape_kuang_gray"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:textColor="@color/gray_6"
+                        android:textSize="@dimen/sp_13">
+
+                    </EditText>
+
+                    <EditText
+                        android:id="@+id/popup_et_bz"
+                        android:inputType="text"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_30"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        android:background="@drawable/shape_kuang_gray"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:textColor="@color/gray_6"
+                        android:textSize="@dimen/sp_13">
+
+                    </EditText>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+
+        <include layout="@layout/line0_5" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_35"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/popup_tv_cancel_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="@color/gray_6"
+                android:textSize="@dimen/sp_15" />
+
+            <TextView
+                android:layout_width="@dimen/dp_0_1"
+                android:layout_height="match_parent"
+                android:background="@color/x_layout_press_bg" />
+
+            <TextView
+                android:id="@+id/popup_tv_ok_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/gray_6"
+                android:textSize="@dimen/sp_15" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

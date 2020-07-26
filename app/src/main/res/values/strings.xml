@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">驰用宝</string>
+    <string name="title_activity_welcom">WelcomActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="msg_empty">暂无消息</string>
+
+    <!-- 消息板块 -->
+    <string name="bangkuai_ygq">沟通</string>
+    <string name="bangkuai_txl">点评</string>
+    <string name="bangkuai_zxh">真心话</string>
+    <string name="bangkuai_sp">审批</string>
+    <string name="bangkuai_gg">公告</string>
+    <string name="bangkuai_xttz">系统通知</string>
+
+    <!-- 登录 -->
+    <string name="login_hint">用户登录</string>
+    <string name="regist_hint">用户注册</string>
+    <string name="title_activity_fragment_one">Fragment_one</string>
+    <string name="title_activity_fragment_two">Fragment_two</string>
+    <string name="title_activity_worker_group">WorkerGroupActivity</string>
+    <string name="title_activity_group_infor">GroupInforActivity</string>
+    <string name="title_activity_group_dongtai">GroupDongtaiActivity</string>
+    <string name="title_activity_creat_group">CreatGroupActivity</string>
+    <string name="title_activity_publish_post">PublishPostActivity</string>
+    <string name="title_activity_user_home_pager">UserHomePagerActivity</string>
+    <string name="title_activity_login_warn">LoginWarnActivity</string>
+    <string name="title_activity_regist">RegistActivity</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="check_in_sight">汇报工作内容(500字以内)</string>
+    <string name="check_second_adre">备注楼室</string>
+    <string name="check_qiandao">考勤</string>
+    <string name="viewpager_indicator">%1$d/%2$d</string>
+    <string name="renwu_zhixingren">执行人</string>
+
+    <string-array name="tab_name">
+        <item>进行中</item>
+        <item>关注</item>
+        <item>添加任务</item>
+        <item>草稿</item>
+        <item>统计</item>
+    </string-array>
+    <string-array name="tabrenwu_name">
+        <item>增加人</item>
+        <item>增加子任务</item>
+        <item>提醒设置</item>
+        <item>发布</item>
+    </string-array>
+
+    <string name="title_activity_team_doing_count">TeamDoingCountActivity</string>
+    <string name="title_activity_team_work_count">TeamWorkCountActivity</string>
+    <string name="title_activity_new_ren_wu">NewRenWuActivity</string>
+    <string name="title_activity_add_person">AddPersonActivity</string>
+    <string name="title_activity_add_zi_ren_wu">AddZiRenWuActivity</string>
+    <string name="title_activity_ren_wu_ming_xi">RenWuMingXiActivity</string>
+    <string name="title_activity_dai_ban_search">DaiBanSearchActivity</string>
+    <string name="title_activity_ren_wu_fan_kui">RenWuFanKuiActivity</string>
+    <string name="title_activity_ren_wu_ming_xi_dialo">RenWuMingXiDialoActivity</string>
+    <string name="title_activity_mine">MineActivity</string>
+    <string name="title_activity_mine_infor">MineInforActivity</string>
+    <string name="title_activity_zhen_xin">ZhenXinActivity</string>
+    <string name="title_activity_diao_cha">DiaoChaActivity</string>
+    <string name="title_activity_zhen_xin_test">ZhenXinTestActivity</string>
+    <string name="title_activity_qian_dao">QianDaoAct</string>
+    <string name="title_activity_zhi_shi_ku_zi_lei">ZhiShiKuZiLeiActivity</string>
+    <string name="title_activity_up_date_group_name">UpDateGroupNameActivity</string>
+    <string name="title_activity_zhen_xin_tong_ji">ZhenXinTongJiActivity</string>
+    <string name="title_activity_replay_zhen_xin">ReplayZhenXinActivity</string>
+    <string name="title_activity_black_list">BlackListActivity</string>
+    <string name="title_activity_up_infor">UpInforActivity</string>
+    <string name="title_activity_fragment_three">Fragment_three</string>
+    <string name="title_activity_ding_cang">DingCangActivity</string>
+    <string name="title_activity_up_sex">UpSexActivity</string>
+    <string name="title_activity_bu_men_list">BuMenListActivity</string>
+    <string name="title_activity_search_member">SearchMemberActivity</string>
+    <string name="title_activity_my_message_list">MyMessageListActivity</string>
+    <string name="title_activity_home_per_aft_load">HomePerAftLoadAct</string>
+    <string name="title_activity_after_load_new">AfterLoadNewAct</string>
+    <string name="title_activity_psw_set">PswSetActivity</string>
+    <string name="title_activity_un_read_ban_kuai">UnReadBanKuaiActivity</string>
+    <string name="title_activity_chose_file">ChoseFileActivity</string>
+    <string name="title_activity_add_zhi_shi_ku">AddZhiShiKuActivity</string>
+    <string name="title_activity_fragment__all">Fragment_All</string>
+    <string name="title_activity_fragment_wendan">Fragment_wendan</string>
+    <string name="title_activity_fragment_media">Fragment_media</string>
+    <string name="title_activity_fragment_image">Fragment_image</string>
+    <string name="title_activity_knowledge_list">KnowledgeListActivity</string>
+    <string name="title_activity_single_knowledge">SingleKnowledgeActivity</string>
+    <string name="title_activity_search_knowledge">SearchKnowledgeActivity</string>
+    <string name="title_activity_question_comm">QuestionCommActivity</string>
+    <string name="title_activity_cut_image">CutImageActivity</string>
+    <string name="title_activity_verson_up_dialog">VersonUpDialogActivity</string>
+    <string name="title_activity_file_list">FileListActivity</string>
+    <string name="title_activity_tong_ji">TongJiActivity</string>
+    <string name="title_activity_wai_chu_check">WaiChuCheckActivity</string>
+    <string name="title_activity_check_wai_chu">CheckWaiChuActivity</string>
+    <string name="title_activity_wai_chu_detial">WaiChuDetialActivity</string>
+    <string name="title_activity_forget_psw_">Forget_psw_Activity</string>
+    <string name="title_activity_forget_psw_next_">Forget_psw_next_Activity</string>
+    <string name="title_activity_shen_pi">ShenPiActivity</string>
+    <string name="title_activity_add_shen_pi">AddShenPiActivity</string>
+    <string name="title_activity_shen_pi_detial">ShenPiDetialActivity</string>
+    <string name="title_activity_shen_pi__isend">ShenPi_ISendActivity</string>
+    <string name="title_activity_add_shen_pi_ren">AddShenPiRenActivity</string>
+    <string name="title_activity_shen_pi__ishen_pi">ShenPi_IShenPiActivity</string>
+    <string name="title_activity_add_bao_xiao">AddBaoXiaoActivity</string>
+    <string name="title_activity_shen_pi_chu_chai">ShenPiChuChaiActivity</string>
+    <string name="title_activity_add_wu_ping_ling_yong">AddWuPingLingYongActivity</string>
+    <string name="title_activity_add_tong_yong">AddTongYongActivity</string>
+    <string name="title_activity_add_ai_te_person">AddAiTePersonActivity</string>
+    <string name="title_activity_map__my_position">Map_MyPositionActivity</string>
+    <string name="title_activity_map__loaction">Map_LoactionActivity</string>
+    <string name="title_activity_oa__main">OA_MainActivity</string>
+    <string name="title_activity_oa__dai_ban">OA_DaiBanActivity</string>
+    <string name="title_activity_oa__li_shi">OA_LiShiActivity</string>
+    <string name="title_activity_oa__dai_li">OA_DaiLiActivity</string>
+    <string name="title_activity_oa__liu_chen_detial">OA_LiuChenDetialActivity</string>
+    <string name="title_activity_oa__liu_chen">OA_LiuChenActivity</string>
+    <string name="title_activity_oa__shen_pi_detial">OA_ShenPiDetialActivity</string>
+    <string name="title_activity_oa__shen_pi_li_shi">OA_ShenPiLiShiActivity</string>
+    <string name="title_activity_oa__add_dai_li">OA_AddDaiLiActivity</string>
+    <string name="title_activity_xzkh">XzkhActivity</string>
+    <string name="title_activity_statement">StatementActivity</string>
+    <string name="title_activity_statement_list">StatementListActivity</string>
+    <string name="title_activity_plan_callon">PlanCallonActivity</string>
+    <string name="title_activity_add_plan">AddPlanActivity</string>
+    <string name="title_activity_test">TestActivity</string>
+
+    <string-array name="language_entries">
+        <item>普通话</item>
+        <item>粤语</item>
+        <item>河南话</item>
+        <item>英语</item>
+    </string-array>
+    <string-array name="language_values">
+        <item>mandarin</item>
+        <item>cantonese</item>
+        <item>henanese</item>
+        <item>en_us</item>
+    </string-array>
+    <string-array name="punc_entries">
+        <item>有标点</item>
+        <item>无标点</item>
+    </string-array>
+    <string-array name="punc_values">
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+
+    <string name="pref_key_iat_show">iat_show</string>
+    <string name="pref_title_iat_show">显示听写界面</string>
+    <string name="text_begin">请开始说话…</string>
+    <string name="app_id">57ae9efb</string>
+    <string name="title_activity_choose_shop">ChooseShopActivity</string>
+
+
+    <!--蓝牙打印相关：开始-->
+    <string name="bluetooth">蓝牙</string>
+    <string name="usb">USB</string>
+    <string name="ethernet">网口</string>
+    <string name="print_mode">打印模式</string>
+    <string name="tsc">标签</string>
+    <string name="esc">票据</string>
+    <string name="print_text">打印文字</string>
+    <string name="print_image">打印图片</string>
+    <string name="print_1d_barcode">打印一维码</string>
+    <string name="open">打开端口</string>
+    <string name="close">关闭端口</string>
+    <string name="receive">接收的数据</string>
+    <string name="query">查询状态</string>
+    <string name="address">地址:</string>
+    <string name="port_parameters_wrong">端口参数错误！</string>
+    <string name="port_parameters_is_not_save">端口参数未保存！</string>
+    <string name="gprinter005">打印机 005</string>
+    <string name="gprinter006">打印机 006</string>
+    <string name="gprinter007">打印机 007</string>
+    <string name="gprinter008">打印机 008</string>
+    <string name="gprinter009">打印机 009</string>
+    <string name="gprinter010">打印机 010</string>
+    <string name="gprinter011">打印机 011</string>
+    <string name="gprinter012">打印机 012</string>
+    <string name="gprinter013">打印机 013</string>
+    <string name="gprinter014">打印机 014</string>
+    <string name="gprinter015">打印机 015</string>
+    <string name="gprinter016">打印机 016</string>
+    <string name="gprinter017">打印机 017</string>
+    <string name="gprinter018">打印机 018</string>
+    <string name="gprinter019">打印机 019</string>
+    <string name="gprinter020">打印机 020</string>
+    <string name="ok">确定</string>
+    <string name="port_configuration">端口设置</string>
+    <string name="refresh_bluetooth_list">打开蓝牙设备列表</string>
+    <string name="usb_info">扫描到的设备USB信息</string>
+    <string name="refresh_usb_device">扫描USB设备</string>
+    <string name="ip_address">ip:</string>
+    <string name="default_ip_address">192.168.123.100</string>
+    <string name="port_number">port:</string>
+    <string name="default_port_number">9100</string>
+    <string name="bluetooth_address">蓝牙地址： </string>
+    <string name="usb_address">USB： </string>
+    <string name="current_version">当前版本</string>
+    <string name="find_new_version">发现新版本</string>
+    <string name="whether_or_not_to_update">是否更新？</string>
+
+    <string name="app_update">App软件更新</string>
+    <string name="update">更新</string>
+    <string name="not_update">暂不更新</string>
+    <string name="downloading">正在下载</string>
+    <string name="please_wait">请稍后</string>
+    <string name="download_complated">下载完成</string>
+    <string name="whether_or_not_setup_new_app">是否安装新的应用</string>
+    <string name="loading">正在载入。。。</string>
+    <string name="cancel">取消</string>
+    <!--蓝牙打印相关：结束-->
+    <string name="title_paired_devices">已配对</string>
+    <string name="title_other_devices">New</string>
+    <string name="scan">扫描</string>
+    <string name="bluetooth_device_list">蓝牙设备列表</string>
+    <string name="select_bluetooth_device">选择蓝牙设备</string>
+    <string name="none_bluetooth_device_found">没有找到蓝牙设备</string>
+    <string name="none_paired">没有已配对设备</string>
+    <string name="scaning">扫描</string>
+    <string name="usb_devices_list">USB设备列表</string>
+    <string name="none_usb_device">没有USB设备</string>
+
+    <string-array name="baudrate">
+        <item>4800</item>
+        <item>9600</item>
+        <item>19200</item>
+        <item>38400</item>
+        <item>115200</item>
+    </string-array>
+    <string name="str_no_serialport">该设备不支持串口</string>
+    <string name="str_conn_state_disconnect">连接状态：未连接</string>
+    <string name="str_conn_state_connecting">连接状态：连接中</string>
+    <string name="str_connecting">连接中</string>
+    <string name="str_conn_state_connected">连接状态：已连接</string>
+    <string name="str_wifi_ip">请输入IP：</string>
+    <string name="str_ip">IP: </string>
+    <string name="str_port">Port: </string>
+    <string name="str_wifi_port">请输入端口号：</string>
+    <string name="str_state_query">状态查询</string>
+    <string name="str_mode_change">更换打印模式</string>
+    <string name="str_disconnect">断开连接</string>
+    <string name="str_label_print">标签打印</string>
+    <string name="str_receipt_print">票据打印</string>
+    <string name="str_cpcl_print">面单打印</string>
+    <string name="str_bluetooth_connect">蓝牙连接</string>
+    <string name="str_usb_connect">USB连接</string>
+    <string name="str_wifi_connect">wifi连接</string>
+    <string name="str_serialport_connect">串口连接</string>
+    <string name="str_confirm">确定</string>
+    <string name="str_cancel">取消</string>
+    <string name="str_cann_printer">请先连接打印机</string>
+    <string name="str_bluetooth">蓝牙</string>
+    <string name="str_serialport">串口</string>
+    <string name="str_usb">USB</string>
+    <string name="str_wifi">WIFI</string>
+    <string name="str_conn_successful">连接成功！</string>
+    <string name="str_conn_fail">连接失败！</string>
+    <string name="str_baudrate">波特率：</string>
+    <string name="str_serialport_path">串口路径：</string>
+    <string name="str_conn_devices">多设备</string>
+    <string name="str_conn_receipt_and_label_continuity_print">连续打印</string>
+    <string name="str_address">地址：</string>
+    <string name="gprinter001">Printer 001</string>
+    <string name="gprinter002">Printer 002</string>
+    <string name="gprinter003">Printer 003</string>
+    <string name="gprinter004">Printer 004</string>
+    <string name="disconnect">断开连接</string>
+    <string name="cut">未连接</string>
+    <string name="cutting">断开连接中...</string>
+    <string name="str_disconn">断开</string>
+    <string name="connect">连接</string>
+    <string name="connected">已连接</string>
+    <string name="connecting">连接中...</string>
+    <string name="port">接口:未设定 </string>
+    <string name="init_port_info">地址:不详</string>
+    <string name="str_enter_print_counts">请输入打印次数：</string>
+    <string name="str_choice_printer_command">请选择正确的打印机指令</string>
+    <string name="str_printer_conn_normal">打印机连接正常</string>
+    <string name="str_printer_out_of_paper">打印机缺纸</string>
+    <string name="str_printer_open_cover">打印机开盖</string>
+    <string name="str_printer_error">打印机出错</string>
+    <string name="str_state">状态：</string>
+    <string name="str_interface_undefine">接口：未设定</string>
+    <string name="str_select_printer_id">选中id为{0}的打印机</string>
+    <string name="bluetooth_is_not_enabled">蓝牙没有开启</string>
+    <string-array name="str_interf_type">
+        <item>蓝牙</item>
+        <item>网口</item>
+        <item>USB</item>
+    </string-array>
+    <string name="str_cpclmode">面单模式</string>
+    <string name="str_escmode">票据模式</string>
+    <string name="str_tscmode">标签模式</string>
+    <string name="str_synchronous_print">多设备同步打印</string>
+    <string name="str_printer_printmode_esc">打印模式:ESC</string>
+    <string name="str_printer_printmode_tsc">打印模式:TSC</string>
+    <string name="str_printer_printmode_cpcl">打印模式:CPCL</string>
+    <string name="str_continuityprinter">连续打印:</string>
+    <string name="str_continuity_count">连续打印的数目为空</string>
+    <string name="str_stop_continuityprint">停止连续打印</string>
+    <string name="str_stop_continuityprint_success">成功停止打印</string>
+    <string name="str_disconnect_success">成功断开连接</string>
+    <string name="str_title_newdev">未配对</string>
+    <string name="str_title_pairedev">已配对</string>
+    <string name="str_tv_printcount">打印次数:</string>
+    <string name="str_print_selftest">打印自检页</string>
+    <string name="str_print_xml">打印XML</string>
+    <string name="title_activity_delivery">DeliveryActivity</string>
+    <string name="title_activity_storehouse">StorehouseActivity</string>
+
+</resources>

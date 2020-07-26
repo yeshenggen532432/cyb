@@ -1,0 +1,123 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/y_layout_head_base" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_35"
+        android:background="@color/layout_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_track_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_weight="1"
+            tools:text="text"
+            android:textColor="@color/gray_6"
+            android:textSize="@dimen/sp_15" />
+
+        <TextView
+            android:id="@+id/tv_track_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_10"
+            tools:text="0000-00-00"
+            android:textColor="@color/gray_9"
+            android:textSize="@dimen/sp_13" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_playback"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fadingEdge="none"/>
+        </LinearLayout>
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/bmapView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="@dimen/dp_35"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_marginBottom="@dimen/dp_180"
+            android:layout_marginRight="@dimen/dp_10"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/btn_up"
+                android:layout_width="@dimen/dp_35"
+                android:layout_height="@dimen/dp_39"
+                android:background="@drawable/selector_btn_up"
+                android:enabled="false" />
+
+            <Button
+                android:id="@+id/btn_down"
+                android:layout_width="@dimen/dp_35"
+                android:layout_height="@dimen/dp_39"
+                android:background="@drawable/selector_btn_down" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <include layout="@layout/line1" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/dp_2"
+        android:paddingTop="@dimen/dp_2" >
+
+        <RadioButton
+            android:id="@+id/rb_bfhf"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/selecter_3_bfhf"
+            android:gravity="center" />
+
+        <RadioButton
+            android:id="@+id/rb_ygfbt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/selecter_3_ygfbt"
+            android:gravity="center" />
+
+        <RadioButton
+            android:id="@+id/rb_gjhf"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/selecter_3_gjhf"
+            android:gravity="center" />
+    </RadioGroup>
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+     >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" >
+
+        <com.xmsx.cnlife.widget.CircleImageView
+            android:id="@+id/iv_userhead"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/user_headico" />
+
+        <ImageView
+            android:id="@+id/iv_delmodel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:src="@drawable/dele_member"
+            android:visibility="gone" />
+
+        <TextView
+            style="@style/tv_cgray6_s13"
+            android:id="@+id/tv_membername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_userhead"
+            android:layout_centerHorizontal="true"
+            android:singleLine="true"
+            tools:text="TextView" />
+    </RelativeLayout>
+
+</RelativeLayout>

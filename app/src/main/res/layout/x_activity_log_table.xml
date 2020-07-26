@@ -1,0 +1,106 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/y_layout_head_base" />
+
+    <!-- 此部分是标题部分 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_35"
+        android:background="@color/layout_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- 左侧标题的父容器 -->
+
+        <TextView
+            android:id="@+id/tv_table_title_left"
+            style="@style/TextView_Table_title"
+            android:textColor="@color/gray_3"
+            android:textSize="@dimen/sp_13"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_35"
+            android:gravity="center"
+            android:maxLines="2"
+            android:textStyle="bold"
+            android:layout_weight="3"
+            tools:text="总标题"/>
+
+        <!-- 右侧标题的父容器可实现水平滚动 -->
+        <com.xmsx.cnlife.widget.SyncHorizontalScrollView
+            android:id="@+id/title_horsv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/right_title_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+            </LinearLayout>
+        </com.xmsx.cnlife.widget.SyncHorizontalScrollView>
+    </LinearLayout>
+
+    <!-- 此部分是内容部分 用ScrollView实现上下滚动效果 -->
+    <com.xmsx.cnlife.widget.pullrefresh.AbPullToRefreshView
+        android:id="@+id/pulltorefreshview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/pull_refresh_scroll"
+            android:layout_width="match_parent"
+            android:overScrollMode="never"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- 左侧内容的父容器 -->
+                <com.xmsx.cnlife.widget.MyListView
+                    android:id="@+id/left_container_listview"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:divider="@color/blue"
+                    android:dividerHeight="0dp"
+                    android:overScrollMode="never"
+                    android:scrollbars="none">
+                </com.xmsx.cnlife.widget.MyListView>
+
+                <!-- 右侧内容的父容器 实现水平滚动 -->
+                <com.xmsx.cnlife.widget.SyncHorizontalScrollView
+                    android:id="@+id/content_horsv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:fillViewport="true"
+                    android:overScrollMode="never"
+                    android:scrollbars="none">
+
+                    <com.xmsx.cnlife.widget.MyListView
+                        android:id="@+id/right_container_listview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:divider="@color/blue"
+                        android:dividerHeight="0dp"
+                        android:overScrollMode="never"
+                        android:scrollbars="none">
+                    </com.xmsx.cnlife.widget.MyListView>
+
+                </com.xmsx.cnlife.widget.SyncHorizontalScrollView>
+            </LinearLayout>
+        </ScrollView>
+    </com.xmsx.cnlife.widget.pullrefresh.AbPullToRefreshView>
+
+
+</LinearLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:background="#eee"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/rb1"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:button="@null"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:padding="@dimen/dp_5"
+                android:singleLine="true"
+                android:text="待接收"
+                android:checked="true"
+                android:textColor="@color/selector_gp_rizhi"
+                android:textSize="@dimen/sp_12" />
+            <RadioButton
+                android:id="@+id/rb2"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:button="@null"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:padding="@dimen/dp_5"
+                android:singleLine="true"
+                android:text="已接收"
+                android:textColor="@color/selector_gp_rizhi"
+                android:textSize="@dimen/sp_12" />
+            <RadioButton
+                android:id="@+id/rb3"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:button="@null"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:padding="@dimen/dp_5"
+                android:singleLine="true"
+                android:text="配送中"
+                android:textColor="@color/selector_gp_rizhi"
+                android:textSize="@dimen/sp_12" />
+
+            <RadioButton
+                android:id="@+id/rb4"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:button="@null"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:padding="@dimen/dp_5"
+                android:singleLine="true"
+                android:text="已收货"
+                android:textColor="@color/selector_gp_rizhi"
+                android:textSize="@dimen/sp_12" />
+
+            <RadioButton
+                android:id="@+id/rb6"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:button="@null"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:padding="@dimen/dp_5"
+                android:singleLine="true"
+                android:text="已完成"
+                android:textColor="@color/selector_gp_rizhi"
+                android:textSize="@dimen/sp_12" />
+
+            <RadioButton
+                android:id="@+id/rb5"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:button="@null"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:padding="@dimen/dp_5"
+                android:singleLine="true"
+                android:text="配送终止"
+                android:textColor="@color/selector_gp_rizhi"
+                android:textSize="@dimen/sp_12" />
+        </RadioGroup>
+
+</LinearLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/gg_first_single"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_fileName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="文件名"
+            android:textColor="@color/blue_head"
+            android:textStyle="bold" />
+
+        <include layout="@layout/line1" />
+
+        <LinearLayout
+            android:id="@+id/ll_zhuanfa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_zhuanfa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="发送给" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_updatefileNm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <include layout="@layout/line1" />
+
+            <TextView
+                android:id="@+id/tv_updatefileNm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="重命名" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_moveFile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <include layout="@layout/line1" />
+
+            <TextView
+                android:id="@+id/tv_moveFile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="移动到" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_deleteFile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <include layout="@layout/line1" />
+
+            <TextView
+                android:id="@+id/tv_deleteFile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="删除" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

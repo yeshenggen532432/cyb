@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/merge_sales"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_35">
+
+    <include
+        android:visibility="visible"
+        layout="@layout/line1_v_match" />
+
+    <TextView
+        android:id="@+id/tv_table_title_0"
+        style="@style/TextView_Table_Right_70"
+        android:text="规格"
+        android:textStyle="bold" />
+
+    <include
+        android:visibility="visible"
+        layout="@layout/line1_v_match" />
+
+    <TextView
+        android:id="@+id/tv_table_title_3"
+        style="@style/TextView_Table_Right_70"
+        android:text="回库数量(小)"
+        android:textStyle="bold" />
+
+    <include
+        android:visibility="visible"
+        layout="@layout/line1_v_match" />
+
+    <TextView
+        android:id="@+id/tv_table_title_2"
+        style="@style/TextView_Table_Right_60"
+        android:text="单位(小)"
+        android:textStyle="bold" />
+
+    <include
+        android:visibility="visible"
+        layout="@layout/line1_v_match" />
+
+    <TextView
+        android:id="@+id/tv_table_title_8"
+        style="@style/TextView_Table_Right_70"
+        android:text="回库数量(大)"
+        android:textStyle="bold" />
+
+    <include
+        android:visibility="visible"
+        layout="@layout/line1_v_match" />
+
+    <TextView
+        android:id="@+id/tv_table_title_9"
+        style="@style/TextView_Table_Right_60"
+        android:text="单位(大)"
+        android:textStyle="bold" />
+
+    <include
+        android:visibility="visible"
+        layout="@layout/line1_v_match" />
+
+    <TextView
+        android:id="@+id/tv_table_title_7"
+        style="@style/TextView_Table_Right_40"
+        android:text="操作"
+        android:textStyle="bold" />
+
+    <include
+        layout="@layout/line1_v_match"
+        android:visibility="visible" />
+
+
+</LinearLayout>

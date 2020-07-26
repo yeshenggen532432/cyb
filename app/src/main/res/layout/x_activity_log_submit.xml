@@ -1,0 +1,250 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/y_layout_head_base" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/hale_light_gray" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_1"
+                android:background="@color/white"
+                android:minHeight="@dimen/dp_47" >
+
+                <TextView
+                    android:id="@+id/tv_gzNr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:text="今日完成工作"
+                    android:textColor="@color/gray_3"
+                    android:textSize="@dimen/sp_15" />
+
+                <EditText
+                    android:id="@+id/edit_gzNr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_toRightOf="@+id/tv_gzNr"
+                    android:background="@null"
+                    android:ems="10"
+                    android:hint="请输入文字(必填)"
+                    android:textColor="@color/gray_6"
+                    android:textSize="@dimen/sp_13" />
+
+                <TextView
+                    android:id="@+id/tv_gzNr_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/tv_gzNr"
+                    android:layout_below="@+id/tv_gzNr"
+                    android:layout_marginBottom="@dimen/dp_2"
+                    android:text="最少100已写10"
+                    android:textColor="@color/gray_9"
+                    android:textSize="@dimen/sp_10"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_1"
+                android:background="@color/white"
+                android:minHeight="@dimen/dp_47" >
+
+                <TextView
+                    android:id="@+id/tv_gzZj"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="　未完成工作"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:textColor="@color/gray_3"
+                    android:textSize="@dimen/sp_15" />
+
+                <EditText
+                    android:id="@+id/edit_gzZj"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_toRightOf="@+id/tv_gzZj"
+                    android:background="@null"
+                    android:ems="10"
+                    android:hint="请输入文字(必填)"
+                    android:textColor="@color/gray_6"
+                    android:textSize="@dimen/sp_13" />
+
+                <TextView
+                    android:id="@+id/tv_gzZj_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/tv_gzZj"
+                    android:layout_below="@+id/tv_gzZj"
+                    android:layout_marginBottom="@dimen/dp_2"
+                    android:text="最少100已写10"
+                    android:textColor="@color/gray_9"
+                    android:textSize="@dimen/sp_10"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_gzJh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_1"
+                android:background="@color/white"
+                android:minHeight="@dimen/dp_47"
+                 >
+
+                <TextView
+                    android:id="@+id/tv_gzJh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:textColor="@color/gray_3"
+                    android:textSize="@dimen/sp_15"
+                    android:text="　需调协工作" />
+
+
+                <EditText
+                    android:id="@+id/edit_gzJh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_toRightOf="@+id/tv_gzJh"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:ems="10"
+                    android:hint="请输入文字(必填)"
+                    android:textColor="@color/gray_6"
+                    android:textSize="@dimen/sp_13" />
+                
+                <TextView
+                    android:id="@+id/tv_gzJh_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/tv_gzJh"
+                    android:layout_below="@+id/tv_gzJh"
+                    android:layout_marginBottom="@dimen/dp_2"
+                    android:text="最少100已写10"
+                    android:textColor="@color/gray_9"
+                    android:textSize="@dimen/sp_10"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_gzBz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_1"
+                android:background="@color/white"
+                android:minHeight="@dimen/dp_47"
+                 >
+
+                <TextView
+                    android:id="@+id/tv_gzBz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:textColor="@color/gray_3"
+                    android:textSize="@dimen/sp_15"
+                    android:text="需帮助与支持" />
+
+
+                <EditText
+                    android:id="@+id/edit_gzBz"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/tv_gzBz"
+                    android:background="@null"
+                    android:ems="10"
+                    android:hint="请输入文字"
+                    android:textColor="@color/gray_6"
+                    android:textSize="@dimen/sp_13" />
+                
+                 <TextView
+                    android:id="@+id/tv_gzBz_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/tv_gzBz"
+                    android:layout_below="@+id/tv_gzBz"
+                    android:layout_marginBottom="@dimen/dp_2"
+                    android:text="最少100已写10"
+                    android:textColor="@color/gray_9"
+                    android:textSize="@dimen/sp_10"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_1"
+                android:background="@color/white"
+                android:minHeight="@dimen/dp_47" >
+
+                <TextView
+                    android:id="@+id/tv_remo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:textColor="@color/gray_3"
+                    android:textSize="@dimen/sp_15"
+                    android:text="	       　备注" />
+
+
+                <EditText
+                    android:id="@+id/edit_remo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/tv_remo"
+                    android:background="@null"
+                    android:ems="10"
+                    android:hint="请输入文字"
+                    android:textColor="@color/gray_6"
+                    android:textSize="@dimen/sp_13" />
+                
+                <TextView
+                    android:id="@+id/tv_remo_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/tv_remo"
+                    android:layout_below="@+id/tv_remo"
+                    android:layout_marginBottom="@dimen/dp_2"
+                    android:text="最少100已写10"
+                    android:textColor="@color/gray_9"
+                    android:textSize="@dimen/sp_10"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <include
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                layout="@layout/x_add_shen_pi_comm" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

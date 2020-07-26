@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout
+        android:id="@+id/es"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentView="@+id/content"
+        app:leftMenuView="@+id/left"
+        app:rightMenuView="@+id/right">
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+            <!--商品名称-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="@dimen/dp_75"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/item_tv_sort"
+                        android:layout_width="@dimen/dp_14"
+                        android:layout_height="@dimen/dp_14"
+                        android:layout_marginLeft="@dimen/dp_3"
+                        android:gravity="center"
+                        android:text="01"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_9"
+                        app:bl_corners_radius="@dimen/dp_10"
+                        app:bl_solid_color="@color/x_main_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="商品名称"
+                        android:textColor="@color/gray_3"
+                        android:textSize="@dimen/sp_13" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":  "
+                    android:textColor="@color/gray_3"
+                    android:textSize="@dimen/sp_13" />
+
+                <TextView
+                    android:id="@+id/item_tv_name"
+                    style="@style/xEditText_base"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint="输入商品名称,商品代码,商品条码"
+                    android:minLines="1" />
+
+                <LinearLayout
+                    android:id="@+id/item_layout_copy"
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/head_right"
+                    android:gravity="center"
+                    app:bl_pressed_drawable="@color/x_layout_press_bg">
+
+                    <TextView
+                        style="@style/tv_cblue_s11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="复制"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/item_layout_ddd"
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/head_right"
+                    android:gravity="center"
+                    app:bl_pressed_drawable="@color/x_layout_press_bg">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_15"
+                        android:layout_height="@dimen/dp_15"
+                        android:src="@mipmap/home_scan_b" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--<include layout="@layout/line0_1" />-->
+
+            <!--大单位数量，小单位数量-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/item_tv_max_name"
+                        android:layout_width="@dimen/dp_70"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:text="盘点数量"
+                        android:textColor="@color/gray_3"
+                        android:textSize="@dimen/sp_13" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":  "
+                        android:textColor="@color/gray_3"
+                        android:textSize="@dimen/sp_13" />
+
+                    <com.xw.repo.XEditText
+                        android:id="@+id/item_et_max"
+                        style="@style/xEditText_base"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal"
+                        app:x_clearDrawable="@mipmap/login_icon_close" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/item_layout_min_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                    <!--小单位数量-->
+                    <TextView
+                        android:id="@+id/item_tv_min_name"
+                        android:layout_width="@dimen/dp_70"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:textColor="@color/gray_3"
+                        android:textSize="@dimen/sp_13"
+                        tools:text="件" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":  "
+                        android:textColor="@color/gray_3"
+                        android:textSize="@dimen/sp_13" />
+
+                    <com.xw.repo.XEditText
+                        android:id="@+id/item_et_min"
+                        style="@style/xEditText_base"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal"
+                        app:x_clearDrawable="@mipmap/login_icon_close" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--库存数量-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/dp_70"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:text="账面数量"
+                        android:textColor="@color/gray_3"
+                        android:textSize="@dimen/sp_13" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":  "
+                        android:textColor="@color/gray_3"
+                        android:textSize="@dimen/sp_13" />
+
+                    <com.xw.repo.XEditText
+                        android:id="@+id/item_et_stk_qty"
+                        style="@style/xEditText_base"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:enabled="false"
+                        android:inputType="numberDecimal"
+                        app:x_clearDrawable="@mipmap/login_icon_close" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!--盘盈亏;生产日期-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/dp_70"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:text="盘盈亏(±)"
+                        android:textColor="@color/gray_3"
+                        android:textSize="@dimen/sp_13" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":  "
+                        android:textColor="@color/gray_3"
+                        android:textSize="@dimen/sp_13" />
+
+                    <com.xw.repo.XEditText
+                        android:id="@+id/item_et_dis_qty"
+                        style="@style/xEditText_base"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:enabled="false"
+                        android:inputType="numberDecimal"
+                        app:x_clearDrawable="@mipmap/login_icon_close" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/item_tv_produce_date"
+                        style="@style/xEditText_base"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:hint="生产日期(盘盈)" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--账面单位成本(大)，实际单位成本(大)-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/dp_90"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:text="账面单位成本(大)"
+                        android:textColor="@color/gray_3"
+                        android:textSize="@dimen/sp_11" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":  "
+                        android:textColor="@color/gray_3"
+                        android:textSize="@dimen/sp_13" />
+
+                    <com.xw.repo.XEditText
+                        android:enabled="false"
+                        android:id="@+id/item_et_zm_price"
+                        style="@style/xEditText_base"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal"
+                        app:x_clearDrawable="@mipmap/login_icon_close" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="@dimen/dp_90"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:textColor="@color/gray_3"
+                        android:textSize="@dimen/sp_11"
+                        android:text="实际单位成本(大)" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":  "
+                        android:textColor="@color/gray_3"
+                        android:textSize="@dimen/sp_13" />
+
+                    <com.xw.repo.XEditText
+                        android:id="@+id/item_et_price"
+                        style="@style/xEditText_base"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal"
+                        app:x_clearDrawable="@mipmap/login_icon_close" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--侧滑菜单-->
+        <LinearLayout
+            android:id="@+id/right"
+            android:layout_width="@dimen/dp_80"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/tv_cwhite_s15"
+                android:id="@+id/right_del"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/red"
+                android:gravity="center"
+                android:text="删除" />
+
+            <TextView
+                style="@style/tv_cwhite_s15"
+                android:id="@+id/right_copy"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/blue"
+                android:gravity="center"
+                android:text="复制" />
+
+        </LinearLayout>
+
+    </com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout>
+
+</LinearLayout>

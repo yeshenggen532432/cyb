@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/merge_sales"
+       xmlns:android="http://schemas.android.com/apk/res/android"
+       android:layout_width="match_parent"
+       android:layout_height="@dimen/dp_30"
+       android:orientation="horizontal">
+
+
+    <TextView android:id="@+id/tv_table_title_1"
+              style="@style/TextView_Table_Right_60"
+              android:text="规格"/>
+
+    <include layout="@layout/linev_0_5"/>
+
+    <TextView android:id="@+id/tv_table_title_2"
+              style="@style/TextView_Table_Right_40"
+              android:text="单位"/>
+
+    <include layout="@layout/linev_0_5"/>
+
+    <TextView android:id="@+id/tv_table_title_3"
+              style="@style/TextView_Table_Right_60"
+              android:text="数量"/>
+
+    <include layout="@layout/linev_0_5"/>
+
+    <TextView android:id="@+id/tv_table_title_4"
+              style="@style/TextView_Table_Right_60"
+              android:text="单价"/>
+
+    <include layout="@layout/linev_0_5"/>
+
+    <TextView android:id="@+id/tv_table_title_5"
+              style="@style/TextView_Table_Right_60"
+              android:text="总价"/>
+
+    <include layout="@layout/linev_0_5"/>
+
+
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_5"
+        android:background="@color/gray_d"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_35"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <include layout="@layout/line1_v"/>
+
+        <TextView
+            android:id="@+id/tv_table_content_right_item0"
+            style="@style/TextView_Table_Right"
+            tools:text="列数-0"/>
+
+        <include layout="@layout/line1_v"/>
+
+        <TextView
+            android:id="@+id/tv_table_content_right_item1"
+            style="@style/TextView_Table_Right"
+            tools:text="列数-1"/>
+
+        <include layout="@layout/line1_v"/>
+
+        <TextView
+            android:id="@+id/tv_table_content_right_item2"
+            style="@style/TextView_Table_Right"
+            tools:text="列数-2"/>
+
+        <include layout="@layout/line1_v"/>
+
+        <TextView
+            android:id="@+id/tv_table_content_right_item3"
+            style="@style/TextView_Table_Right"
+            tools:text="列数-3"/>
+
+        <include layout="@layout/line1_v"/>
+
+        <TextView
+            android:id="@+id/tv_table_content_right_item4"
+            style="@style/TextView_Table_Right"
+            tools:text="列数-3"/>
+
+        <include layout="@layout/line1_v"/>
+
+    </LinearLayout>
+
+</LinearLayout>

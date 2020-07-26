@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_contentview"
+        android:layout_width="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shadow_bg"
+        android:orientation="vertical"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue"
+            android:textSize="22sp"
+            android:gravity="left"
+            android:layout_marginLeft="15dp"
+            android:text="创建类别" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/light_gray"
+             />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            >
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/et_conten"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/green_ling_bg"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="3dp"
+            android:ems="10" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="15dp"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/bt_upName"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:textColor="@color/white"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:background="@drawable/select_square_blue"
+                android:text="确定" />
+
+            <Button
+                android:id="@+id/bt_cancle"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_toRightOf="@+id/bt_upName"
+                android:background="@drawable/select_square_blue"
+                android:textColor="@color/white"
+                 android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:text="取消" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

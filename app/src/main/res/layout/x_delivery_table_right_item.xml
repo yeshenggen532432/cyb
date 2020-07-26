@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+    android:background="#ffffff"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+
+    <TextView
+        android:id="@+id/tv_table_content_right_item1"
+        style="@style/TextView_Table_Right_60"
+        tools:text="规格"/>
+
+    <include layout="@layout/linev_0_5"/>
+
+    <TextView
+        android:id="@+id/tv_table_content_right_item2"
+        style="@style/TextView_Table_Right_40"
+        tools:text="单位" />
+
+    <include layout="@layout/linev_0_5"/>
+
+    <!--android:background="@drawable/shape_kuang_gray"-->
+    <EditText
+        android:enabled="false"
+        android:id="@+id/tv_table_content_right_item3"
+        style="@style/TextView_Table_Right_60"
+        android:selectAllOnFocus="true"
+        android:inputType="numberDecimal"
+        android:background="@null"
+        android:hint="点击输入"
+        tools:text="数量"/>
+
+    <include layout="@layout/linev_0_5"/>
+
+    <EditText
+        android:enabled="false"
+        android:id="@+id/tv_table_content_right_item4"
+        style="@style/TextView_Table_Right_60"
+        android:selectAllOnFocus="true"
+        android:background="@null"
+        android:hint="点击输入"
+        android:inputType="numberDecimal"
+        android:gravity="center"
+        tools:text="单价"/>
+
+    <include layout="@layout/linev_0_5"/>
+
+    <TextView
+        android:id="@+id/tv_table_content_right_item5"
+        style="@style/TextView_Table_Right_60"
+        tools:text="总价"/>
+
+    <include layout="@layout/linev_0_5"/>
+
+
+</LinearLayout>

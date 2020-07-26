@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <com.deadline.statebutton.StateButton
+        android:id="@+id/footer_sb_join_company"
+        android:layout_width="@dimen/dp_80"
+        android:layout_height="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:padding="@dimen/dp_0"
+        android:text="入职申请"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_13"
+        app:normalBackgroundColor="@color/x_main_color"
+        app:pressedBackgroundColor="@color/x_main_color_dirk"
+        app:radius="@dimen/dp_3" />
+
+    <com.deadline.statebutton.StateButton
+        android:id="@+id/footer_sb_register_company"
+        android:layout_width="@dimen/dp_80"
+        android:layout_height="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:padding="@dimen/dp_0"
+        android:text="创建公司"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_13"
+        app:normalBackgroundColor="@color/x_main_color"
+        app:pressedBackgroundColor="@color/x_main_color_dirk"
+        app:radius="@dimen/dp_3" />
+
+</LinearLayout>

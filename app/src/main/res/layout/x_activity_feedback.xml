@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/x_layout_head"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/y_h_bg"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:id="@+id/rg_feed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:paddingRight="8dp">
+
+            <RadioButton
+                android:id="@+id/rb_yichang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="异常问题"
+                android:textColor="@color/dark_gray" />
+
+            <RadioButton
+                android:id="@+id/rb_yijian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="意见改进"
+                android:textColor="@color/dark_gray" />
+
+        </RadioGroup>
+
+        <com.xw.repo.XEditText
+            android:id="@+id/et_feed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/shap_square_light_gray"
+            android:ems="10"
+            android:gravity="left|top"
+            android:hint="说说你的建议"
+            android:minHeight="120dp"
+            android:padding="10dp"
+            android:textSize="14sp">
+
+        </com.xw.repo.XEditText>
+
+        <GridView
+            android:id="@+id/gv_pic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:numColumns="4"/>
+
+    </LinearLayout>
+
+</LinearLayout>

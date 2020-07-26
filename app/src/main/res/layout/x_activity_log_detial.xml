@@ -1,0 +1,290 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/y_layout_head_base" />
+
+    <ScrollView
+        android:id="@+id/sv_detial"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/dp_10"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingRight="@dimen/dp_20"
+                android:paddingTop="@dimen/dp_10" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_toRightOf="@+id/iv_head" >
+
+                        <TextView
+                            android:id="@+id/tv_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/sp_15"
+                            android:textColor="@color/gray_3"
+                            android:text="名称" />
+
+                        <TextView
+                            android:id="@+id/tv_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_title"
+                            android:textSize="@dimen/sp_13"
+                            android:textColor="@color/gray_6"
+                            android:text="时间" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/iv_head"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_oval_zise_50"
+                        android:gravity="center"
+                        android:text="时间"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_10" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/dp_10"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingRight="@dimen/dp_20" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:background="@color/hale_light_gray" />
+
+                <TextView
+                    android:id="@+id/tv_gzNr0"
+                    android:textSize="@dimen/sp_16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gray_6"
+                    android:paddingTop="@dimen/dp_5"
+                    android:text="今日完成工作" />
+                <TextView
+                    android:id="@+id/tv_gzNr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_2"
+                    android:textColor="@color/gray_3"
+                    android:text="" />
+                
+               <include layout="@layout/line1"/>
+
+                <TextView
+                    android:id="@+id/tv_gzZj0"
+                    android:textSize="@dimen/sp_16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gray_6"
+                    android:paddingTop="@dimen/dp_5"
+                    android:text="未完成工作" />
+                <TextView
+                    android:id="@+id/tv_gzZj"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_2"
+                    android:textColor="@color/gray_3"
+                    android:text="" />
+                
+                <include layout="@layout/line1"/>
+
+                <TextView
+                    android:id="@+id/tv_gzJh0"
+                    android:textSize="@dimen/sp_16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                     android:textColor="@color/gray_6"
+                     android:paddingTop="@dimen/dp_5"
+                    android:text="需调协工作" />
+                <TextView
+                    android:id="@+id/tv_gzJh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_2"
+                     android:textColor="@color/gray_3"
+                    android:text="" />
+                <include layout="@layout/line1"/>
+
+                <TextView
+                    android:id="@+id/tv_gzBz0"
+                    android:textSize="@dimen/sp_16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gray_6"
+                    android:paddingTop="@dimen/dp_5"
+                    android:text="需调协工作" />
+                <TextView
+                    android:id="@+id/tv_gzBz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_2"
+                    android:textColor="@color/gray_3"
+                    android:text="" />
+                <include layout="@layout/line1"/>
+
+                <TextView
+                    android:id="@+id/tv_remo0"
+                    android:textSize="@dimen/sp_16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gray_6"
+                    android:paddingTop="@dimen/dp_5"
+                    android:text="备注" />
+                <TextView
+                    android:id="@+id/tv_remo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_2"
+                    android:textColor="@color/gray_3"
+                    android:text="" />
+                <include layout="@layout/line1"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_pic_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible" >
+
+                    <TextView
+                        android:id="@+id/tv_tupian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dp_2"
+                        android:text="图片"
+                        android:textColor="@color/dark_gray" />
+
+                    <com.xmsx.cnlife.widget.ComputeHeightGridView
+                        android:id="@+id/gv_pics"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_tupian"
+                        android:numColumns="6" >
+                    </com.xmsx.cnlife.widget.ComputeHeightGridView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_fujian"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible" >
+
+                    <TextView
+                        android:id="@+id/tv_fujian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dp_2"
+                        android:text="附件"
+                        android:textColor="@color/dark_gray" />
+
+                    <com.xmsx.cnlife.widget.ComputeHeightListView
+                        android:id="@+id/listview_fujian"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_fujian" >
+                    </com.xmsx.cnlife.widget.ComputeHeightListView>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <com.xmsx.cnlife.widget.ComputeHeightListView
+                android:id="@+id/lv_liucheng"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:divider="@null"
+                android:scrollbars="none" >
+            </com.xmsx.cnlife.widget.ComputeHeightListView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_huifu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:padding="@dimen/dp_2"
+                    android:text="共有几条回复"
+                    android:textColor="@color/dark_gray" />
+
+                <com.xmsx.cnlife.widget.ComputeHeightListView
+                    android:id="@+id/lv_huifu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none" >
+                </com.xmsx.cnlife.widget.ComputeHeightListView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="@dimen/dp_5"
+        android:paddingTop="@dimen/dp_5"
+        android:paddingBottom="@dimen/dp_5"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_5"
+            android:layout_weight="1"
+            android:background="@drawable/shape_headblue_rectangle"
+            android:padding="@dimen/dp_5"
+            android:minHeight="@dimen/dp_40"
+            android:textColor="@color/gray_6"
+            android:textSize="@dimen/sp_13" >
+        </EditText>
+
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="@drawable/select_login_btn_blue"
+            android:text="发送"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_13" />
+    </LinearLayout>
+
+</LinearLayout>

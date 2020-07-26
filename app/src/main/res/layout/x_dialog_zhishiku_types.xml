@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/ll_contentview"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shadow_bg"
+        android:paddingTop="20dp"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tv_bumenname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/blue"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="请选择类别" />
+        <TextView
+            android:id="@+id/tv_backlv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:paddingRight="35dp"
+            android:textColor="@color/blue"
+            android:visibility="invisible"
+            android:layout_alignParentRight="true"
+            android:text="返回上一级" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray"
+            android:layout_below="@+id/tv_bumenname"
+            />
+
+        <ListView
+            android:id="@+id/lv_types"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/tv_bumenname"
+            android:layout_above="@+id/rl_bottomview"
+            android:scrollbars="none"
+            android:layout_height="match_parent" >
+        </ListView>
+
+        <RelativeLayout
+            android:id="@+id/rl_bottomview"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="10dp"
+            android:layout_alignParentBottom="true"
+            android:paddingTop="5dp"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/bt_sure"
+                android:layout_width="70dp"
+                android:layout_height="35dp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:background="@drawable/select_square_blue"
+                android:text="确定" />
+
+            <Button
+                android:id="@+id/bt_cancle"
+                android:layout_width="70dp"
+                android:layout_height="35dp"
+                 android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:gravity="center"
+                android:layout_toRightOf="@+id/bt_sure"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/white"
+                android:background="@drawable/select_square_blue"
+                android:text="取消" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

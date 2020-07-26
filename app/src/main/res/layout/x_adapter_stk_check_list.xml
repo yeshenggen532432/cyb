@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/dp_5"
+    android:paddingLeft="@dimen/dp_10"
+    android:paddingRight="@dimen/dp_10"
+    android:paddingTop="@dimen/dp_5"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="@dimen/dp_70"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="单  据  号:"
+                    android:textColor="@color/gray_3"
+                    android:textSize="@dimen/sp_13" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_orderNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/gray_6"
+                android:textSize="@dimen/sp_13"
+                tools:text="DDT180821_214606111" />
+
+            <TextView
+                style="@style/tv_cyellow_s13"
+                android:id="@+id/tv_is_pc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="批次" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="@dimen/dp_70"
+                android:layout_height="@dimen/dp_25">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="盘  点  人:"
+                    android:textColor="@color/gray_3"
+                    android:textSize="@dimen/sp_13" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_weight="1"
+                android:textColor="@color/gray_6"
+                android:textSize="@dimen/sp_13"
+                tools:text="叶生根" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="@dimen/dp_70"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="盘点仓库:"
+                    android:textColor="@color/gray_3"
+                    android:textSize="@dimen/sp_13" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_stkName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:textColor="@color/gray_6"
+                android:textSize="@dimen/sp_13"
+                tools:text="仓库123" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="@dimen/dp_70"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="盘点日期:"
+                    android:textColor="@color/gray_3"
+                    android:textSize="@dimen/sp_13" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_orderTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2018-08-21 00:00"
+                android:textColor="@color/gray_6"
+                android:textSize="@dimen/sp_13" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_orderZt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/x_main_color"
+            android:textSize="@dimen/sp_13"
+            tools:text="暂存" />
+
+        <ImageView
+            android:visibility="visible"
+            android:id="@+id/item_iv_cb"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_60"
+            android:paddingTop="@dimen/dp_18"
+            android:paddingBottom="@dimen/dp_18"
+            android:paddingLeft="@dimen/dp_8"
+            android:paddingRight="@dimen/dp_8"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_dx" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
+

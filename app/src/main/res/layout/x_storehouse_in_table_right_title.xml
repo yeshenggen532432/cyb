@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/merge_sales"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_35"
+    android:orientation="horizontal">
+
+    <include
+        layout="@layout/line1_v_match"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_table_title_1"
+        style="@style/TextView_Table_Right_40"
+        android:text="单位"
+        android:textStyle="bold" />
+
+    <include
+        layout="@layout/line1_v_match"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_table_title_2"
+        style="@style/TextView_Table_Right_70"
+        android:text="移入库位"
+        android:textStyle="bold" />
+
+    <include
+        layout="@layout/line1_v_match"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_table_title_3"
+        style="@style/TextView_Table_Right_60"
+        android:text="移入数量"
+        android:textStyle="bold" />
+
+    <include
+        layout="@layout/line1_v_match"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_table_title_4"
+        style="@style/TextView_Table_Right_60"
+        android:text="待入仓"
+        android:textStyle="bold" />
+
+    <include
+        layout="@layout/line1_v_match"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_table_title_5"
+        style="@style/TextView_Table_Right_40"
+        android:text="操作"
+        android:textStyle="bold" />
+
+
+    <include
+        layout="@layout/line1_v_match"
+        android:visibility="visible" />
+
+</LinearLayout>

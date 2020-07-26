@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+     >
+     
+     <include layout="@layout/y_layout_head" />
+
+     <ImageView
+         android:id="@+id/file_ico"
+         android:layout_width="100dp"
+         android:layout_height="120dp"
+         android:scaleType="fitXY"
+         android:layout_marginTop="50dp"
+         android:src="@drawable/ic_file_text" />
+
+     <TextView
+         android:id="@+id/tv_fileName"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="10dp"
+         android:text="文件名" />
+     <TextView
+         android:id="@+id/tv_fileSize"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="5dp"
+         android:visibility="gone"
+         android:text="文件大小:00k" />
+     <ProgressBar
+         android:id="@+id/pb_file"
+         style="?android:attr/progressBarStyleHorizontal"
+         android:layout_width="match_parent"
+         android:layout_marginLeft="30dp"
+         android:layout_marginRight="30dp"
+         android:layout_height="wrap_content" />
+
+     <Button
+         android:id="@+id/btn_download"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="20dp"
+         android:text="下载文件" />
+
+
+</LinearLayout>

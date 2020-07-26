@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_35"
+    android:background="@color/layout_bg"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <include layout="@layout/line1_v" />
+
+
+    <TextView
+        android:id="@+id/tv_table_title_0"
+        style="@style/TextView_Table_title"
+        android:layout_width="@dimen/dp_60"
+        android:text="业务员" />
+
+    <include layout="@layout/line1_v" />
+
+    <TextView
+        android:id="@+id/tv_table_title_1"
+        style="@style/TextView_Table_title"
+        android:text="商品名称" />
+
+    <include layout="@layout/line1_v" />
+
+    <TextView
+        android:id="@+id/tv_table_title_2"
+        style="@style/TextView_Table_title"
+        android:layout_width="@dimen/dp_60"
+        android:text="销售类型" />
+
+    <include layout="@layout/line1_v" />
+
+    <TextView
+        android:id="@+id/tv_table_title_3"
+        style="@style/TextView_Table_title"
+        android:layout_width="@dimen/dp_60"
+        android:text="数量" />
+
+    <include layout="@layout/line1_v" />
+
+    <TextView
+        android:id="@+id/tv_table_title_4"
+        style="@style/TextView_Table_title"
+        android:layout_width="@dimen/dp_60"
+        android:text="单价" />
+
+    <include layout="@layout/line1_v" />
+
+    <TextView
+        android:id="@+id/tv_table_title_5"
+        style="@style/TextView_Table_title"
+        android:layout_width="@dimen/dp_60"
+        android:text="金额" />
+
+    <include layout="@layout/line1_v" />
+
+
+</LinearLayout>

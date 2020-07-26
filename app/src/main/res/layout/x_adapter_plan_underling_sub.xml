@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fafafa"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_tv_khNm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="客户名称"
+                android:textColor="@color/gray_6"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/item_tv_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_4"
+                android:text="客户地址"
+                android:textColor="@color/gray_9"
+                android:textSize="@dimen/sp_10" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/item_tv_wwc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="未完成"
+                android:textColor="@color/x_main_color"
+                android:textSize="@dimen/sp_10"/>
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/item_iv_wc"
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_wancheng"/>
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_wancheng"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:drawablePadding="3dp"-->
+                <!--android:drawableTop="@drawable/icon_wancheng"-->
+                <!--android:gravity="center"-->
+                <!--android:text="已拜访"-->
+                <!--android:textColor="@color/gray_9"-->
+                <!--android:textSize="10dp"-->
+                <!--android:visibility="gone" />-->
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_42"
+        android:gravity="center_vertical|right"
+        android:orientation="horizontal">
+
+        <!--&lt;!&ndash; 添加商品 &ndash;&gt;-->
+        <!--<LinearLayout-->
+            <!--android:visibility="gone"-->
+            <!--android:id="@+id/bottom_add_ware"-->
+            <!--android:layout_width="@dimen/dp_80"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:gravity="center"-->
+            <!--android:orientation="horizontal"-->
+            <!--app:bl_pressed_drawable="@color/x_layout_press_bg">-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="@dimen/dp_14"-->
+                <!--android:layout_height="@dimen/dp_14"-->
+                <!--android:src="@mipmap/x_add_blue" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="选择商品"-->
+                <!--android:textColor="@color/x_main_color"-->
+                <!--android:textSize="@dimen/sp_14" />-->
+
+        <!--</LinearLayout>-->
+
+        <!-- 添加商品 -->
+        <LinearLayout
+            android:id="@+id/bottom_add_line"
+            android:layout_width="@dimen/dp_80"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:bl_pressed_drawable="@color/x_layout_press_bg">
+
+            <ImageView
+                android:layout_width="@dimen/dp_14"
+                android:layout_height="@dimen/dp_14"
+                android:src="@mipmap/x_add_blue" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="添加一行"
+                android:textColor="@color/x_main_color"
+                android:textSize="@dimen/sp_14" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

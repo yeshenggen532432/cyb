@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+    android:background="#ffffff"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <include
+        android:visibility="visible"
+        layout="@layout/line1_v_match" />
+
+    <TextView
+        android:id="@+id/tv_table_content_right_item1"
+        style="@style/TextView_Table_Right_70"
+        tools:text="销售类型"/>
+
+    <include layout="@layout/line1_v_match"/>
+
+    <TextView
+        android:id="@+id/tv_table_content_right_item2"
+        style="@style/TextView_Table_Right_40"
+        tools:text="单位" />
+
+    <include layout="@layout/line1_v_match"/>
+
+    <LinearLayout
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_35"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_table_content_right_item_num_"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textColor="@color/red"
+            android:textSize="@dimen/sp_18"/>
+
+        <EditText
+            android:id="@+id/tv_table_content_right_item3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@null"
+            android:padding="0dp"
+            android:hint="点击输入"
+            android:inputType="numberDecimal"
+            android:selectAllOnFocus="true"
+            tools:text="数量"
+            android:textSize="@dimen/sp_11"
+            android:maxLines="2"
+            android:textColor="@color/gray_3"
+            />
+
+    </LinearLayout>
+
+
+
+    <include layout="@layout/line1_v_match"/>
+
+    <EditText
+        android:id="@+id/tv_table_content_right_item4"
+        style="@style/TextView_Table_Right_60"
+        android:selectAllOnFocus="true"
+        android:background="@null"
+        android:hint="点击输入"
+        android:inputType="numberDecimal"
+        android:gravity="center"
+        tools:text="单价"
+        />
+
+    <include layout="@layout/line1_v_match"/>
+
+    <LinearLayout
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_35"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_table_content_right_item_sum_"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textColor="@color/red"
+            android:textSize="@dimen/sp_18"/>
+
+        <TextView
+            android:id="@+id/tv_table_content_right_item5"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            tools:text="总价"
+            android:textSize="@dimen/sp_11"
+            android:maxLines="2"
+            android:textColor="@color/gray_3"
+            />
+
+    </LinearLayout>
+
+
+
+    <include layout="@layout/line1_v_match"/>
+
+    <TextView
+        android:id="@+id/tv_table_content_right_item8_produce_date"
+        style="@style/TextView_Table_Right_70"
+        android:hint="点击选择"
+        tools:text="生产日期"/>
+
+    <include
+        android:id="@+id/line_produce_date"
+        layout="@layout/line1_v_match"/>
+
+    <TextView
+        android:id="@+id/tv_table_content_right_item0"
+        style="@style/TextView_Table_Right_70"
+        tools:text="规格"/>
+
+    <include layout="@layout/line1_v_match"/>
+
+    <EditText
+        android:id="@+id/tv_table_content_right_item6"
+        style="@style/TextView_Table_Right"
+        android:maxLines="2"
+        android:inputType="text"
+        android:background="@null"
+        android:hint="点击输入"
+        android:gravity="center"
+        tools:text="备注"/>
+
+    <include layout="@layout/line1_v_match"/>
+
+    <TextView
+        android:id="@+id/tv_table_content_right_item7"
+        style="@style/TextView_Table_Right_40"
+        android:textColor="@color/x_main_color"
+        tools:text="删除"/>
+
+    <include layout="@layout/line1_v_match"/>
+
+
+
+</LinearLayout>

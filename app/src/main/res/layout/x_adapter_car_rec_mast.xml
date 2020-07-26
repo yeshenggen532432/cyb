@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_25"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/item_tv_sk_no"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray_3"
+            android:textSize="@dimen/sp_13"
+            tools:text="收款单号：YKGL2019101000002" />
+
+        <TextView
+            android:id="@+id/item_tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="2019-10-10 15:01"
+            android:textColor="@color/gray_3"
+            android:textSize="@dimen/sp_13"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_25"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/item_tv_order_no"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            tools:text="订单号：YKGL2019101000002"
+            android:textColor="@color/gray_3"
+            android:textSize="@dimen/sp_13"/>
+
+        <TextView
+            android:id="@+id/item_tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.00元"
+            android:textColor="@color/x_main_color"
+            android:textSize="@dimen/sp_13"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_25"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/item_tv_stk_name"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            tools:text="车销仓库：旧货仓"
+            android:textColor="@color/gray_3"
+            android:textSize="@dimen/sp_13"/>
+
+        <TextView
+            android:id="@+id/item_tv_member_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="陈某某"
+            android:textColor="@color/gray_3"
+            android:textSize="@dimen/sp_13"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_25"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+        <TextView
+            android:id="@+id/item_tv_wldw"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            tools:text="往来单位：厦门XXXXXXX"
+            android:textColor="@color/gray_3"
+            android:textSize="@dimen/sp_13"/>
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_35"
+        android:background="@color/layout_bg"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/item_tv_status"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_6"
+            android:paddingRight="@dimen/dp_6"
+            android:paddingBottom="@dimen/dp_6"
+            tools:text="状态:未收款"
+            android:textColor="#FF6600"
+            android:textSize="@dimen/sp_13"
+            android:visibility="visible" />
+
+        <com.deadline.statebutton.StateButton
+            android:id="@+id/item_sb_zf"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:padding="0dp"
+            android:text="作废"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_13"
+            app:radius="@dimen/dp_3"
+            app:normalBackgroundColor="@color/x_main_color"
+            app:pressedBackgroundColor="@color/x_main_color_dirk"/>
+
+        <com.deadline.statebutton.StateButton
+            android:id="@+id/item_sb_qrsk"
+            android:layout_width="70dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:padding="0dp"
+            android:text="确认收款"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_13"
+            app:radius="@dimen/dp_3"
+            app:normalBackgroundColor="@color/x_main_color"/>
+
+    </LinearLayout>
+
+</LinearLayout>

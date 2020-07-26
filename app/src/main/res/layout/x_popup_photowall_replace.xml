@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:id="@+id/ll_zan_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="@color/light_blue"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/tv_ding_save"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="3dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:src="@drawable/ding_bg_ico_select" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="0.5dp"
+            android:layout_height="23dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_ding_save"
+            android:background="@color/dark_blue" />
+
+        <ImageView
+            android:id="@+id/tv_replay_save"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_ding_save"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:src="@drawable/pinglung_btn" />
+
+        <TextView
+            android:id="@+id/tv_addzhishi_line"
+            android:layout_width="0.5dp"
+            android:layout_height="23dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_replay_save"
+            android:background="@color/dark_blue"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_addzhishiku"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_replay_save"
+            android:paddingBottom="9dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="9dp"
+            android:src="@drawable/as_zhishiku"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

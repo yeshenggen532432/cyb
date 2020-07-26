@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+     >
+
+    <include layout="@layout/x_layout_head"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/y_h_bg"
+        android:layout_height="match_parent" >
+
+        <EditText
+            android:id="@+id/et_update"
+            android:layout_width="match_parent"
+            android:layout_margin="15dp"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:background="@drawable/green_ling_bg"
+            android:ems="10" >
+
+            <requestFocus />
+        </EditText>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,215 @@
+apply plugin: 'com.android.application'
+
+android {
+    useLibrary 'org.apache.http.legacy'//androidStudio没有httpclient的解决办法
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    defaultConfig {
+        applicationId "com.syb"
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+
+        //清单文件配置值
+        manifestPlaceholders = [
+                PGYER_APPID: "8fd7deb690eb7314590990a10b12c07c"//蒲公英id mp:40c064bddf927c0a73aa17bbc28dbbda      beta:8fd7deb690eb7314590990a10b12c07c       my:9e79960385f2133e94a176cd1b3abb3b
+        ]
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file("test.keystore")
+            keyAlias 'test'
+            keyPassword '123456'
+            storePassword '123456'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    //为了解决部分第三方库重复打包了META-INF的问题
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/rxjava.properties'
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDir 'libs'
+            //说明so的路径为该libs路径，关联所有地图SDK的so文件
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation rootProject.ext.dependencies["support-v4"]
+    implementation 'com.android.support:support-v4:27.1.1'
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation project(':library')
+    implementation project(':mvp')
+    implementation project(':autostart')
+    implementation project(':FlycoDialog_Lib')
+    implementation project(':easypopup')
+    implementation project(':searchview')
+    implementation project(':scanlibrary')
+    implementation project(':voicerecorder')
+    implementation project(':zxinglibrary')
+    implementation files('libs/Android_SCAN_SDKV1.03.01PRO.jar')
+    implementation files('libs/BaiduLBS_Android.jar')
+    implementation files('libs/fastjson-1.1.43.jar')
+    implementation files('libs/gprintersdkv1.jar')
+    implementation files('libs/gprintersdkv22.jar')
+    implementation files('libs/happy-dns-0.2.3.2.jar')
+    implementation files('libs/httpcore-4.3.jar')
+    implementation files('libs/httpmime-4.3.5.jar')
+    implementation files('libs/library_uil.jar')
+    implementation files('libs/Msc.jar')
+    implementation files('libs/pgyer_sdk_3.0.10.jar')
+    implementation files('libs/qiniu-android-sdk-7.3.0.jar')
+    implementation files('libs/Sunflower.jar')
+    implementation files('libs/zhy_treeview.jar')
+
+    //    compile files('libs/zixing-core-3.2.0.jar')
+
+    //权限
+    implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.3@aar'
+
+    //rxjava
+    implementation 'com.github.akarnokd:rxjava2-interop:0.8.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.0'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+
+    //图片选择器
+    //    implementation 'com.lzy.widget:imagepicker:0.6.1'
+    implementation project(':imagepicker')
+
+    //图片压缩工具
+    implementation 'top.zibin:Luban:1.1.3'
+
+    //多分包
+    implementation 'com.android.support:multidex:1.0.1'
+
+    //图片压缩工具
+    implementation 'com.github.nanchen2251:CompressHelper:1.0.5'
+
+//    //混合开发-基础，文件选择
+//    implementation 'com.just.agentweb:agentweb:4.0.1'
+//    implementation 'com.just.agentweb:filechooser:4.0.1'
+
+    //注解
+    annotationProcessor rootProject.ext.dependencies["butterknife-apt"]
+    implementation rootProject.ext.dependencies["okhttp3"]
+    implementation rootProject.ext.dependencies["glide"]
+
+    //    compile 'com.blankj:utilcode:1.13.3'
+
+    //进程保活
+    implementation 'com.xdandroid:hellodaemon:+'
+
+    //数据库
+
+    //    implementation 'org.litepal.android:core:1.6.1'
+    implementation 'org.litepal.android:java:3.0.0'
+
+    //adapter
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.34'
+    implementation 'com.zhy:base-adapter:3.0.3'
+
+    //滑动删除
+    implementation 'com.github.anzaizai:EasySwipeMenuLayout:1.1.4'
+
+    //    下拉刷新
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-5'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-5'
+
+    //分割线
+    implementation 'com.yqritc:recyclerview-flexibledivider:1.4.0'
+
+    //状态栏
+    implementation 'com.jaeger.statusbarutil:library:1.5.1'
+
+    //EditText
+    implementation 'com.xw.repo:xedittext:2.0.8@aar'
+
+    //扫描，二维码
+
+    //compile 'com.github.yuzhiqiang1993:zxing:2.1.8'
+
+    //徽章
+    implementation 'q.rorbin:badgeview:1.1.3'
+
+    //蓝牙相关
+    implementation files('libs/gprintersdkv22.jar')
+    implementation files('libs/xUtils-2.6.14.jar')
+    implementation files('libs/ksoap2-android-assembly-2.5.2-jar-with-dependencies.jar')
+    implementation files('libs/gprintersdkv1.jar')
+
+    //    implementation 'com.google.android.gms:play-services-appindexing:8.4.0'
+
+    //button状态
+    implementation 'com.github.niniloveyou:StateButton:v1.0.0'
+
+    //tab
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+
+    //多状态view:content,empty,error,loading
+    implementation 'com.github.Kennyc1012:MultiStateView:1.3.2'
+
+    //今日头条屏幕适配方案终极版
+    implementation 'me.jessyan:autosize:1.1.2'
+
+    //加载动画
+    implementation 'com.wang.avi:library:2.1.3'
+
+    //扫描--二维码
+    implementation 'cn.bingoogolapple:bga-qrcode-zxing:1.3.6'
+
+    //流式布局
+    implementation 'cn.bingoogolapple:bga-flowlayout:1.0.0@aar'
+
+    //录音
+    implementation 'com.github.adrielcafe:AndroidAudioRecorder:0.3.0'
+
+    //拼音
+    implementation 'com.github.promeg:tinypinyin:2.0.3'
+
+    // TinyPinyin核心包，约80KB
+    implementation 'com.github.promeg:tinypinyin-lexicons-android-cncity:2.0.3'
+
+    // 可选，适用于Android的中国地区词典
+
+    //九图
+    implementation 'com.lzy.widget:ninegridview:0.2.0'
+
+    //android工具类：https://github.com/afkT/DevUtils
+    implementation 'com.github.afkT:DevUtils:1.7.2@aar'
+    implementation files('libs/pgyer_sdk_3.0.10.jar')
+    //省市区
+//    implementation 'liji.library.dev:citypickerview:5.2.2'
+    implementation project(':citypickerview')
+    implementation 'com.tencent.tbs.tbssdk:sdk:43903'
+    implementation 'me.grantland:autofittextview:0.2.+'
+
+}

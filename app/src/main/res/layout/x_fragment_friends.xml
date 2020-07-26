@@ -1,0 +1,24 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+
+
+
+            <com.handmark.pulltorefresh.library.PullToRefreshListView
+                android:id="@+id/lv_pull"
+                android:layout_width="match_parent"
+                android:scrollbars="none"
+                android:layout_height="fill_parent" >
+            </com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+             <com.xmsx.cnlife.widget.BladeView
+                android:id="@+id/bv_speedsearch"
+                android:layout_width="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_height="wrap_content" />
+
+
+
+</RelativeLayout>

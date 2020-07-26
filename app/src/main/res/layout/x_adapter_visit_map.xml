@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_80"
+        android:orientation="vertical"
+        android:paddingBottom="5dip"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="5dip" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <com.xmsx.cnlife.widget.CircleImageView
+                android:id="@+id/img_listitem_realTime"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
+                android:src="@drawable/portrait" />
+
+            <TextView
+                android:id="@+id/tv_listitem_realTime_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:text="王亦强"
+                android:textColor="#0082CA"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_listitem_realTime_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/linearLayout1"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/linearLayout1"
+            android:text="13950104779"
+            android:textColor="#666666"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_listitem_realTime_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_listitem_realTime_phone"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@+id/img_listitem_realTime_more"
+            android:layout_toRightOf="@+id/tv_listitem_realTime_phone"
+            android:text="2016-01-18 09:57"
+            android:textColor="#999999"
+            android:textSize="10sp" />
+        <!--            android:layout_below="@+id/tv_listitem_realTime_phone"-->
+        <TextView
+            android:id="@+id/tv_listitem_realTime_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_listitem_realTime_phone"
+            android:layout_below="@+id/tv_listitem_realTime_phone"
+            android:layout_marginRight="10dip"
+            android:layout_toRightOf="@+id/img_listitem_realTime_more"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tools:text="福建省厦门市思明区望海路59号福建省厦门市思明区望海路59号福建省厦门市思明区望海路59号福建省厦门市思明区望海路59号"
+            android:textColor="#333333"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/linearLayout1"
+            android:layout_alignLeft="@+id/tv_listitem_realTime_address" >
+
+            <TextView
+                android:id="@+id/tv_listitem_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dip"
+                android:background="@color/yundong"
+                android:paddingBottom="4dip"
+                android:paddingLeft="8dip"
+                android:paddingRight="8dip"
+                android:paddingTop="4dip"
+                android:text="运动"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_track"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#0082CA"
+                android:paddingBottom="4dip"
+                android:paddingLeft="20dip"
+                android:paddingRight="20dip"
+                android:paddingTop="4dip"
+                android:text="拜访回放"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_memberJob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/gray_6"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_listitem_realTime_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/y_icon_gray_more_right" />
+    </RelativeLayout>
+
+</LinearLayout>

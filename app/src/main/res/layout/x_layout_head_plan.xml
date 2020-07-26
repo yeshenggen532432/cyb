@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:background="@color/blue" >
+
+        <!-- 返回键 -->
+        <ImageView
+            android:id="@+id/iv_head_back"
+            android:layout_width="@dimen/dp_35"
+            android:layout_height="@dimen/dp_35"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp_8"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:src="@drawable/back" />
+        <!-- 中间文字 -->
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true" >
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:visibility="visible"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/radio_underling"
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/callon_manager"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_5"
+                    android:text="下属拜访"
+                    android:textColor="@color/selector_gp_client"
+                    android:textSize="@dimen/sp_15" />
+
+                <RadioButton
+                    android:id="@+id/radio_mine"
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/callon_manager2"
+                    android:checked="true"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_5"
+                    android:text="我的拜访"
+                    android:textColor="@color/selector_gp_client"
+                    android:textSize="@dimen/sp_15" />
+            </RadioGroup>
+
+            <RadioButton
+                android:id="@+id/radio_mine2"
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:padding="@dimen/dp_5"
+                android:text="我的拜访"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_15" />
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layout_line"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_13"
+                android:text="线路"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

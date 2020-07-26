@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_contentview"
+        android:layout_width="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shadow_bg"
+        android:padding="1dp"
+        android:orientation="vertical"
+        android:gravity="left"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue"
+            android:textSize="22sp"
+            android:layout_gravity="left"
+            android:layout_marginTop="22dp"
+            android:gravity="left"
+            android:layout_marginLeft="20dp"
+            android:text="提示" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/light_gray"
+             />
+
+        <TextView
+            android:id="@+id/tv_upname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:gravity="left"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/dark_gray"
+            android:text="重命名" />
+
+        <TextView
+            android:id="@+id/tv_del_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/light_gray"
+            />
+
+        <TextView
+            android:id="@+id/tv_deltype"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:paddingTop="10dp"
+            android:paddingBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="left"
+            android:layout_gravity="left"
+            android:textColor="@color/dark_gray"
+            android:text="删除该类别" />
+
+    </LinearLayout>
+
+</RelativeLayout>

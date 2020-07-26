@@ -1,0 +1,158 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/y_layout_head"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/y_h_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="0dp">
+
+                    <requestFocus />
+                </EditText>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/photo" />
+
+                    <com.xmsx.cnlife.widget.ComputeHeightGridView
+                        android:id="@+id/gv_pic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/imageView2"
+                        android:numColumns="4"></com.xmsx.cnlife.widget.ComputeHeightGridView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeLayout1"
+                    android:layout_marginTop="15dp">
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/icon_dw" />
+
+                    <TextView
+                        android:id="@+id/ckin_tv_showloctinfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toLeftOf="@+id/ckin_bnt_refadr"
+                        android:layout_toRightOf="@+id/imageView3"
+                        android:text="定位中..."
+                        android:textColor="@color/gray" />
+
+                    <ProgressBar
+                        android:id="@+id/pb_refresh"
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/ckin_bnt_refadr"
+                        android:layout_centerInParent="true"
+                        android:indeterminateDrawable="@drawable/customs_progress"
+                        android:indeterminateDuration="500"
+                        android:padding="5dp"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:id="@+id/ckin_bnt_refadr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="5dp"
+                        android:src="@drawable/shuaxin_weizi" />
+                </RelativeLayout>
+
+                <com.xw.repo.XEditText
+                    android:id="@+id/et_remark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeLayout2"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/shape_checkin_edit_bg"
+                    android:ems="10"
+                    android:hint="备注"
+                    android:padding="8dp"
+                    android:textSize="12sp"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_above="@+id/ll_bottom"
+            android:background="@color/hale_light_gray"/>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/light_gray">
+
+            <Button
+                android:id="@+id/bt_up"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/shap_square_light_gray"
+                android:text="上班考勤"
+                android:textColor="@color/blue" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/hale_light_gray" />
+
+            <Button
+                android:id="@+id/bt_down"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/shap_square_light_gray"
+                android:text="下班考勤"
+                android:textColor="@color/blue" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

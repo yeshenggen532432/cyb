@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:background="@color/blue" >
+
+        <!-- 返回键 -->
+        <ImageView
+            android:id="@+id/iv_head_back"
+            android:layout_width="@dimen/dp_35"
+            android:layout_height="@dimen/dp_35"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp_8"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:visibility="visible"
+            android:id="@+id/tv_head_right_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_5"
+            android:padding="@dimen/dp_5"
+            android:text="新增"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_13"/>
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/iv_head_right_frame"
+            android:layout_width="@dimen/dp_35"
+            android:layout_height="@dimen/dp_35"
+            android:layout_toLeftOf="@+id/tv_head_right_add"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp_8"
+            android:src="@drawable/y_ic_frame"/>
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/iv_head_right_map"
+            android:layout_width="@dimen/dp_35"
+            android:layout_height="@dimen/dp_35"
+            android:layout_marginRight="@dimen/dp_5"
+            android:padding="@dimen/dp_8"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_map"/>
+
+        <RadioGroup
+            android:id="@+id/rg_client_manager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/rb_near"
+                android:layout_width="@dimen/dp_85"
+                android:layout_height="wrap_content"
+                android:background="@drawable/callon_manager"
+                android:button="@null"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:padding="@dimen/dp_5"
+                android:singleLine="true"
+                android:text="周边客户"
+                android:textColor="@color/selector_gp_client"
+                android:textSize="@dimen/sp_9" />
+
+            <RadioButton
+                android:id="@+id/rb_mine"
+                android:layout_width="@dimen/dp_85"
+                android:layout_height="wrap_content"
+                android:background="@drawable/callon_manager2"
+                android:button="@null"
+                android:checked="true"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:padding="@dimen/dp_5"
+                android:singleLine="true"
+                android:text="我的客户"
+                android:textColor="@color/selector_gp_client"
+                android:textSize="@dimen/sp_9" />
+            <RadioButton
+                android:visibility="gone"
+                android:id="@+id/rb_tomporary"
+                android:layout_width="@dimen/dp_85"
+                android:layout_height="wrap_content"
+                android:background="@drawable/callon_manager2"
+                android:button="@null"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:padding="@dimen/dp_5"
+                android:singleLine="true"
+                android:text="临时客户"
+                android:textColor="@color/selector_gp_client"
+                android:textSize="@dimen/sp_10" />
+        </RadioGroup>
+
+    </RelativeLayout>
+
+</LinearLayout>

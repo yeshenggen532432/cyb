@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+
+    <TextView
+        android:id="@+id/tv_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tag_bg"
+        android:visibility="gone"
+        android:gravity="center_vertical"
+        android:text="TextView" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/tv_tag"
+        android:background="@drawable/tongxunlu_bg"
+        android:layout_height="wrap_content" >
+
+        <com.xmsx.cnlife.widget.CircleImageView
+            android:id="@+id/iv_userhead"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/user_headico" />
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_userhead"
+            android:layout_marginLeft="10dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:paddingLeft="10dp"
+            android:layout_toLeftOf="@+id/cb_setnomal"
+            android:layout_centerVertical="true"
+            android:singleLine="true"
+            android:text="TextView" />
+
+        <CheckBox
+            android:id="@+id/cb_setnomal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            android:button="@null"
+            android:visibility="invisible"
+            android:textColor="@color/gray"
+            android:drawableRight="@drawable/selector_checkbox_"
+             />
+
+    </RelativeLayout>
+
+</RelativeLayout>

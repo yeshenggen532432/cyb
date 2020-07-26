@@ -1,0 +1,86 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_bg_white"
+    android:orientation="vertical">
+
+    <include layout="@layout/x_layout_head_blue" />
+
+    <FrameLayout
+        android:id="@+id/fl_manager"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+    </FrameLayout>
+
+    <include layout="@layout/line0_1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_35"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/view_in"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:background="@color/light_blue"
+                android:id="@+id/tab_tv_storehouse_in"
+                style="@style/tv_cwhite_s15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="  入仓  " />
+
+            <ImageView
+                android:id="@+id/tab_iv_storehouse_in"
+                android:layout_width="@dimen/dp_35"
+                android:layout_height="@dimen/dp_35"
+                android:layout_alignParentRight="true"
+                android:padding="12dp"
+                android:src="@mipmap/ic_audit_tab_select" />
+
+        </LinearLayout>
+
+        <include layout="@layout/line1_v"/>
+
+        <LinearLayout
+            android:id="@+id/view_out"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tab_tv_storehouse_out"
+                style="@style/tv_cgray6_s15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="  出仓  " />
+
+            <ImageView
+                android:id="@+id/tab_iv_storehouse_out"
+                android:layout_width="@dimen/dp_35"
+                android:layout_height="@dimen/dp_35"
+                android:layout_alignParentRight="true"
+                android:padding="12dp"
+                android:src="@mipmap/ic_audit_tab_unselect" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

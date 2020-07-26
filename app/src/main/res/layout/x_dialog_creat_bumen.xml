@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/login_wanr_bg"
+        android:orientation="vertical"
+        android:padding="1dp"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tv_biaoti"
+            android:layout_width="match_parent"
+            android:gravity="left"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue"
+            android:textSize="20sp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:text="创建部门" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/light_gray"
+             />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            />
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:hint="请输入部门名称"
+            android:gravity="left"
+            android:padding="10dp"
+            android:background="@drawable/green_ling_bg"
+            android:ems="10" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="30dp"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/bt_sure"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:background="@drawable/select_square_blue"
+                android:textColor="@color/white"
+                android:text="确定" />
+
+            <Button
+                android:id="@+id/bt_cancle"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@+id/bt_sure"
+                android:background="@drawable/select_square_blue"
+                android:textColor="@color/white"
+                android:layout_marginLeft="15dp"
+                android:text="取消" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

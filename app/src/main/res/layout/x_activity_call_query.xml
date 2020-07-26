@@ -1,0 +1,248 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_e"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <include layout="@layout/y_layout_head" />
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ll_search"
+            android:layout_width="match_parent"
+            android:layout_height="30dip"
+            android:layout_margin="8dip"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal" >
+
+            <com.xw.repo.XEditText
+                android:id="@+id/edit_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/shape_kuang_gray"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:hint="搜索"
+                android:paddingLeft="8dip"
+                android:textSize="15dip" >
+            </com.xw.repo.XEditText>
+
+            <TextView
+                android:id="@+id/iv_search"
+                android:text="搜索"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/gray_6"
+                android:padding="@dimen/dp_5">
+            </TextView>
+
+<!--            <ImageButton
+                android:id="@+id/iv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dip"
+                android:background="@drawable/select_roundcorner_blue"
+                android:padding="10dip"
+                android:src="@drawable/icon_search_white_small" >
+            </ImageButton>-->
+        </LinearLayout>
+
+        <include layout="@layout/line1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dip"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_bfTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/y_icon_xl"
+                    android:gravity="center"
+                    android:text="拜访时间" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/gray_9" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_zuzhi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/y_icon_xl"
+                    android:gravity="center"
+                    android:text="人员" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/gray_9" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/y_icon_xl"
+                    android:gravity="center"
+                    android:text="搜索" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <include layout="@layout/line1" />
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/listView_callOnQuery"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:divider="#eeeeee"
+            android:dividerHeight="1dip" >
+        </com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+        <RelativeLayout
+            android:id="@+id/rl_editcontent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/light_gray"
+            android:padding="7dp"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/bt_voice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="6dp"
+                android:src="@drawable/ht_ly" />
+
+            <FrameLayout
+                android:id="@+id/fl_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:gravity="center_vertical"
+                android:layout_toRightOf="@+id/bt_voice" >
+
+                <RelativeLayout
+                    android:id="@+id/rl_replay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:layout_toLeftOf="@+id/bt_send"
+                        android:background="@drawable/shape_checkin_edit_bg" >
+
+                        <com.xmsx.cnlife.widget.emoji.CCPEditText
+                            android:id="@+id/et_repley"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="5dp"
+                            android:layout_toLeftOf="@+id/iv_face"
+                            android:background="@null"
+                            android:ems="10"
+                            android:padding="3dp" >
+                        </com.xmsx.cnlife.widget.emoji.CCPEditText>
+
+                        <ImageView
+                            android:id="@+id/iv_face"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:background="@null"
+                            android:src="@drawable/face" />
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/bt_send"
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/select_roundcorner_blue"
+                        android:text="发送"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/record"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/select_square_blue"
+                    android:text="按住说话"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <com.xmsx.cnlife.widget.emoji.AppPanel
+                android:id="@+id/ap_replay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fl_center" >
+            </com.xmsx.cnlife.widget.emoji.AppPanel>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_recode"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:background="@drawable/luyin_bg"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/iv_voiceProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/record_animate_03" />
+    </RelativeLayout>
+
+</FrameLayout>

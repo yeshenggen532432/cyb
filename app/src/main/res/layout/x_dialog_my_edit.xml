@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_kuang_gray"
+        android:orientation="vertical"
+        >
+
+        <!--请输入理由(非必填)-->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:gravity="left"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/sp_18"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:text="温馨提示" />
+
+
+        <com.xw.repo.XEditText
+            style="@style/tv_cgray6_s13"
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_10"
+            android:background="@drawable/shape_kuang_gray"
+            android:hint="请输入"
+            android:gravity="left"
+            android:padding="10dp"
+            android:ems="10" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.deadline.statebutton.StateButton
+                android:id="@+id/sb_cancel"
+                android:layout_width="75dp"
+                android:layout_height="30dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_13"
+                android:padding="@dimen/dp_0"
+                android:layout_marginRight="@dimen/dp_30"
+                app:radius="@dimen/dp_3"
+                app:normalBackgroundColor="@color/gray_c"
+                app:pressedBackgroundColor="@color/x_main_color_dirk"
+                android:text="取消" />
+
+            <com.deadline.statebutton.StateButton
+                android:id="@+id/sb_ok"
+                android:layout_width="75dp"
+                android:layout_height="30dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_13"
+                android:padding="@dimen/dp_0"
+                app:radius="@dimen/dp_3"
+                app:normalBackgroundColor="@color/x_main_color"
+                app:pressedBackgroundColor="@color/x_main_color_dirk"
+                android:text="确定" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
