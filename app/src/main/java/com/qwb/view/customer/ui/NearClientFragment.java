@@ -27,6 +27,7 @@ import com.flyco.dialog.widget.NormalDialog;
 import com.flyco.dialog.widget.NormalListDialog;
 import com.qwb.common.ToStepEnum;
 import com.qwb.utils.MyCollectionUtil;
+import com.qwb.utils.MyDividerUtil;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
@@ -59,9 +60,6 @@ import io.reactivex.functions.Consumer;
 
 /**
  * 创建描述：客户管理--周边客户
- * 修改描述：
- * 修改作者：
- * 修改时间：
  */
 public class NearClientFragment extends XFragment<PNearClient> {
 
@@ -131,10 +129,7 @@ public class NearClientFragment extends XFragment<PNearClient> {
 		mRvNearClient.setHasFixedSize(true);
 		mRvNearClient.setLayoutManager(new LinearLayoutManager(context));
 		//添加分割线
-		mRvNearClient.addItemDecoration(new HorizontalDividerItemDecoration.Builder(context)
-				.colorResId(R.color.gray_e)
-				.sizeResId(R.dimen.dp_5)
-				.build());
+//		mRvNearClient.addItemDecoration(MyDividerUtil.getH5CGray(context));
 		mNearAdapter = new NearClientAdapter();
 		mNearAdapter.openLoadAnimation();
 		mRvNearClient.setAdapter(mNearAdapter);
@@ -151,7 +146,7 @@ public class NearClientFragment extends XFragment<PNearClient> {
 			public void onItemChildClick(BaseQuickAdapter adapter, View view, int position) {
 				NearClientInfo data=(NearClientInfo)adapter.getData().get(position);
 				switch (view.getId()){
-					case R.id.tv_callonCount_mine://导航
+					case R.id.view_nav://导航
 						ActivityManager.getInstance().jumpActivityNavMap(context, data.getLatitude(), data.getLongitude(), data.getAddress());
 						break;
 				}

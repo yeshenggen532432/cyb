@@ -102,7 +102,6 @@ public class ApplyAdapter2 extends BaseQuickAdapter<ApplyBean2, BaseViewHolder> 
                     ApplyBean item = (ApplyBean) adapter.getData().get(position);
                     switch (item.getApplyCode()) {
                         case ConstantUtils.Apply.TXL_NEW://通讯录
-//                            ActivityManager.getInstance().jumpActivity(mActivity, XTongxunluActivity.class);
                             ActivityManager.getInstance().jumpActivity(mActivity, TongXunLuActivity.class);
                             break;
                         case ConstantUtils.Apply.GG_NEW://公告
@@ -125,7 +124,6 @@ public class ApplyAdapter2 extends BaseQuickAdapter<ApplyBean2, BaseViewHolder> 
                         case ConstantUtils.Apply.WDHC_NEW://我的缓存
                             ActivityManager.getInstance().jumpActivity(mActivity, CacheActivity.class);
                             break;
-
                         case ConstantUtils.Apply.KHGL_NEW:// 我的客户--客户管理
                             ActivityManager.getInstance().jumpActivity(mActivity, ClientManagerActivity.class);
                             break;
@@ -134,7 +132,6 @@ public class ApplyAdapter2 extends BaseQuickAdapter<ApplyBean2, BaseViewHolder> 
                             break;
                         case ConstantUtils.Apply.DHXD_NEW://订货下单
                             ActivityManager.getInstance().jumpActivity(mActivity, OrderListActivity.class);
-//                            ActivityManager.getInstance().jumpActivity(mActivity, OrderListActivity2.class);
                             break;
                         case ConstantUtils.Apply.JHBF_NEW://计划拜访
                             ActivityManager.getInstance().jumpActivity(mActivity, PlanActivity.class);
@@ -204,7 +201,8 @@ public class ApplyAdapter2 extends BaseQuickAdapter<ApplyBean2, BaseViewHolder> 
                             ActivityManager.getInstance().jumpActivity(mActivity, FootQueryActivity.class);
                             break;
                         case ConstantUtils.Apply.TJ_NEW://编辑应用
-                            ActivityManager.getInstance().jumpToApplyActivity(mActivity);
+//                            ActivityManager.getInstance().jumpToApplyActivity(mActivity);
+                            ActivityManager.getInstance().jumpActivity(mActivity, ClientManagerActivity.class);
                             break;
                         default:
                             String applyUrl = item.getApplyUrl();

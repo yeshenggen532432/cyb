@@ -23,6 +23,7 @@ import com.flyco.dialog.listener.OnOperItemClickL;
 import com.flyco.dialog.widget.NormalListDialog;
 import com.qwb.common.ToStepEnum;
 import com.qwb.utils.MyCollectionUtil;
+import com.qwb.utils.MyDividerUtil;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
@@ -168,16 +169,12 @@ public class MineClientFragment extends XFragment<PMineClient> {
     MineClientAdapter mMineAdapter;
     private int pageNo = 1;
     private int pageSize = 10;
-
     private void initAdapter() {
         mRvMineClient = context.findViewById(R.id.rv_mine_client);
         mRvMineClient.setHasFixedSize(true);
         mRvMineClient.setLayoutManager(new LinearLayoutManager(context));
         //添加分割线
-        mRvMineClient.addItemDecoration(new HorizontalDividerItemDecoration.Builder(context)
-                .colorResId(R.color.gray_e)
-                .sizeResId(R.dimen.dp_5)
-                .build());
+//        mRvMineClient.addItemDecoration(MyDividerUtil.getH5CGray(context));
         mMineAdapter = new MineClientAdapter();
         mMineAdapter.openLoadAnimation();
         mRvMineClient.setAdapter(mMineAdapter);
@@ -194,14 +191,14 @@ public class MineClientFragment extends XFragment<PMineClient> {
             public void onItemChildClick(BaseQuickAdapter adapter, View view, int position) {
                 MineClientInfo data = (MineClientInfo) adapter.getData().get(position);
                 switch (view.getId()) {
-                    case R.id.tv_callonCount_mine://导航
+                    case R.id.view_nav://导航
                         ActivityManager.getInstance().jumpActivityNavMap(context, data.getLatitude(), data.getLongitude(), data.getAddress());
                         break;
-                    case R.id.tv_zr://编辑客户（转让客户，删除客户）
-                        mCurrentData = data;
-                        mCurrentPosition = position;
-                        showDialogEditClient();
-                        break;
+//                    case R.id.tv_zr://编辑客户（转让客户，删除客户）
+//                        mCurrentData = data;
+//                        mCurrentPosition = position;
+//                        showDialogEditClient();
+//                        break;
                 }
             }
         });

@@ -12,6 +12,7 @@ public class NearClientInfo implements Serializable {
 	private int khTp;//客户类型：（1经销商；2客户）
 	private String khNm ; 		 //客户名称
 	private String memberNm ; //业务员
+	private String branchName ;  //分组名称（我的客户才有）
 	private String longitude ;
 	private String latitude ;
 	private String jlkm ;        //距离
@@ -150,5 +151,13 @@ public class NearClientInfo implements Serializable {
 	}
 	public void setKhTp(int khTp) {
 		this.khTp = khTp;
+	}
+
+	public String getBranchName() {
+		return branchName;
+	}
+
+	public void setBranchName(String branchName) {
+		this.branchName = branchName;
 	}
 }

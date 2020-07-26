@@ -10,6 +10,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import com.jaeger.library.StatusBarUtil;
+import com.qwb.utils.MyStatusBarUtil;
 import com.qwb.widget.MyMenuPopup;
 import com.qwb.utils.ActivityManager;
 import com.qwb.utils.ConstantUtils;
@@ -62,7 +63,6 @@ public class ClientManagerActivity extends XActivity {
     public RadioButton mRbMine;
     private void initUI() {
         initHead();
-
         boolean query = MyLoginUtil.getMenuByApplyCode(ConstantUtils.Apply.KHGL_QUERY_NEW);
         boolean near = MyLoginUtil.getMenuByApplyCode(ConstantUtils.Apply.KHGL_NEAR_NEW);
         if(query && !near){
@@ -98,7 +98,7 @@ public class ClientManagerActivity extends XActivity {
     ImageView mIvHeadRightFrame;//组织架构
     ImageView mIvHeadRightMap;//地图
     private void initHead() {
-        StatusBarUtil.setColor(context, getResources().getColor(R.color.blue), ConstantUtils.STATUSBAR_ALPHA);//设置状态栏颜色
+        MyStatusBarUtil.getInstance().setColorGreen(context);
         findViewById(R.id.iv_head_back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
