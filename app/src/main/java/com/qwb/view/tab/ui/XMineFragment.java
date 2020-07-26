@@ -7,8 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.qwb.application.MyApp;
+import com.qwb.utils.MyLoginUtil;
+import com.qwb.view.mine.ui.UserManagerActivity;
 import com.qwb.view.tab.parsent.PXMine;
 import com.qwb.utils.MyAppUtil;
 import com.qwb.utils.MyStringUtil;
@@ -25,6 +26,8 @@ import com.qwb.utils.Constans;
 import com.qwb.utils.QRCodeUtil;
 import com.qwb.utils.SPUtils;
 import com.xmsx.qiweibao.R;
+import com.zhy.http.okhttp.utils.MyUrlUtil;
+
 import java.io.File;
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -40,7 +43,8 @@ public class XMineFragment extends XFragment<PXMine> {
 
     @Override
     public int getLayoutId() {
-        return R.layout.x_fragment_mine;
+//        return R.layout.x_fragment_mine;
+        return R.layout.x_fragment_mine2;
     }
 
     @Override
@@ -51,7 +55,6 @@ public class XMineFragment extends XFragment<PXMine> {
     @Override
     public void initData(Bundle savedInstanceState) {
         initUI();
-
         // 正式（放开）：后台获取版本信息
         if (!Constans.ISDEBUG) {
             getP().queryDataUpdateVersion(context);
@@ -70,16 +73,16 @@ public class XMineFragment extends XFragment<PXMine> {
     TextView mTvVersion;
     @BindView(R.id.view_version)
     View mViewVersion;
-    @BindView(R.id.iv_code)
-    ImageView mIvCode;
+//    @BindView(R.id.iv_code)
+//    ImageView mIvCode;
     private void initUI() {
         setUserInfo();
-        mTvVersion.setText("当前版本:" + MyAppUtil.getAppVersion());
+        mTvVersion.setText(MyAppUtil.getAppVersion());
         // 生成二维码
-        createCode(mIvCode, (int) (100 * MyApp.getI().getBiLi()));
+//        createCode(mIvCode, (int) (100 * MyApp.getI().getBiLi()));
     }
 
-    @OnClick({R.id.view_user, R.id.view_feedback,R.id.view_version, R.id.view_user_guide, R.id.view_setting, R.id.iv_code})
+    @OnClick({R.id.view_user, R.id.view_change_user,R.id.view_feedback,R.id.view_version, R.id.view_setting, R.id.view_code, R.id.sb_logout})
     public void OnClick(View view){
         switch (view.getId()){
             //用户信息
@@ -94,18 +97,20 @@ public class XMineFragment extends XFragment<PXMine> {
             case R.id.view_version:
                 showDialogVersionUpdate();
                 break;
-            //用户指南
-            case R.id.view_user_guide:
-                ActivityManager.getInstance().jumpToWebX5Activity(context, Constans.ZhiNanUrl, "操作指南");
-                break;
             //设置
             case R.id.view_setting:
                 ActivityManager.getInstance().jumpActivity(context, SetActivity.class);
                 break;
-
             //二维码图片
-            case R.id.iv_code:
+            case R.id.view_code:
                 showDialogCode();
+                break;
+            case R.id.view_change_user:
+                ActivityManager.getInstance().jumpActivity(context, UserManagerActivity.class);
+                break;
+            case R.id.sb_logout:
+                MyUrlUtil.clearUrl();
+                MyLoginUtil.logout(context);
                 break;
         }
     }
