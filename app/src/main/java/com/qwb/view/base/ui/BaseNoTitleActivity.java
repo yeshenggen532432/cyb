@@ -23,6 +23,7 @@ public abstract class BaseNoTitleActivity extends FragmentActivity implements On
 		super.onCreate(savedInstanceState);
 		PgyCrashManager.register(this);// 蒲公英注册
 		MyApp.getI().addActivity(this);// 添加界面
+		//stest
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		if (getRequestedOrientation() != ActivityInfo.SCREEN_ORIENTATION_PORTRAIT) {
 			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
