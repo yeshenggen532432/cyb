@@ -15,7 +15,6 @@ import android.view.Display;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
-
 import com.baidu.mapapi.SDKInitializer;
 import com.bumptech.glide.Glide;
 import com.iflytek.cloud.Setting;
@@ -43,15 +42,12 @@ import com.qwb.utils.ToastUtils;
 import com.xmsx.cnlife.view.widget.CornersTransform;
 import com.xmsx.qiweibao.R;
 import com.zhy.http.okhttp.OkHttpUtils;
-
 import org.litepal.LitePal;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
-
 import cn.droidlover.xdroidmvp.log.XLog;
 import cn.jpush.android.api.JPushInterface;
 import dev.DevUtils;
@@ -59,7 +55,6 @@ import me.jessyan.autosize.AutoSize;
 import me.jessyan.autosize.AutoSizeConfig;
 import me.jessyan.autosize.onAdaptListener;
 import okhttp3.OkHttpClient;
-
 
 public class MyApp extends Application {
 
@@ -454,7 +449,6 @@ public class MyApp extends Application {
 			}
 		});
 		PgyerActivityManager.set(this);
-//		Pgyer.setAppId("20dfb77471ebfd226f5c38d0c2767a60");
 	}
 
 	//初始化九图的图片显示

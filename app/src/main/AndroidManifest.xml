@@ -11,10 +11,10 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- 拨打电话权限 -->
     <uses-permission android:name="android.permission.CALL_PHONE" /> <!-- 极光配置 -->
     <permission
-        android:name="com.xmsx.qiweibao.permission.JPUSH_MESSAGE"
+        android:name="com.cyb.permission.JPUSH_MESSAGE"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="com.xmsx.qiweibao.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="com.cyb.permission.JPUSH_MESSAGE" />
     <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -99,7 +99,7 @@
 
         <provider
             android:name="android.support.v4.content.FileProvider"
-            android:authorities="com.xmsx.qiweibao.fileProvider"
+            android:authorities="com.cyb.fileProvider"
             android:exported="false"
             android:grantUriPermissions="true">
 
@@ -126,7 +126,7 @@
                 <action android:name="cn.jpush.android.ui.PushActivity" />
 
                 <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="com.xmsx.qiweibao" />
+                <category android:name="com.cyb" />
             </intent-filter>
         </activity> <!-- Required SDK 核心功能 -->
         <!-- 可配置android:process参数将PushService放在其他进程中 -->
@@ -143,7 +143,7 @@
         </service> <!-- since 3.0.9 Required SDK 核心功能 -->
         <provider
             android:name="cn.jpush.android.service.DataProvider"
-            android:authorities="com.xmsx.qiweibao.DataProvider"
+            android:authorities="com.cyb.DataProvider"
             android:exported="false" /> <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
         <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
         <service
@@ -152,13 +152,12 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="cn.jpush.android.intent.DaemonService" />
-
-                <category android:name="com.xmsx.qiweibao" />
+                <category android:name="com.cyb" />
             </intent-filter>
         </service> <!-- since 3.1.0 Required SDK 核心功能 -->
         <provider
             android:name="cn.jpush.android.service.DownloadProvider"
-            android:authorities="com.xmsx.qiweibao.DownloadProvider"
+            android:authorities="com.cyb.DownloadProvider"
             android:exported="true" /> <!-- Required SDK核心功能 -->
         <receiver
             android:name="cn.jpush.android.service.PushReceiver"
@@ -166,7 +165,7 @@
             android:exported="false">
             <intent-filter android:priority="1000">
                 <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" /> <!-- Required  显示通知栏 -->
-                <category android:name="com.xmsx.qiweibao" />
+                <category android:name="com.cyb" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.USER_PRESENT" />
@@ -192,7 +191,7 @@
                 <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!-- Required  用户接收SDK通知栏信息的intent -->
                 <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!-- Required  用户打开自定义通知栏的intent -->
                 <action android:name="cn.jpush.android.intent.CONNECTION" /> <!-- 接收网络变化 连接/断开 since 1.6.3 -->
-                <category android:name="com.xmsx.qiweibao" />
+                <category android:name="com.cyb" />
             </intent-filter>
         </receiver>
 
