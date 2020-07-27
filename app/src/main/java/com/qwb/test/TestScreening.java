@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import com.qwb.widget.MyDoubleDatePickerDialog;
 import com.qwb.utils.MyTimeUtils;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import butterknife.BindView;
 

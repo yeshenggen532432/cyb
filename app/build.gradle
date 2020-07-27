@@ -4,7 +4,7 @@ android {
     useLibrary 'org.apache.http.legacy'//androidStudio没有httpclient的解决办法
     compileSdkVersion rootProject.ext.android.compileSdkVersion
     defaultConfig {
-        applicationId "com.cyb"
+        applicationId "com.chiyong.t3"
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode rootProject.ext.android.versionCode

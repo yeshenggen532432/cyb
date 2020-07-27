@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 
 /**

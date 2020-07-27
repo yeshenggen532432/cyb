@@ -9,7 +9,7 @@ import com.qwb.utils.ConstantUtils;
 import com.qwb.view.common.adapter.AbsCommonAdapter;
 import com.qwb.view.table.model.TableModel;
 import com.qwb.view.call.ui.CallRecordActivity;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import cn.droidlover.xdroidmvp.router.Router;
 

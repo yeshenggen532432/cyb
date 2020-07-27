@@ -12,7 +12,7 @@ import com.qwb.utils.ActivityManager;
 import com.qwb.utils.ToastUtils;
 import com.qwb.view.base.parsent.PXRegisterNext;
 import com.qwb.utils.MyStatusBarUtil;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import butterknife.BindView;
 import butterknife.OnClick;

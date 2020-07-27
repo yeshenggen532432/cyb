@@ -11,7 +11,7 @@ import com.flyco.tablayout.listener.CustomTabEntity;
 import com.flyco.tablayout.listener.OnTabSelectListener;
 import com.qwb.utils.ActivityManager;
 import com.qwb.view.common.model.TabEntity;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import java.util.ArrayList;
 import butterknife.BindView;
 import cn.droidlover.xdroidmvp.mvp.XActivity;

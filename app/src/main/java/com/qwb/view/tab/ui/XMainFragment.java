@@ -33,7 +33,7 @@ import com.qwb.view.common.model.TabEntity;
 import com.qwb.view.tab.parsent.PXMain;
 import com.qwb.view.base.ui.XApplyActivity;
 import com.qwb.utils.MyStringUtil;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -34,7 +34,7 @@ import com.xmsx.cnlife.widget.SyncHorizontalScrollView;
 import com.qwb.view.table.model.FooterBean;
 import com.qwb.view.table.model.Statement_list1Bean;
 import com.qwb.view.table.model.Statement_xsddBean;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import java.util.ArrayList;
 import java.util.List;

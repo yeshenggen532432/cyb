@@ -16,7 +16,7 @@ import com.iflytek.cloud.RecognizerResult;
 import com.iflytek.cloud.SpeechConstant;
 import com.iflytek.cloud.SpeechError;
 import com.iflytek.cloud.SpeechRecognizer;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;

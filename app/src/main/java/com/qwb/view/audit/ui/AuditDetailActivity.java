@@ -41,7 +41,7 @@ import com.qwb.utils.SPUtils;
 import com.qwb.view.file.model.FileBean;
 import com.qwb.view.file.ui.FileDetailActivity;
 import com.qwb.view.audit.adapter.PicsAdapter;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;

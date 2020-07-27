@@ -9,7 +9,7 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.qwb.application.MyApp;
 import com.xmsx.cnlife.view.widget.CircleTransform;
 import com.xmsx.cnlife.view.widget.CornersTransform;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.zhy.http.okhttp.utils.MyUrlUtil;
 
 /**

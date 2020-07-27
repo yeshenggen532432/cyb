@@ -8,7 +8,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.qwb.db.LocationBean;
 import com.qwb.utils.MyUtils;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 /**
  * 文 件 名: 轨迹回放

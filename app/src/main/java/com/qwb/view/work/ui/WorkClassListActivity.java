@@ -14,7 +14,7 @@ import com.qwb.view.work.model.WorkBean;
 import com.qwb.view.work.model.WorkClassListResult;
 import com.qwb.view.work.parsent.PWorkClassList;
 import com.qwb.utils.MyStatusBarUtil;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 import java.util.List;
 import butterknife.BindView;

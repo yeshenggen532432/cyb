@@ -10,7 +10,7 @@ import com.qwb.utils.Constans;
 import com.qwb.utils.MyGlideUtil;
 import com.qwb.utils.MyStringUtil;
 import com.qwb.view.tab.model.MainFuncBean;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 /**
  * 整理单列表

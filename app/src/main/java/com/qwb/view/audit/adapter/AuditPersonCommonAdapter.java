@@ -11,7 +11,7 @@ import com.qwb.utils.Constans;
 import com.qwb.view.member.model.BuMenListBean.MemberBean;
 import com.qwb.utils.MyGlideUtil;
 import com.xmsx.cnlife.widget.CircleImageView;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import java.util.List;
 
 /**

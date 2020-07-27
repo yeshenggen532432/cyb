@@ -26,7 +26,7 @@ import com.qwb.utils.MyMapUtil;
 import com.qwb.widget.MyDoubleDatePickerDialog;
 import com.qwb.utils.MyStatusBarUtil;
 import com.qwb.view.customer.model.CustomerBfBean;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.zyyoona7.lib.EasyPopup;
 import butterknife.BindView;
 import butterknife.OnClick;

@@ -40,7 +40,7 @@ import com.qwb.utils.MyRecyclerViewUtil;
 import com.qwb.utils.MyStringUtil;
 import com.qwb.view.call.ui.CallQueryActivity;
 import com.qwb.view.log.model.RizhiListBean;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import java.util.ArrayList;
 import java.util.List;

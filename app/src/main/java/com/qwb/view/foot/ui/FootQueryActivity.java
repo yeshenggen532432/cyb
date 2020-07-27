@@ -17,7 +17,7 @@ import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 import com.qwb.utils.ActivityManager;
 import com.qwb.utils.MyTimeUtils;
 import com.qwb.utils.MyStatusBarUtil;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import java.util.Calendar;
 import java.util.List;
 import butterknife.BindView;

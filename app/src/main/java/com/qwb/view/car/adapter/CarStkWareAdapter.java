@@ -10,7 +10,7 @@ import com.qwb.utils.MyMathUtils;
 import com.qwb.utils.MyStringUtil;
 import com.qwb.utils.MyUnitUtil;
 import com.qwb.view.step.model.ShopInfoBean;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;

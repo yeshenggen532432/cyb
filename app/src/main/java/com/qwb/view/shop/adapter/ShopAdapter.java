@@ -16,7 +16,7 @@ import com.qwb.utils.ConstantUtils;
 import com.qwb.utils.SPUtils;
 import com.qwb.view.company.model.CompanysBean;
 import com.qwb.utils.MyGlideUtil;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import java.util.List;
 

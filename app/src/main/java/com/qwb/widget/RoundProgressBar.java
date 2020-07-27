@@ -11,7 +11,7 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 /**
  * 仿iphone带进度的进度条，线程安全的View，可直接在线程中更新进度

@@ -44,7 +44,7 @@ import com.qwb.utils.MyStringUtil;
 import com.qwb.widget.table.TableHorizontalScrollView;
 import com.qwb.widget.table.TableOnScrollListener;
 import com.qwb.widget.MyDateTimePickerDialog;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 import com.zyyoona7.lib.EasyPopup;
 

@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.zyyoona7.lib.BaseCustomPopup;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import java.util.ArrayList;
 import java.util.List;

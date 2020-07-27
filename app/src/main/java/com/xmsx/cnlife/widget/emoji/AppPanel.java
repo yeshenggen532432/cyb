@@ -21,7 +21,7 @@ import android.widget.AdapterView;
 import android.widget.LinearLayout;
 
 import com.xmsx.cnlife.widget.emoji.EmojiGrid.OnEmojiItemClickListener;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import java.util.ArrayList;
 import java.util.Iterator;

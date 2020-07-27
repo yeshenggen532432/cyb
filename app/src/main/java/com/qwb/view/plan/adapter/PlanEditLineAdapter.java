@@ -6,7 +6,7 @@ import android.widget.TextView;
 import com.chad.library.adapter.base.BaseItemDraggableAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.qwb.view.customer.model.MineClientInfo;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 /**
  * 计划拜访-编辑线路

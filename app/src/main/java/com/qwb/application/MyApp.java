@@ -40,7 +40,7 @@ import com.qwb.utils.Constans;
 import com.qwb.utils.MyUtils;
 import com.qwb.utils.ToastUtils;
 import com.xmsx.cnlife.view.widget.CornersTransform;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.zhy.http.okhttp.OkHttpUtils;
 import org.litepal.LitePal;
 import java.io.File;

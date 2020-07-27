@@ -10,7 +10,7 @@ import com.chad.library.adapter.base.BaseViewHolder;
 import com.qwb.utils.MyUtils;
 import com.qwb.view.customer.model.MineClientInfo;
 import com.qwb.view.customer.model.NearClientInfo;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import java.util.ArrayList;
 import java.util.List;

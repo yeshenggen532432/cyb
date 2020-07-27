@@ -45,7 +45,7 @@ import com.qwb.view.common.ui.XScanActivity;
 import com.qwb.utils.MyStatusBarUtil;
 import com.qwb.utils.MyStringUtil;
 import com.qwb.widget.MyCrashHandler;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
 import java.math.BigDecimal;

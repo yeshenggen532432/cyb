@@ -25,7 +25,7 @@ import com.qwb.view.base.ui.BaseNoTitleActivity;
 import com.qwb.utils.Constans;
 import com.qwb.utils.MyUtils;
 import com.qwb.utils.ToastUtils;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
 

@@ -9,7 +9,7 @@ import android.widget.TextView;
 import com.flyco.dialog.widget.base.BaseDialog;
 import com.qwb.utils.MyStringUtil;
 import com.qwb.utils.ToastUtils;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 /**
  * 车销收款

@@ -17,7 +17,7 @@ import com.qwb.utils.ToastUtils;
 import com.qwb.db.DStep6Bean;
 import com.qwb.utils.MyStringUtil;
 import com.qwb.widget.recordvoice.VoiceManager;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import java.util.ArrayList;
 import java.util.List;

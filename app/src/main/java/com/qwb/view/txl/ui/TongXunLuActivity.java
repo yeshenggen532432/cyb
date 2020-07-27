@@ -45,7 +45,7 @@ import com.qwb.utils.MyLoginUtil;
 import com.qwb.utils.MyUtils;
 import com.qwb.utils.SPUtils;
 import com.qwb.utils.ToastUtils;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
 import org.json.JSONException;

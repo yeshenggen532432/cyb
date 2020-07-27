@@ -40,7 +40,7 @@ import com.qwb.view.step.model.XiaJi;
 import com.qwb.utils.MyKeyboardUtil;
 import com.qwb.utils.MyNetWorkUtil;
 import com.xmsx.cnlife.view.widget.MyVoiceDialog;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;

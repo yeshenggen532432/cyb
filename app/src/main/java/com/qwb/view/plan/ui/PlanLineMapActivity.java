@@ -38,7 +38,7 @@ import com.qwb.view.customer.model.KhtypeAndKhlevellBean;
 import com.qwb.view.customer.model.MineClientInfo;
 import com.qwb.view.plan.parsent.PPlanLineMap;
 import com.qwb.utils.MyStatusBarUtil;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import java.util.ArrayList;
 import java.util.List;

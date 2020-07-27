@@ -6,7 +6,7 @@ import android.content.Context;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.qwb.view.work.model.WorkBean;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 /**
  * 文 班次列表

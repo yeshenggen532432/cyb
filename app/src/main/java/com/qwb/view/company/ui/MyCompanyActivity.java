@@ -25,7 +25,7 @@ import com.qwb.utils.MyKeyboardUtil;
 import com.qwb.utils.MyStatusBarUtil;
 import com.qwb.utils.MyStringUtil;
 import com.xmsx.cnlife.view.widget.MyTextChanged;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.zyyoona7.lib.EasyPopup;
 
 import java.util.ArrayList;

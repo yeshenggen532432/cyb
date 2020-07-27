@@ -30,7 +30,7 @@ import com.qwb.view.tree.SimpleTreeAdapter_map;
 import com.qwb.view.base.model.TreeBean;
 import com.qwb.view.member.model.MemberBean;
 import com.qwb.view.log.model.RizhiListBean;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.zyyoona7.lib.EasyPopup;
 
 import java.util.ArrayList;

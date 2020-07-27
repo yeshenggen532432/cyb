@@ -8,7 +8,7 @@ import android.widget.ImageView;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.qwb.db.DStep5Bean;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import cn.droidlover.xdroidmvp.log.XLog;
 

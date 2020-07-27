@@ -9,7 +9,7 @@ import com.qwb.utils.MyGlideUtil;
 import com.xmsx.cnlife.widget.CircleImageView;
 import com.qwb.utils.Constans;
 import com.qwb.utils.MyUtils;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 /**
  * 审批：我审批的

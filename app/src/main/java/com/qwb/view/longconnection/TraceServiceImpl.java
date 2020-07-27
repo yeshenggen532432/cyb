@@ -22,7 +22,7 @@ import com.qwb.utils.SPUtils;
 import com.qwb.db.CacheLocationBean;
 import com.qwb.db.LocationBean;
 import com.qwb.utils.MyStringUtil;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.MyHttpCallback;
 

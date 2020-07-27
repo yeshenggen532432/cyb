@@ -4,7 +4,7 @@ import android.widget.TextView;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.qwb.view.member.model.MemberListBean;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 /**
  * 员工

@@ -6,7 +6,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.qwb.view.customer.model.CustomerVisitBean;
 import com.qwb.utils.ToastUtils;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 /**
  * 客户拜访(我的拜访)

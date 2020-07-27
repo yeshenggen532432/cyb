@@ -19,7 +19,7 @@ import com.qwb.utils.ToastUtils;
 import com.qwb.view.object.adapter.ProviderAdapter;
 import com.qwb.view.object.model.ProviderListBean;
 import com.qwb.view.object.parsent.PObjectProvider;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 import java.util.List;
 import butterknife.BindView;

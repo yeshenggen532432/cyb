@@ -4,7 +4,7 @@ import android.widget.TextView;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.qwb.view.company.model.PurchaseOrderBean;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 /**
  * 采购单列表

@@ -16,7 +16,7 @@ import com.qwb.view.delivery.model.DeliverySubBean;
 import com.qwb.view.delivery.parsent.PDeliveryDetail;
 import com.qwb.utils.MyStatusBarUtil;
 import com.qwb.widget.table.SyncHorizontalScrollView;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;

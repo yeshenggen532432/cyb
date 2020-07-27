@@ -7,7 +7,7 @@ import com.chad.library.adapter.base.BaseViewHolder;
 import com.qwb.view.audit.model.ShenPiIsendBean;
 import com.xmsx.cnlife.widget.CircleImageView;
 import com.qwb.utils.MyUtils;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 /**
  * 审批：我发送的

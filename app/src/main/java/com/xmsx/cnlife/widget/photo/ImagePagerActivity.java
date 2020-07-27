@@ -10,7 +10,7 @@ import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.Window;
 import android.widget.TextView;
 
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.zhy.http.okhttp.utils.MyUrlUtil;
 
 public class ImagePagerActivity extends FragmentActivity {

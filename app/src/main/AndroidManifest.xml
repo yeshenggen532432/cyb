@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.xmsx.qiweibao">
+    package="com.chiyong.t3">
 
     <!-- 使用照相机权限 -->
     <uses-feature android:name="android.hardware.camera" />

@@ -11,7 +11,7 @@ import com.qwb.utils.MyUtils;
 import com.qwb.utils.SPUtils;
 import com.qwb.utils.ToastUtils;
 import com.qwb.view.tab.ui.XTabActivity;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import java.util.Timer;
 import java.util.TimerTask;

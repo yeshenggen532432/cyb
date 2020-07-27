@@ -8,7 +8,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.qwb.view.audit.model.AuditModelBean;
 import com.qwb.utils.MyStringUtil;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 /**
  * 审批模版

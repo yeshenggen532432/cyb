@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
 
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 public class MyDialogManager {
 

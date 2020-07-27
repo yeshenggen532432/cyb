@@ -20,7 +20,7 @@ import com.qwb.view.base.parsent.PXLogin;
 import com.qwb.utils.MyStatusBarUtil;
 import com.xmsx.cnlife.view.widget.MyAfterTextWatcher;
 import com.xmsx.cnlife.view.widget.MyVerifyCodeView;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 
 import butterknife.BindView;

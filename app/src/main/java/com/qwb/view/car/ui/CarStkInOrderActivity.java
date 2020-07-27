@@ -37,7 +37,7 @@ import com.qwb.view.step.model.XiaJi;
 import com.qwb.view.car.parsent.PCarStkInOrder;
 import com.qwb.utils.MyStatusBarUtil;
 import com.qwb.widget.table.TableHorizontalScrollView;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

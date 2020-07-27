@@ -14,7 +14,7 @@ import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.View;
 
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 
 /**

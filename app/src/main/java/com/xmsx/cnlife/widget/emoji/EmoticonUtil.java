@@ -10,7 +10,7 @@ import android.text.TextUtils;
 import android.text.style.ImageSpan;
 
 import com.qwb.application.MyApp;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import java.lang.ref.SoftReference;
 import java.lang.reflect.Field;

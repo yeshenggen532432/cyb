@@ -39,7 +39,7 @@ import com.qwb.utils.MyStringUtil;
 import com.qwb.view.map.model.TrackListBean;
 import com.qwb.view.map.model.TrackListBean.TrackList;
 import com.qwb.utils.MyStatusBarUtil;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.zyyoona7.lib.EasyPopup;
 
 import java.util.ArrayList;

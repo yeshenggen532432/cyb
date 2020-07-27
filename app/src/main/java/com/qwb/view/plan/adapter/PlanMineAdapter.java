@@ -9,7 +9,7 @@ import com.chad.library.adapter.base.BaseViewHolder;
 import com.qwb.view.plan.model.PlanBean;
 import com.qwb.utils.MyTimeUtils;
 import com.qwb.utils.MyUtils;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 /**
  * 计划拜访--我的拜访

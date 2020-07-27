@@ -18,7 +18,7 @@ import com.qwb.utils.ActivityManager;
 import com.qwb.view.gonggao.adapter.GongGaoAdapter;
 import com.qwb.view.gonggao.parsent.PGongGao;
 import com.qwb.utils.MyStatusBarUtil;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 import java.util.List;
 import butterknife.BindView;

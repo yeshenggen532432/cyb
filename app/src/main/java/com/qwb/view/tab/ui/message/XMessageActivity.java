@@ -13,7 +13,7 @@ import android.widget.TextView;
 import com.qwb.view.tab.ui.XMessageFragment;
 import com.qwb.utils.ConstantUtils;
 import com.qwb.utils.MyStatusBarUtil;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import butterknife.BindView;
 import cn.droidlover.xdroidmvp.mvp.XActivity;

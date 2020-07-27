@@ -8,7 +8,7 @@ import android.widget.TextView;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.qwb.view.plan.model.PlanLineBean;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 /**
  * 计划拜访-线路

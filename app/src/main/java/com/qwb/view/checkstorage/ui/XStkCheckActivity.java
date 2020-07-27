@@ -34,7 +34,7 @@ import com.qwb.utils.MyStatusBarUtil;
 import com.qwb.utils.MyStringUtil;
 import com.qwb.view.step.model.ShopInfoBean;
 import com.qwb.widget.MyCrashHandler;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import java.util.ArrayList;
 import java.util.List;
 import butterknife.BindView;

@@ -9,7 +9,7 @@ import com.chad.library.adapter.base.BaseViewHolder;
 import com.qwb.utils.MyStringUtil;
 import com.qwb.utils.MyUtils;
 import com.qwb.view.customer.model.NearClientInfo;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 /**
  */

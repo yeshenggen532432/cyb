@@ -18,7 +18,7 @@ import com.qwb.utils.ToastUtils;
 import com.qwb.view.order.adapter.MemberAdapter;
 import com.qwb.view.member.model.MemberListBean;
 import com.qwb.view.object.parsent.PObjectMember;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
 import java.util.List;

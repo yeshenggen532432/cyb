@@ -11,7 +11,7 @@ import com.chad.library.adapter.base.BaseViewHolder;
 import com.qwb.utils.MyUtils;
 import com.qwb.db.DMessageBean;
 import com.xmsx.cnlife.widget.emoji.CCPTextView;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import q.rorbin.badgeview.Badge;
 import q.rorbin.badgeview.QBadgeView;

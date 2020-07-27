@@ -11,7 +11,7 @@ import com.qwb.utils.MyStringUtil;
 import com.qwb.view.print.model.Bluetooth;
 import com.qwb.view.print.model.BluetoothBean;
 import com.qwb.utils.ToastUtils;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 import java.util.ArrayList;
 import java.util.List;

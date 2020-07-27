@@ -9,7 +9,7 @@ import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.wang.avi.AVLoadingIndicatorView;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import cn.droidlover.xdroidmvp.log.XLog;
 

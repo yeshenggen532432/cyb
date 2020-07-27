@@ -29,7 +29,7 @@ import com.qwb.utils.MyStringUtil;
 import com.xmsx.cnlife.view.widget.MyVoiceDialog;
 import com.qwb.view.step.model.ShopInfoBean.Data;
 import com.qwb.view.base.model.TreeBean;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 import com.zhy.tree.bean.Node;
 import java.util.ArrayList;

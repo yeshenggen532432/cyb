@@ -23,7 +23,7 @@ import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 import com.qwb.utils.ActivityManager;
 import com.qwb.utils.MyTimeUtils;
 import com.qwb.utils.ToastUtils;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
 import java.util.List;

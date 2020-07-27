@@ -17,7 +17,7 @@ import com.qwb.view.cache.model.CacheAdapter;
 import com.qwb.view.cache.model.MineCacheBean;
 import com.qwb.view.cache.parsent.PCache;
 import com.qwb.utils.MyStatusBarUtil;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
 import java.util.ArrayList;

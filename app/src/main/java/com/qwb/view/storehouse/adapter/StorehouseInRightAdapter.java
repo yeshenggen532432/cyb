@@ -12,7 +12,7 @@ import com.qwb.view.storehouse.model.StorehouseInSubBean;
 import com.qwb.utils.ToastUtils;
 import com.qwb.utils.MyColorUtil;
 import com.xmsx.cnlife.view.widget.MyAfterTextWatcher;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import java.math.BigDecimal;
 import java.util.List;

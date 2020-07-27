@@ -18,7 +18,7 @@ import com.qwb.utils.ToastUtils;
 import com.qwb.view.object.adapter.FinUnitAdapter;
 import com.qwb.view.object.model.FinUnitListBean;
 import com.qwb.view.object.parsent.PObjectFinUnit;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 import java.util.List;
 import butterknife.BindView;

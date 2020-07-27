@@ -14,7 +14,7 @@ import com.qwb.utils.ToastUtils;
 import com.qwb.view.audit.adapter.AuditModelAdapter;
 import com.qwb.view.audit.model.AuditModelBean;
 import com.qwb.view.audit.parsent.PAuditTabSendAudit;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import java.util.ArrayList;
 import java.util.List;

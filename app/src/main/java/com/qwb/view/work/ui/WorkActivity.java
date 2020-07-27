@@ -35,7 +35,7 @@ import com.qwb.utils.ToastUtils;
 import com.qwb.utils.MyMapUtil;
 import com.qwb.utils.MyStatusBarUtil;
 import com.qwb.utils.MyStringUtil;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import java.util.ArrayList;
 

@@ -22,7 +22,7 @@ import com.qwb.db.DDeliveryCustomerBean;
 import com.qwb.view.delivery.model.DeliveryBean;
 import com.qwb.view.customer.ui.ChooseCustomerActivity;
 import com.qwb.utils.MyStringUtil;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
 import java.util.ArrayList;

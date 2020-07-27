@@ -17,7 +17,7 @@ import com.qwb.view.checkstorage.model.StkWareBean;
 import com.qwb.view.checkstorage.parsent.PxStkWare;
 import com.qwb.view.ware.adapter.WareTreeAdapter;
 import com.qwb.utils.ConstantUtils;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 import com.zhy.tree.bean.Node;
 

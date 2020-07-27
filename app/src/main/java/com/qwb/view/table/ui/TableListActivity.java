@@ -11,7 +11,7 @@ import com.qwb.utils.ActivityManager;
 import com.qwb.view.table.adapter.TableAdapter;
 import com.qwb.utils.ConstantUtils;
 import com.qwb.utils.MyStatusBarUtil;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
 import java.util.ArrayList;

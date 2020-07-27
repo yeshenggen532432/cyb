@@ -37,7 +37,7 @@ import com.qwb.view.customer.model.XsjdBean.Xsphasels;
 import com.qwb.view.customer.model.queryHzfsBean.queryHzfs;
 import com.qwb.utils.MyChooseTimeUtil;
 import com.qwb.widget.treedialog.MyTreeDialog;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.zyyoona7.lib.EasyPopup;
 import java.util.ArrayList;
 import java.util.List;

@@ -34,7 +34,7 @@ import com.qwb.db.DStepAllBean;
 import com.qwb.utils.MyGlideUtil;
 import com.qwb.utils.MyStringUtil;
 import com.qwb.widget.recordvoice.VoiceManager;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import java.util.List;
 

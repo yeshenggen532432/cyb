@@ -20,7 +20,7 @@ import com.qwb.utils.MyUtils;
 import com.xmsx.cnlife.widget.MyTableListView;
 import com.qwb.view.step.model.QueryBforderBean;
 import com.qwb.view.step.model.XiaJi;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;

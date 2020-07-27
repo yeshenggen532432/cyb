@@ -9,7 +9,7 @@ import com.qwb.utils.Constans;
 import com.qwb.utils.MD5;
 import com.qwb.utils.MyUtils;
 import com.qwb.utils.SPUtils;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.zhy.http.okhttp.builder.GetBuilder;
 import com.zhy.http.okhttp.builder.HeadBuilder;
 import com.zhy.http.okhttp.builder.OtherRequestBuilder;

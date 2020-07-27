@@ -33,7 +33,7 @@ import com.qwb.view.call.model.QueryCallon;
 import com.qwb.view.map.model.TrackListBean.TrackList;
 import com.qwb.utils.MyMapUtil;
 import com.qwb.utils.MyStatusBarUtil;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import butterknife.BindView;
 import cn.droidlover.xdroidmvp.mvp.XActivity;

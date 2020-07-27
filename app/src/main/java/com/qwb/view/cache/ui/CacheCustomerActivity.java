@@ -31,7 +31,7 @@ import com.qwb.utils.MyStatusBarUtil;
 import com.xmsx.cnlife.view.widget.MyLoadingDialog;
 import com.xmsx.cnlife.view.widget.MyVoiceDialog;
 import com.qwb.view.customer.model.MineClientInfo;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
 import java.util.List;

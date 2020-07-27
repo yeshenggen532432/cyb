@@ -11,7 +11,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.qwb.view.plan.model.PlanUnderBean;
 import com.xmsx.cnlife.view.widget.MyRecyclerView;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import cn.droidlover.xrecyclerview.divider.HorizontalDividerItemDecoration;
 

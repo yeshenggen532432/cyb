@@ -35,7 +35,7 @@ import com.qwb.view.step.model.ShopInfoBean;
 import com.qwb.utils.MyStatusBarUtil;
 import com.xmsx.cnlife.view.widget.MyAfterTextWatcher;
 import com.qwb.widget.table.TableHorizontalScrollView;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.zyyoona7.lib.EasyPopup;
 import java.util.ArrayList;
 import java.util.List;

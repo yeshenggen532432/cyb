@@ -16,7 +16,7 @@ import com.qwb.utils.ActivityManager;
 import com.qwb.utils.ConstantUtils;
 import com.qwb.utils.Constans;
 import com.qwb.utils.MyLoginUtil;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import butterknife.BindView;
 import butterknife.OnClick;
 import cn.droidlover.xdroidmvp.mvp.XActivity;

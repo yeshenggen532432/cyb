@@ -37,7 +37,7 @@ import com.qwb.view.log.model.RizhiDetialBean.List2;
 import com.qwb.view.log.model.RizhiListBean.RizhiList;
 import com.qwb.view.log.model.RizhiPinlunBean;
 import com.qwb.view.log.model.RizhiPinlunBean.RizhiPinlun;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import java.util.ArrayList;
 import java.util.List;

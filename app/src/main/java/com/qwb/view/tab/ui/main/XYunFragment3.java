@@ -20,7 +20,7 @@ import com.qwb.utils.SPUtils;
 import com.qwb.view.tab.adapter.ApplyAdapter2;
 import com.qwb.view.base.model.ApplyBean;
 import com.qwb.view.tab.model.ApplyBean2;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -25,7 +25,7 @@ import com.qwb.utils.Constans;
 import com.qwb.utils.MyLoginUtil;
 import com.qwb.utils.MyUtils;
 import com.qwb.utils.SPUtils;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import java.util.ArrayList;
 import java.util.List;

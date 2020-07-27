@@ -14,7 +14,7 @@ import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.View;
 import com.qwb.utils.MyDisplayUtil;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import java.util.ArrayList;
 import java.util.Random;
 

@@ -8,7 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import com.qwb.utils.Constans;
 import com.qwb.utils.MyGlideUtil;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 public class ShenPi_PicAdatper extends BaseAdapter {
 

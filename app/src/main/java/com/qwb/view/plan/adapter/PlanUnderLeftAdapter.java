@@ -7,7 +7,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.qwb.utils.MyColorUtil;
 import com.qwb.view.member.model.MemberBean;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 /**
  * 文 件 名: 计划拜访--下属拜访--下属线路--左边（业务员）

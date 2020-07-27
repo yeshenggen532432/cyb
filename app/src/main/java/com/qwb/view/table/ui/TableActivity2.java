@@ -32,7 +32,7 @@ import com.qwb.utils.MyStatusBarUtil;
 import com.xmsx.cnlife.view.widget.MyAfterTextWatcher;
 import com.xmsx.cnlife.widget.SyncHorizontalScrollView;
 import com.qwb.view.table.model.Statement_khbfBean;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import java.util.ArrayList;
 import java.util.List;
 import butterknife.BindView;

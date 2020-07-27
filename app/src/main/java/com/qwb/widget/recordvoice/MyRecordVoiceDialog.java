@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.qwb.utils.Constans;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 
 /**

@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import com.qwb.view.file.model.FileBean;
 import com.qwb.view.base.ui.BaseNoTitleActivity;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 /**
  * 云盘模块：转发文件

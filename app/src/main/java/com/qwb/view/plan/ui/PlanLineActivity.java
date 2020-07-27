@@ -26,7 +26,7 @@ import com.qwb.view.plan.model.PlanLineDetailBean;
 import com.qwb.view.plan.parsent.PPlanLine;
 import com.qwb.utils.MyStatusBarUtil;
 import com.qwb.utils.MyStringUtil;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import java.util.ArrayList;
 import java.util.List;

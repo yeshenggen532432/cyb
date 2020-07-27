@@ -25,7 +25,7 @@ import com.qwb.utils.ToastUtils;
 import com.qwb.view.mine.model.AddressUploadBean;
 import com.qwb.utils.MyStringUtil;
 import com.qwb.utils.MyStatusBarUtil;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.zhy.http.okhttp.utils.MyUrlUtil;
 
 import java.io.File;

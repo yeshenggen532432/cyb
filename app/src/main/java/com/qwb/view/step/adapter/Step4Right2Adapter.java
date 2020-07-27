@@ -16,7 +16,7 @@ import com.qwb.utils.ToastUtils;
 import com.qwb.utils.MyStringUtil;
 import com.xmsx.cnlife.view.widget.MyAfterTextWatcher;
 import com.qwb.view.step.model.ShopInfoBean;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.zyyoona7.lib.EasyPopup;
 
 /**

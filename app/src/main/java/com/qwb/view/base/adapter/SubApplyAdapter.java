@@ -12,7 +12,7 @@ import com.qwb.utils.ConstantUtils;
 import com.qwb.view.base.model.ApplyBean;
 import com.qwb.utils.MyGlideUtil;
 import com.qwb.utils.MyStringUtil;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import q.rorbin.badgeview.Badge;
 import q.rorbin.badgeview.QBadgeView;

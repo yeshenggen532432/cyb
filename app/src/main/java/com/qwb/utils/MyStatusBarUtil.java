@@ -5,7 +5,7 @@ import android.content.Context;
 import android.view.View;
 
 import com.jaeger.library.StatusBarUtil;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 /**
  * Created by yeshenggen on 2019/5/11.

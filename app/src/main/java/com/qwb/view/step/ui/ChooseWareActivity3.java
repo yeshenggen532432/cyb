@@ -43,7 +43,7 @@ import com.qwb.view.step.model.HistoryOrgPriceBean;
 import com.qwb.view.step.model.ShopInfoBean;
 import com.qwb.view.step.model.ShopInfoBean.Data;
 import com.qwb.view.base.model.TreeBean;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 import com.zhy.tree.bean.Node;
 import com.zyyoona7.lib.EasyPopup;

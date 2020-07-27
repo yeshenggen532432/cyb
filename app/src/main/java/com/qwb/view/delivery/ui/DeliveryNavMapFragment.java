@@ -26,7 +26,7 @@ import com.qwb.view.delivery.model.DeliveryBean;
 import com.qwb.view.delivery.parsent.PDeliveryNavMap;
 import com.qwb.utils.MyMapUtil;
 import com.qwb.utils.MyStringUtil;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.zyyoona7.lib.EasyPopup;
 
 import java.util.ArrayList;

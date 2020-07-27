@@ -27,7 +27,7 @@ import com.qwb.view.call.model.QueryCallon;
 import com.qwb.view.location.ui.MapLocationActivity;
 import com.qwb.widget.recordvoice.VoiceManager;
 import com.xmsx.cnlife.widget.CircleImageView;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.zhy.http.okhttp.utils.MyUrlUtil;
 import com.zyyoona7.lib.EasyPopup;
 import com.zyyoona7.lib.HorizontalGravity;

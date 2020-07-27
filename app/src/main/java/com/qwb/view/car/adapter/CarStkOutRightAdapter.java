@@ -9,7 +9,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.xmsx.cnlife.view.widget.MyAfterTextWatcher;
 import com.qwb.view.step.model.ShopInfoBean;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 /**
  * 车销配货

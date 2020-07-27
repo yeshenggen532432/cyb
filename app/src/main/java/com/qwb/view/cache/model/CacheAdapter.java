@@ -6,7 +6,7 @@ import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 /**
  * 文 件 名: 我的缓存

@@ -41,7 +41,7 @@ import com.qwb.view.stk.StorageBean;
 import com.qwb.view.step.model.ShopInfoBean;
 import com.qwb.view.common.ui.XScanActivity;
 import com.qwb.utils.MyStatusBarUtil;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
 import java.util.ArrayList;

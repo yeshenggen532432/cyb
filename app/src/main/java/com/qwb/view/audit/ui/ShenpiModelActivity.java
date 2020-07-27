@@ -24,7 +24,7 @@ import com.qwb.listener.OnNoMoreClickListener;
 import com.qwb.utils.MyStatusBarUtil;
 import com.qwb.utils.MyStringUtil;
 import com.qwb.view.audit.model.ShenpiModel;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import java.util.List;
 
 import cn.droidlover.xdroidmvp.mvp.XActivity;

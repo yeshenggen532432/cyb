@@ -36,7 +36,7 @@ import com.qwb.utils.Constans;
 import com.qwb.utils.MyPopWindowManager;
 import com.qwb.utils.ToastUtils;
 import com.qwb.view.file.model.FileBean;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;

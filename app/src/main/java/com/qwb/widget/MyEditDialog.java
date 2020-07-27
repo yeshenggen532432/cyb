@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import com.flyco.dialog.widget.base.BaseDialog;
 import com.qwb.utils.MyStringUtil;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 
 /**

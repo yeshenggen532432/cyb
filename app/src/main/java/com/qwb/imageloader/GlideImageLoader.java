@@ -6,7 +6,7 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.lzy.imagepicker.loader.ImageLoader;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import java.io.File;
 
 /**

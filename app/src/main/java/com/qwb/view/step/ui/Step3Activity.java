@@ -41,7 +41,7 @@ import com.qwb.utils.MyNetWorkUtil;
 import com.qwb.view.step.model.QueryBfcljccjBean;
 import com.qwb.view.step.model.QueryBfcljccjBean.QueryBfcljccj;
 import com.qwb.view.step.model.QueryCljccjMdlsBean;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.zhy.http.okhttp.utils.MyUrlUtil;
 
 import java.io.File;

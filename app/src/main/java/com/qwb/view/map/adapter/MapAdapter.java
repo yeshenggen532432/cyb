@@ -10,7 +10,7 @@ import com.qwb.utils.Constans;
 import com.qwb.view.map.model.TrackListBean;
 import com.qwb.utils.MyGlideUtil;
 import com.xmsx.cnlife.widget.CircleImageView;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import java.net.URLDecoder;
 

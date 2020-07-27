@@ -39,7 +39,7 @@ import com.qwb.db.DStep2Bean;
 import com.qwb.utils.MyNetWorkUtil;
 import com.qwb.utils.MyStringUtil;
 import com.qwb.view.step.model.QueryBfsdhjcBean;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.zhy.http.okhttp.utils.MyUrlUtil;
 
 import java.io.File;

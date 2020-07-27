@@ -25,7 +25,7 @@ import android.widget.TextView;
 
 import com.qwb.utils.MyDisplayUtil;
 import com.xmsx.cnlife.widget.ProgressWheel;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 
 /**

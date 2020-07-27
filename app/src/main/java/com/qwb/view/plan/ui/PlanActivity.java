@@ -8,7 +8,7 @@ import android.widget.RadioGroup;
 
 import com.qwb.utils.ActivityManager;
 import com.qwb.view.plan.parsent.PPlan;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import cn.droidlover.xdroidmvp.mvp.XActivity;
 
 /**

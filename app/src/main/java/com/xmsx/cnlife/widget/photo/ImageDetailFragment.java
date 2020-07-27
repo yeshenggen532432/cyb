@@ -25,7 +25,7 @@ import com.xmsx.cnlife.widget.photo.PhotoViewAttacher.OnPhotoTapListener;
 import com.qwb.utils.Constans;
 import com.qwb.utils.MyUtils;
 import com.qwb.utils.ToastUtils;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import java.io.File;
 

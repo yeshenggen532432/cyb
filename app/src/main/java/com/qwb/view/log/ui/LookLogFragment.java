@@ -29,7 +29,7 @@ import com.qwb.view.audit.ui.AddCurrentIds;
 import com.qwb.view.audit.adapter.ShenPi_PersonAdatper;
 import com.qwb.utils.ToastUtils;
 import com.qwb.view.log.model.RizhiListBean;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
 import java.util.List;

@@ -15,7 +15,7 @@ import com.qwb.utils.MyStatusBarUtil;
 import com.qwb.event.BaseEvent;
 import com.qwb.utils.ConstantUtils;
 import com.qwb.view.work.parsent.PWorkClassAddress;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import butterknife.BindView;
 import butterknife.OnClick;
 import cn.droidlover.xdroidmvp.event.BusProvider;

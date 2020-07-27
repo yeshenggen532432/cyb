@@ -52,7 +52,7 @@ import com.qwb.widget.MyDatePickerDialog;
 import com.qwb.view.call.ui.CallRecordActivity;
 import com.qwb.view.map.model.QueryBflsmwebBean;
 import com.qwb.view.map.model.QueryBflsmwebBean.QueryBfHf;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 import com.zyyoona7.lib.EasyPopup;
 

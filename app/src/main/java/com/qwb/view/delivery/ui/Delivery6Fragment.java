@@ -24,7 +24,7 @@ import com.qwb.view.delivery.model.DeliveryBean;
 import com.qwb.view.delivery.parsent.PDelivery6;
 import com.qwb.utils.MyStringUtil;
 import com.qwb.widget.MyDoubleDatePickerDialog;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
 import java.util.Calendar;

@@ -17,7 +17,7 @@ import com.tools.io.SerialPort;
 import com.tools.io.UsbPort;
 import com.qwb.application.MyApp;
 import com.qwb.utils.ToastUtils;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import java.io.IOException;
 import java.util.Vector;

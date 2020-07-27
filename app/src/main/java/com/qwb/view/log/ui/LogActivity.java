@@ -7,7 +7,7 @@ import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 
 import com.qwb.utils.OtherUtils;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import cn.droidlover.xdroidmvp.mvp.XActivity;
 

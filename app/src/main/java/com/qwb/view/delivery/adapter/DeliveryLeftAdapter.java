@@ -10,7 +10,7 @@ import android.widget.TextView;
 import com.qwb.view.delivery.model.DeliverySubBean;
 import com.qwb.utils.ToastUtils;
 import com.qwb.utils.MyColorUtil;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -9,7 +9,7 @@ import com.deadline.statebutton.StateButton;
 import com.qwb.view.delivery.model.DeliveryBean;
 import com.qwb.utils.SPUtils;
 import com.qwb.utils.MyStringUtil;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 /**
  * 文 件 名: DeliveryAdapter

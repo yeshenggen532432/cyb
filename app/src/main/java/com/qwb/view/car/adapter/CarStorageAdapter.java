@@ -10,7 +10,7 @@ import com.qwb.utils.ConstantUtils;
 import com.qwb.view.stk.StorageBean;
 import com.qwb.utils.MyUtils;
 import com.qwb.utils.SPUtils;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 /**
  * 文 件 名: 车销：仓库

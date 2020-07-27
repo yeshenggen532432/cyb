@@ -35,7 +35,7 @@ import com.qwb.db.DStepAllBean;
 import com.qwb.view.cache.parsent.PCacheStep;
 import com.qwb.utils.MyNetWorkUtil;
 import com.qwb.utils.MyStatusBarUtil;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
 import java.util.List;

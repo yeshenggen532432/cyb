@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 
 /**

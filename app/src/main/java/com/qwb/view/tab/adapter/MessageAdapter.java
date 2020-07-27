@@ -17,7 +17,7 @@ import com.qwb.utils.MyUtils;
 import com.qwb.db.DMessageBean;
 import com.qwb.utils.MyGlideUtil;
 import com.xmsx.cnlife.widget.emoji.CCPTextView;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import cn.droidlover.xdroidmvp.log.XLog;
 import q.rorbin.badgeview.Badge;

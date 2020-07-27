@@ -12,7 +12,7 @@ import com.qwb.utils.ConstantUtils;
 import com.qwb.utils.MyChooseTimeUtil;
 import com.qwb.utils.MyStringUtil;
 import com.qwb.utils.MyTimeUtils;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import java.lang.reflect.Type;
 

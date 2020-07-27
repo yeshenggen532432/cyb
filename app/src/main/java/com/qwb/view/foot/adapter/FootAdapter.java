@@ -19,7 +19,7 @@ import com.qwb.utils.SPUtils;
 import com.qwb.utils.MyGlideUtil;
 import com.qwb.widget.recordvoice.VoiceManager;
 import com.xmsx.cnlife.widget.CircleImageView;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.zhy.http.okhttp.utils.MyUrlUtil;
 
 import java.util.ArrayList;

@@ -2,7 +2,7 @@ package com.qwb.utils;
 
 import android.content.Context;
 
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
 

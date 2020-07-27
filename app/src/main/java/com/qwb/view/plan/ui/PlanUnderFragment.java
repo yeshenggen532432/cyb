@@ -24,7 +24,7 @@ import com.qwb.view.plan.model.PlanUnderBean;
 import com.qwb.utils.MyColorUtil;
 import com.qwb.utils.MyStringUtil;
 import com.qwb.view.member.model.MemberBean;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import java.util.List;
 

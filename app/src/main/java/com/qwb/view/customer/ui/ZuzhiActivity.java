@@ -20,7 +20,7 @@ import com.qwb.view.member.model.BranchBean;
 import com.qwb.view.base.model.TreeBean;
 import com.qwb.view.member.model.MemberBean;
 import com.qwb.view.member.model.BranchListBean2;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
 

@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 /**
     复制工具类

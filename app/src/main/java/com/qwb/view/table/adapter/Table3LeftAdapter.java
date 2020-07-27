@@ -7,7 +7,7 @@ import android.widget.TextView;
 import com.qwb.view.common.adapter.AbsCommonAdapter;
 import com.qwb.view.common.adapter.AbsViewHolder;
 import com.qwb.view.table.model.TableModel;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 /**
  * 产品统计表

@@ -10,7 +10,7 @@ import com.chad.library.adapter.base.BaseViewHolder;
 import com.qwb.utils.MyUtils;
 import com.qwb.utils.SPUtils;
 import com.qwb.view.order.model.QueryDhorderBean;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 /**
  * 下单列表

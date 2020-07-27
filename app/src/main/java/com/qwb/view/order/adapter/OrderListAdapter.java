@@ -12,7 +12,7 @@ import com.qwb.view.order.model.OrderBean;
 import com.qwb.utils.MyUtils;
 import com.qwb.utils.SPUtils;
 import com.qwb.utils.MyColorUtil;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 /**
  * 下单列表

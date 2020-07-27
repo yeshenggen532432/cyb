@@ -15,7 +15,7 @@ import com.qwb.utils.SPUtils;
 import com.qwb.view.audit.parsent.PAudit;
 import com.qwb.utils.MyStatusBarUtil;
 import com.qwb.utils.MyStringUtil;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import butterknife.BindView;
 import cn.droidlover.xdroidmvp.mvp.XActivity;

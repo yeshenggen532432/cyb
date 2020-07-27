@@ -18,7 +18,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.ViewFlipper;
 
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import java.util.Calendar;
 import java.util.Date;

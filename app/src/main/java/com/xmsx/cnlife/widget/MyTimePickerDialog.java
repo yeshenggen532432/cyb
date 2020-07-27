@@ -13,7 +13,7 @@ import android.widget.NumberPicker;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;

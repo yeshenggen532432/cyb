@@ -11,7 +11,7 @@ import com.flyco.dialog.utils.CornerUtils;
 import com.flyco.dialog.widget.base.BaseDialog;
 import com.qwb.view.tree.SimpleTreeAdapter_map;
 import com.qwb.view.base.model.TreeBean;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import java.util.ArrayList;
 import java.util.List;

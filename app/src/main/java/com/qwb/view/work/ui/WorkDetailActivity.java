@@ -23,7 +23,7 @@ import com.qwb.utils.MyGlideUtil;
 import com.qwb.utils.MyStatusBarUtil;
 import com.xmsx.cnlife.widget.ComputeHeightGridView;
 import com.qwb.utils.Constans;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import java.util.ArrayList;
 import java.util.List;

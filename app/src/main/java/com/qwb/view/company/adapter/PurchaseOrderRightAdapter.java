@@ -15,7 +15,7 @@ import com.qwb.view.step.model.ShopInfoBean;
 import com.qwb.utils.MyStringUtil;
 import com.xmsx.cnlife.view.widget.MyAfterTextWatcher;
 import com.qwb.widget.MyDatePickerDialog;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import java.util.List;
 

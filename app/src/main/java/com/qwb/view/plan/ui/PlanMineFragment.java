@@ -36,7 +36,7 @@ import com.qwb.view.plan.model.PlanLineBean;
 import com.qwb.utils.MyStringUtil;
 import com.qwb.view.call.ui.CallRecordActivity;
 import com.qwb.view.plan.model.PlanMineResult;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import java.util.ArrayList;
 import java.util.List;

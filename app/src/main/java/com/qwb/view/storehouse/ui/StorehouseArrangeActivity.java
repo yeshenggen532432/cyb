@@ -39,7 +39,7 @@ import com.qwb.utils.MyKeyboardUtil;
 import com.qwb.utils.MyStatusBarUtil;
 import com.qwb.widget.table.TableHorizontalScrollView;
 import com.qwb.widget.treedialog.MyTreeDialog;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
 import java.util.ArrayList;

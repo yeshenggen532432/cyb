@@ -23,7 +23,7 @@ import com.qwb.view.car.parsent.PCarStkWare;
 import com.qwb.listener.OnNoMoreClickListener;
 import com.qwb.utils.MyStatusBarUtil;
 import com.qwb.view.step.model.ShopInfoBean;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
 import java.util.ArrayList;

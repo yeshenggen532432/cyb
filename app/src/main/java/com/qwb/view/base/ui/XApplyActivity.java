@@ -21,7 +21,7 @@ import com.qwb.view.base.model.NewApplyComparator;
 import com.qwb.utils.MyStatusBarUtil;
 import com.qwb.widget.channel.ItemDragHelperCallback;
 import com.qwb.view.base.model.ApplyBean;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import java.util.ArrayList;
 import java.util.Collections;

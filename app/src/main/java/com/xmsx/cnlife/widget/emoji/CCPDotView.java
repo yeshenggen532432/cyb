@@ -19,7 +19,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 /**
  * 

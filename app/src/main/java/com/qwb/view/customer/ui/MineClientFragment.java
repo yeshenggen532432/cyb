@@ -46,7 +46,7 @@ import com.qwb.widget.treedialog.MyTreeDialog;
 import com.qwb.view.tree.SimpleTreeAdapter_kh;
 import com.qwb.view.base.model.TreeBean;
 import com.qwb.view.customer.model.MineClientInfo;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 import com.zyyoona7.lib.EasyPopup;
 

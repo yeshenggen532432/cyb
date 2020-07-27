@@ -8,7 +8,7 @@ import android.widget.TextView;
 import com.deadline.statebutton.StateButton;
 import com.qwb.utils.ActivityManager;
 import com.qwb.utils.MyStatusBarUtil;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import butterknife.BindView;
 

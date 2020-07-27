@@ -29,7 +29,7 @@ import com.qwb.view.tab.model.MainResult;
 import com.qwb.view.tab.model.ShopInfoBean;
 import com.qwb.view.tab.parsent.PXMain2;
 import com.qwb.widget.MyDoubleDatePickerDialog;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import java.util.ArrayList;
 import java.util.List;

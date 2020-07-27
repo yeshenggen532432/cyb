@@ -21,7 +21,7 @@ import com.qwb.event.ApplyEvent;
 import com.qwb.widget.channel.OnDragVHListener;
 import com.qwb.widget.channel.OnItemMoveListener;
 import com.qwb.view.base.model.ApplyBean;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import java.util.List;
 

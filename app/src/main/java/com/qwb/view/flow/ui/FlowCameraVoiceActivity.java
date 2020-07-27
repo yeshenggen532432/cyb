@@ -38,7 +38,7 @@ import com.qwb.utils.MyStatusBarUtil;
 import com.qwb.utils.MyStringUtil;
 import com.qwb.widget.recordvoice.MyRecordVoiceDialog;
 import com.qwb.widget.recordvoice.VoiceManager;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import java.io.File;
 import java.util.ArrayList;

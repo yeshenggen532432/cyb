@@ -52,7 +52,7 @@ import com.qwb.view.ware.ui.WareManagerActivity;
 import com.qwb.view.cache.ui.CacheActivity;
 import com.qwb.utils.MyStringUtil;
 import com.xmsx.cnlife.view.widget.MyRecyclerView;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import cn.droidlover.xdroidmvp.event.BusProvider;
 import cn.droidlover.xdroidmvp.router.Router;

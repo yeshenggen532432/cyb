@@ -23,7 +23,7 @@ import com.qwb.utils.SPUtils;
 import com.qwb.view.mine.model.UserInfoResult;
 import com.qwb.utils.MyGlideUtil;
 import com.qwb.utils.MyStatusBarUtil;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import java.io.File;
 import java.util.ArrayList;

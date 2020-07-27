@@ -16,7 +16,7 @@ import com.qwb.view.file.model.FileBean;
 import com.qwb.view.base.ui.BaseNoTitleActivity;
 import com.qwb.utils.MyUtils;
 import com.qwb.utils.SPUtils;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import java.io.File;
 import java.util.ArrayList;

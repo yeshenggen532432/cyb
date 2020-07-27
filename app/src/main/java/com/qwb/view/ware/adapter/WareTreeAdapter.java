@@ -10,7 +10,7 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 import com.zhy.tree.bean.Node;
 import com.zhy.tree.bean.TreeHelper;
 

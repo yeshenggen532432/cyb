@@ -32,7 +32,7 @@ import com.qwb.utils.ToastUtils;
 import com.qwb.utils.MyGlideUtil;
 import com.qwb.utils.MyStatusBarUtil;
 import com.xmsx.cnlife.widget.photo.ImagePagerActivity;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import java.util.ArrayList;
 

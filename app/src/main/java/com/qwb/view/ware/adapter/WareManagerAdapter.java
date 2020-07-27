@@ -13,7 +13,7 @@ import com.xmsx.cnlife.widget.photo.ImagePagerActivity;
 import com.qwb.utils.Constans;
 import com.qwb.utils.MyGlideUtil;
 import com.qwb.view.step.model.ShopInfoBean;
-import com.xmsx.qiweibao.R;
+import com.chiyong.t3.R;
 
 import java.util.List;
 
