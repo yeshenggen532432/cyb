@@ -134,7 +134,7 @@ public class Step5Activity extends XActivity<PStep5> {
         doIntent();
         createPopupSearchGoods();//语音搜索商品
         queryToken();
-        queryOrderConfigWeb();
+//        queryOrderConfigWeb();
     }
 
     public DoStep5 mDo;
