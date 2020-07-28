@@ -36,8 +36,8 @@ public class PXShop extends XPresent<XShopFragment> {
         OkHttpUtils
                 .post()
                 .addParams("token", SPUtils.getTK())
-//                .url(Constans.shopMember_mySuppliers)
-                .url(Constans.myFollow)
+                .url(Constans.shopMember_mySuppliers)
+//                .url(Constans.myFollow)
                 .id(1)
                 .build()
                 .execute(new MyHttpCallback(context) {

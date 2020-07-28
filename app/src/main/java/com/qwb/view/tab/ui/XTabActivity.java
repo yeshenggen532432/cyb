@@ -82,12 +82,10 @@ public class XTabActivity extends XActivity<PXTab>{
         initOnePx();
         // 蒲公英版本更新（正式注释）
         if(Constans.ISDEBUG){
-//            checkUpdate();
+            checkUpdate();
         }else{
             getP().queryDataUpdateVersion();
         }
-
-        getP().queryDataUpdateVersion();
     }
 
     @Override

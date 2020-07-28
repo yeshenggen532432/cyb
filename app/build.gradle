@@ -14,7 +14,7 @@ android {
 
         //清单文件配置值
         manifestPlaceholders = [
-                PGYER_APPID: "8fd7deb690eb7314590990a10b12c07c"//蒲公英id mp:40c064bddf927c0a73aa17bbc28dbbda      beta:8fd7deb690eb7314590990a10b12c07c       my:9e79960385f2133e94a176cd1b3abb3b
+                PGYER_APPID: "e81ab95b8559a7610c56046a4e57ed60"
         ]
     }
 

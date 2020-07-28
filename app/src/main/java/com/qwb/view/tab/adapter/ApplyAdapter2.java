@@ -201,8 +201,7 @@ public class ApplyAdapter2 extends BaseQuickAdapter<ApplyBean2, BaseViewHolder> 
                             ActivityManager.getInstance().jumpActivity(mActivity, FootQueryActivity.class);
                             break;
                         case ConstantUtils.Apply.TJ_NEW://编辑应用
-//                            ActivityManager.getInstance().jumpToApplyActivity(mActivity);
-                            ActivityManager.getInstance().jumpActivity(mActivity, ClientManagerActivity.class);
+                            ActivityManager.getInstance().jumpToApplyActivity(mActivity);
                             break;
                         default:
                             String applyUrl = item.getApplyUrl();

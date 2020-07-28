@@ -78,7 +78,7 @@ public class XShopFragment extends XFragment<PXShop> {
 	public void initData(Bundle savedInstanceState) {
 		initEvent();
 		initUI();
-		getP().queryShopMember(context,true);
+//		getP().queryShopMember(context,true);
 	}
 
 	/**
