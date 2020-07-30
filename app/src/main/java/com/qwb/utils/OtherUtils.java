@@ -114,7 +114,8 @@ public class OtherUtils {
      * 统一设置：状态栏颜色，透明度
      */
     public static void setStatusBarColor(Context context){
-        StatusBarUtil.setColor((Activity)context, context.getResources().getColor(R.color.blue), ConstantUtils.STATUSBAR_ALPHA);//设置状态栏颜色
+//        StatusBarUtil.setColor((Activity)context, context.getResources().getColor(R.color.green), ConstantUtils.STATUSBAR_ALPHA);//设置状态栏颜色
+        StatusBarUtil.setColor((Activity)context, context.getResources().getColor(R.color.green), 0);//设置状态栏颜色
     }
     /**
      * 统一设置：全屏，透明度

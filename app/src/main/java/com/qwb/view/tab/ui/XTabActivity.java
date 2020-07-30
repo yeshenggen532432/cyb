@@ -271,11 +271,11 @@ public class XTabActivity extends XActivity<PXTab>{
             startService(it);
         }
 
-        //开启或关闭上传位置服务
-        MyTraceServiceUtil.getInstance().startOrStopService();
-
-        //上传拜访的缓存数据，下载"我的客户"，"商品分类"，"商品"
-        MyServiceUtil.startService(context, XStepService.class);
+//        //开启或关闭上传位置服务
+//        MyTraceServiceUtil.getInstance().startOrStopService();
+//
+//        //上传拜访的缓存数据，下载"我的客户"，"商品分类"，"商品"
+//        MyServiceUtil.startService(context, XStepService.class);
     }
 
 

@@ -318,7 +318,6 @@ public class WorkActivity extends XActivity<PWork> {
      */
 //    EasyPopup mEasyPop;
     private MyMenuPopup mMenuPopup;
-
     private void initPopup() {
         String[] items = {"考勤列表", "班次设置"};
         mMenuPopup = new MyMenuPopup(context, items);

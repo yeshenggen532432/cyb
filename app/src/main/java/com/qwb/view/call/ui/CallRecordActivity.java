@@ -20,6 +20,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.alibaba.fastjson.JSON;
+import com.qwb.utils.MyStatusBarUtil;
 import com.qwb.view.location.ui.MapLocationActivity;
 import com.qwb.view.plan.model.PlanBean;
 import com.qwb.view.base.ui.BaseNoTitleActivity;
@@ -203,6 +204,7 @@ public class CallRecordActivity extends BaseNoTitleActivity  {
 
 	// 头部
 	private void initHead() {
+		MyStatusBarUtil.getInstance().setColorGreen(this);
 		findViewById(R.id.iv_head_back).setOnClickListener(this);
 		findViewById(R.id.tv_head_right).setOnClickListener(this);
 		TextView tv_headTitle = (TextView) findViewById(R.id.tv_head_title);

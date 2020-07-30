@@ -47,16 +47,16 @@ public class TraceServiceImpl extends AbsWorkService {
     public static Disposable sDisposable;
 
     public static void stopService() {
-        //取消 Job / Alarm / Subscription
-        cancelJobAlarmSub();
-        //关闭音乐
-        stopPlayMusic();
-        //关闭定位，释放资源
-        stopLocation();
-        //我们现在不再需要服务运行了, 将标志位置为 true
-        sShouldStopService = true;
-        //取消对任务的订阅
-        if (sDisposable != null) sDisposable.dispose();
+//        //取消 Job / Alarm / Subscription
+//        cancelJobAlarmSub();
+//        //关闭音乐
+//        stopPlayMusic();
+//        //关闭定位，释放资源
+//        stopLocation();
+//        //我们现在不再需要服务运行了, 将标志位置为 true
+//        sShouldStopService = true;
+//        //取消对任务的订阅
+//        if (sDisposable != null) sDisposable.dispose();
     }
 
     /**
@@ -71,49 +71,48 @@ public class TraceServiceImpl extends AbsWorkService {
 
     @Override
     public void startWork(Intent intent, int flags, int startId) {
-        int upload = SPUtils.getIValues(ConstantUtils.Sp.TRACK_UPLOAD_STATUS);
-        XLog.e("upload", "" + upload);
-        if (1 == upload) {
-            //初始化定位
-            initLocation();
-            //初始化音乐
-            initMediaPlayer();
-            //间隔线程
-            sDisposable = Observable.interval(1, TimeUnit.SECONDS)//"每1秒采集一次数据"
-                    .doOnDispose(new Action() {
-                        @Override
-                        public void run() throws Exception {
-                            //取消任务时取消定时唤醒
-                            stopService();
-                        }
-                    })
-                    .subscribe(new Consumer<Long>() {
-                        @Override
-                        public void accept(Long count) throws Exception {
-                            int traceTime = 60;// 默认一分钟
-                            int min = SPUtils.getIValues(ConstantUtils.Sp.TRACK_UPLOAD_MIN);
-                            if (min > 0) {
-                                traceTime = min * 60;
-                            }
-//                            XLog.e("gps --count", "" + count);
-                            if (null != count && count % traceTime == 0) {
-//                                mLocClient.start();//开启定位
-                                String workTime = SPUtils.getSValues(ConstantUtils.Sp.WORK_TIME);
-                                String nowTime = MyTimeUtils.getNowTime();
-                                if (!MyStringUtil.isEmpty(workTime)){
-                                    if (!MyTimeUtils.judgmentDate(workTime, nowTime)){
-                                        doSubmitData(mCurrentLocation);
-                                        saveCacheData();
-                                    }else {
-                                        TraceServiceImpl.stopService();//关闭上传
-                                        SPUtils.setValues(ConstantUtils.Sp.WORK_STATE,"2");
-                                        //可以调下班接口
-                                    }
-                                }
-                            }
-                        }
-                    });
-        }
+//        int upload = SPUtils.getIValues(ConstantUtils.Sp.TRACK_UPLOAD_STATUS);
+//        if (1 == upload) {
+//            //初始化定位
+//            initLocation();
+//            //初始化音乐
+//            initMediaPlayer();
+//            //间隔线程
+//            sDisposable = Observable.interval(1, TimeUnit.SECONDS)//"每1秒采集一次数据"
+//                    .doOnDispose(new Action() {
+//                        @Override
+//                        public void run() throws Exception {
+//                            //取消任务时取消定时唤醒
+//                            stopService();
+//                        }
+//                    })
+//                    .subscribe(new Consumer<Long>() {
+//                        @Override
+//                        public void accept(Long count) throws Exception {
+//                            int traceTime = 60;// 默认一分钟
+//                            int min = SPUtils.getIValues(ConstantUtils.Sp.TRACK_UPLOAD_MIN);
+//                            if (min > 0) {
+//                                traceTime = min * 60;
+//                            }
+////                            XLog.e("gps --count", "" + count);
+//                            if (null != count && count % traceTime == 0) {
+////                                mLocClient.start();//开启定位
+//                                String workTime = SPUtils.getSValues(ConstantUtils.Sp.WORK_TIME);
+//                                String nowTime = MyTimeUtils.getNowTime();
+//                                if (!MyStringUtil.isEmpty(workTime)){
+//                                    if (!MyTimeUtils.judgmentDate(workTime, nowTime)){
+//                                        doSubmitData(mCurrentLocation);
+//                                        saveCacheData();
+//                                    }else {
+//                                        TraceServiceImpl.stopService();//关闭上传
+//                                        SPUtils.setValues(ConstantUtils.Sp.WORK_STATE,"2");
+//                                        //可以调下班接口
+//                                    }
+//                                }
+//                            }
+//                        }
+//                    });
+//        }
     }
 
     @Override

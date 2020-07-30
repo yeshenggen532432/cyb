@@ -172,23 +172,23 @@ public class MyMapUtil {
      * work_status1:上班，2：下班，3：拜访签到，4：拜访签退
      */
     public void sendLocation(int work_status, String latitude, String longitude, String address, String location_from) {
-        List<LocationBean> list = new ArrayList<>();
-        LocationBean mLocationBean = new LocationBean();
-        mLocationBean.setLatitude(Double.valueOf(latitude));
-        mLocationBean.setLongitude(Double.valueOf(longitude));
-        mLocationBean.setAddress(address);
-        mLocationBean.setLocation_time(Long.valueOf(System.currentTimeMillis() / 1000));
-        mLocationBean.setLocation_from(location_from);
-        mLocationBean.setOs(Build.MODEL + "   " + Build.VERSION.RELEASE);
-        mLocationBean.setWork_status(work_status);
-        list.add(mLocationBean);
-        // 作用：同一个时间连线，不同时间断开连线
-        if (1 == work_status) {
-            SPUtils.setValues("check_in_time", String.valueOf(System.currentTimeMillis() / 1000));
-        }
-        String location = JSON.toJSONString(list);
-
-        sendData(location);
+//        List<LocationBean> list = new ArrayList<>();
+//        LocationBean mLocationBean = new LocationBean();
+//        mLocationBean.setLatitude(Double.valueOf(latitude));
+//        mLocationBean.setLongitude(Double.valueOf(longitude));
+//        mLocationBean.setAddress(address);
+//        mLocationBean.setLocation_time(Long.valueOf(System.currentTimeMillis() / 1000));
+//        mLocationBean.setLocation_from(location_from);
+//        mLocationBean.setOs(Build.MODEL + "   " + Build.VERSION.RELEASE);
+//        mLocationBean.setWork_status(work_status);
+//        list.add(mLocationBean);
+//        // 作用：同一个时间连线，不同时间断开连线
+//        if (1 == work_status) {
+//            SPUtils.setValues("check_in_time", String.valueOf(System.currentTimeMillis() / 1000));
+//        }
+//        String location = JSON.toJSONString(list);
+//
+//        sendData(location);
     }
 
     /**
