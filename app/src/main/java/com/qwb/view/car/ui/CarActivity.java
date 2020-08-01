@@ -13,10 +13,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.flyco.dialog.listener.OnBtnClickL;
-import com.flyco.dialog.widget.NormalDialog;
 import com.qwb.common.OrderTypeEnum;
 import com.qwb.widget.MyCarCollectionDialog;
 import com.qwb.widget.MyMenuPopup;
@@ -45,7 +42,6 @@ import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 import com.zyyoona7.lib.EasyPopup;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
 import butterknife.BindView;
@@ -130,9 +126,8 @@ public class CarActivity extends XActivity<PCar> {
     ImageView mIvHeadRight;
     @BindView(R.id.iv_head_right2)
     ImageView mIvHeadRight2;
-
     private void initHead() {
-        MyStatusBarUtil.getInstance().setColorWhite(context);
+        MyStatusBarUtil.getInstance().setColorGreen(context);
         mHeadLeft.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -140,14 +135,14 @@ public class CarActivity extends XActivity<PCar> {
             }
         });
         mTvHeadTitle.setText("车销管理");
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams((int) getResources().getDimension(R.dimen.dp_20), (int) getResources().getDimension(R.dimen.dp_20));
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams((int) getResources().getDimension(R.dimen.dp_30), (int) getResources().getDimension(R.dimen.dp_30));
         mIvHeadRight.setLayoutParams(params);
-        mIvHeadRight.setImageResource(R.mipmap.ic_ddd_h_gray_333);
+        mIvHeadRight.setImageResource(R.mipmap.ic_ddd_white);
         //具体车销仓库商品；车销回库
         mTvHeadTitle.setOnClickListener(new OnNoMoreClickListener() {
             @Override
             protected void OnMoreClick(View view) {
-                jumpCarStorageGoodsActivity();
+//                jumpCarStorageGoodsActivity();
             }
         });
         //默认仓库，车销配货
@@ -160,55 +155,94 @@ public class CarActivity extends XActivity<PCar> {
     }
 
 
+//    /**
+//     * 初始化筛选:时间和搜索
+//     */
+//    LinearLayout mRlSearch;
+//    EditText mEtSearch;
+//    TextView mIvSearch;
+//    TextView mTvStartEndTime;
+//    int mStartYear, mStartMonth, mStartDay, mEndYear, mEndMonth, mEndDay;//年，月，日
+//    String mStartDate, mEndDate;//开始时间，结束时间
+//    Calendar calendar = Calendar.getInstance();
+//
+//    private void initScreening() {
+//        mRlSearch = findViewById(R.id.rl_search);
+//        mEtSearch = findViewById(R.id.et_search);
+//        mIvSearch = findViewById(R.id.iv_search);
+//        mTvStartEndTime = findViewById(R.id.tv_start_end_time);
+//        TextView mTvSearch = findViewById(R.id.tv_search);
+//        mTvSearch.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                onClickTvSearch();//搜索：显示搜索和隐藏搜索
+//            }
+//        });
+//        mIvSearch.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                onClickIvSearch();//搜索按钮：请求数据
+//            }
+//        });
+//        mStartYear = mEndYear = calendar.get(Calendar.YEAR);//年
+//        mStartMonth = mEndMonth = calendar.get(Calendar.MONTH);//月
+//        mStartDay = mEndDay = calendar.get(Calendar.DAY_OF_MONTH);//日
+//        mTvStartEndTime.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                showDialogStartEndTime();
+//            }
+//        });
+//    }
+
     /**
      * 初始化筛选:时间和搜索
      */
-    LinearLayout mRlSearch;
+    @BindView(R.id.view_search)
+    View mViewSearch;
+    @BindView(R.id.et_search)
     EditText mEtSearch;
-    TextView mIvSearch;
-    TextView mTvStartEndTime;
-    int mStartYear, mStartMonth, mStartDay, mEndYear, mEndMonth, mEndDay;//年，月，日
+    @BindView(R.id.tv_search)
+    TextView mTvSearch;
+    @BindView(R.id.view_screening_tab1)
+    View mViewScreeningTab1;
+    @BindView(R.id.view_screening_tab2)
+    View mViewScreeningTab2;
+    @BindView(R.id.tv_screening_tab1)
+    TextView mTvScreeningTab1;
+    @BindView(R.id.tv_screening_tab2)
+    TextView mTvScreeningTab2;
     String mStartDate, mEndDate;//开始时间，结束时间
-    Calendar calendar = Calendar.getInstance();
-
+    String mSearchOrder;//记录“订货”的搜索，“退货”的搜索
     private void initScreening() {
-        mRlSearch = findViewById(R.id.rl_search);
-        mEtSearch = findViewById(R.id.et_search);
-        mIvSearch = findViewById(R.id.iv_search);
-        mTvStartEndTime = findViewById(R.id.tv_start_end_time);
-        TextView mTvSearch = findViewById(R.id.tv_search);
         mTvSearch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onClickTvSearch();//搜索：显示搜索和隐藏搜索
-            }
-        });
-        mIvSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onClickIvSearch();//搜索按钮：请求数据
             }
         });
-        mStartYear = mEndYear = calendar.get(Calendar.YEAR);//年
-        mStartMonth = mEndMonth = calendar.get(Calendar.MONTH);//月
-        mStartDay = mEndDay = calendar.get(Calendar.DAY_OF_MONTH);//日
-        mTvStartEndTime.setOnClickListener(new View.OnClickListener() {
+        mViewScreeningTab1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showDialogStartEndTime();
             }
         });
+        mViewScreeningTab2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                doScreeningTab2();//搜索：显示搜索和隐藏搜索
+            }
+        });
     }
 
-    /**
-     * 搜索：显示搜索和隐藏搜索 - 关闭的时候：清空搜索
-     */
-    private void onClickTvSearch() {
-        if (mRlSearch.getVisibility() == View.VISIBLE) {
-            mRlSearch.setVisibility(View.GONE);
+    //筛选2：搜索
+    private void doScreeningTab2(){
+        if (mViewSearch.getVisibility() == View.VISIBLE) {
+            mViewSearch.setVisibility(View.GONE);
             mEtSearch.setText("");
+            mSearchOrder = null;
         } else {
-            mRlSearch.setVisibility(View.VISIBLE);
+            mViewSearch.setVisibility(View.VISIBLE);
         }
     }
 
@@ -413,7 +447,7 @@ public class CarActivity extends XActivity<PCar> {
                             SPUtils.setValues(ConstantUtils.Sp.CAR_DEFAULT_STORAGE_NAME, String.valueOf(data.getStkName()));
                             stkId = data.getId().toString();
                             stkName = data.getStkName();
-                            String str="车销单(<font color='#2597f0'>" +stkName+ "</font>)";
+                            String str="车销单(<font color='#ffffff'>" +stkName+ "</font>)";
                             mTvHeadTitle.setText(Html.fromHtml(str));
                             //刷新数据
                             pageNo = 1;
@@ -437,7 +471,7 @@ public class CarActivity extends XActivity<PCar> {
             for (StorageBean.Storage data : datas) {
                 if (stkId.equals(data.getId().toString())) {
                     stkName = data.getStkName();
-                    String str="车销单(<font color='#2597f0'>" +stkName+ "</font>)";
+                    String str="车销单(<font color='#ffffff'>" +stkName+ "</font>)";
                     mTvHeadTitle.setText(Html.fromHtml(str));
                 }
             }
@@ -539,11 +573,11 @@ public class CarActivity extends XActivity<PCar> {
      * 筛选时间的对话框
      */
     private void showDialogStartEndTime() {
-        new MyDoubleDatePickerDialog(context, "筛选时间", mStartYear, mStartMonth, mStartDay, mEndYear, mEndMonth, mEndDay,
+        new MyDoubleDatePickerDialog(context, "筛选时间", mStartDate, mEndDate,
                 new MyDoubleDatePickerDialog.DateTimeListener() {
                     @Override
                     public void onSetTime(int year, int month, int day, int year2, int month2, int day2, String startDate, String endDate) {
-                        mTvStartEndTime.setText(startDate + "至" + endDate);
+                        mTvScreeningTab1.setText(startDate + "至" + endDate);
                         mStartDate = startDate;
                         mEndDate = endDate;
                         pageNo = 1;

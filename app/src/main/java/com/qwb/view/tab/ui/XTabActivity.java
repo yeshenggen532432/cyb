@@ -27,10 +27,7 @@ import com.qwb.utils.SPUtils;
 import com.qwb.utils.ToastUtils;
 import com.qwb.view.common.model.TabEntity;
 import com.qwb.view.tab.parsent.PXTab;
-import com.qwb.service.XStepService;
-import com.qwb.utils.MyServiceUtil;
 import com.qwb.utils.MyStatusBarUtil;
-import com.qwb.utils.MyTraceServiceUtil;
 import com.chiyong.t3.R;
 import java.util.ArrayList;
 import butterknife.BindView;
@@ -44,7 +41,7 @@ import io.reactivex.functions.Consumer;
 public class XTabActivity extends XActivity<PXTab>{
 
 //    "消息"
-    private String[] mTitles = {"首页", "工作台", "商城", "我的"};
+    private String[] mTitles = {"首页", "报表", "我的"};
 //    /*未选择时的icon*/
 //    private int[] mIconUnselectIds = {
 //            R.mipmap.tab_icon_main_g, R.mipmap.tab_icon_shop_g,
@@ -54,10 +51,10 @@ public class XTabActivity extends XActivity<PXTab>{
 //            R.mipmap.tab_icon_main_b, R.mipmap.tab_icon_shop_b,
 //            R.mipmap.tab_icon_message_b, R.mipmap.tab_icon_mine_b};
     /*未选择时的icon*/
-    private int[] mIconUnselectIds = {  R.mipmap.tab_icon_main_gray, R.mipmap.tab_icon_more_gray,R.mipmap.tab_icon_shop_gray, R.mipmap.tab_icon_mine_gray};
+    private int[] mIconUnselectIds = {  R.mipmap.tab_icon_main_gray, R.mipmap.tab_icon_more_gray, R.mipmap.tab_icon_mine_gray};
     /*选择时的icon*/
     private int[] mIconSelectIds = {
-            R.mipmap.tab_icon_main_green, R.mipmap.tab_icon_more_green, R.mipmap.tab_icon_shop_green,R.mipmap.tab_icon_mine_green};
+            R.mipmap.tab_icon_main_green, R.mipmap.tab_icon_more_green, R.mipmap.tab_icon_mine_green};
 
     private ArrayList<CustomTabEntity> mTabEntities = new ArrayList<>();
 
@@ -151,12 +148,13 @@ public class XTabActivity extends XActivity<PXTab>{
         showFragment(0);// 页面默认
     }
 
+
     /**
      */
-    private XMainFragment2 mainFragment = null;
-    private XMainFragment moreFragment = null;
-    private XShopFragment shopFragment = null;
-    private XMessageFragment messageFragment = null;
+    private XMainFragment mainFragment = null;
+    private XMainFragment2 tableFragment = null;
+//    private XShopFragment shopFragment = null;
+//    private XMessageFragment messageFragment = null;
     private XMineFragment mineFragment = null;
     private void showFragment(int position) {
         FragmentManager manager=getSupportFragmentManager();
@@ -165,12 +163,12 @@ public class XTabActivity extends XActivity<PXTab>{
         if (mainFragment != null) {
             transaction.hide(mainFragment);
         }
-        if (moreFragment != null) {
-            transaction.hide(moreFragment);
+        if (tableFragment != null) {
+            transaction.hide(tableFragment);
         }
-        if (shopFragment != null) {
-            transaction.hide(shopFragment);
-        }
+//        if (shopFragment != null) {
+//            transaction.hide(shopFragment);
+//        }
         if (mineFragment != null) {
             transaction.hide(mineFragment);
         }
@@ -178,29 +176,29 @@ public class XTabActivity extends XActivity<PXTab>{
         switch (position) {
             case 0:
                 if (mainFragment == null) {
-                    mainFragment = new XMainFragment2();
+                    mainFragment = new XMainFragment();
                     transaction.add(R.id.tab_fl_manager, mainFragment);
                 } else {
                     transaction.show(mainFragment);
                 }
                 break;
             case 1:
-                if (moreFragment == null) {
-                    moreFragment = new XMainFragment();
-                    transaction.add(R.id.tab_fl_manager, moreFragment);
+                if (tableFragment == null) {
+                    tableFragment = new XMainFragment2();
+                    transaction.add(R.id.tab_fl_manager, tableFragment);
                 } else {
-                    transaction.show(moreFragment);
+                    transaction.show(tableFragment);
                 }
                 break;
+//            case 2:
+//                if (shopFragment == null) {
+//                    shopFragment = new XShopFragment();
+//                    transaction.add(R.id.tab_fl_manager, shopFragment);
+//                } else {
+//                    transaction.show(shopFragment);
+//                }
+//                break;
             case 2:
-                if (shopFragment == null) {
-                    shopFragment = new XShopFragment();
-                    transaction.add(R.id.tab_fl_manager, shopFragment);
-                } else {
-                    transaction.show(shopFragment);
-                }
-                break;
-            case 3:
                 if (mineFragment == null) {
                     mineFragment = new XMineFragment();
                     transaction.add(R.id.tab_fl_manager, mineFragment);

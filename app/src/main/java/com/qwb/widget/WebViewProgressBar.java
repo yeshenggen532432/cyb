@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by 林冠宏 on 2016/7/11.
  * 真正的仿微信网页打开的进度条
  * 两种方式
  *     1，setLayoutParams 的形式
@@ -185,7 +184,6 @@ public class WebViewProgressBar {
         if(progress >= lastWidth){
             view.setLayoutParams(new RelativeLayout.LayoutParams(progress,height*3));
         }else{
-            Log.d("zzzzz","hit "+progress+"---"+lastWidth);
         }
         record ++;
     }

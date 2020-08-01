@@ -1,47 +1,45 @@
 package com.qwb.view.tab.ui;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.View;
-import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.alibaba.fastjson.JSON;
-import com.example.scanlibrary.ScanActivity;
-import com.flyco.dialog.entity.DialogMenuItem;
-import com.flyco.dialog.listener.OnBtnClickL;
-import com.flyco.dialog.listener.OnOperItemClickL;
-import com.flyco.dialog.widget.NormalDialog;
-import com.flyco.dialog.widget.NormalListDialog;
-import com.flyco.tablayout.CommonTabLayout;
-import com.flyco.tablayout.listener.CustomTabEntity;
-import com.flyco.tablayout.listener.OnTabSelectListener;
-import com.qwb.common.ScanTypeEnum;
-import com.qwb.view.tab.ui.main.XGztFragment3;
-import com.qwb.view.tab.ui.main.XYunFragment3;
-import com.qwb.event.ChangeCompanyEvent;
-import com.qwb.event.CreateCompanyEvent;
+import com.bumptech.glide.Glide;
+import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.kennyc.view.MultiStateView;
+import com.qwb.db.DMessageBean;
+import com.qwb.event.CategroyMessageEvent;
+import com.qwb.event.MsgModelEvent;
 import com.qwb.utils.ActivityManager;
+import com.qwb.utils.Constans;
 import com.qwb.utils.ConstantUtils;
-import com.qwb.view.company.model.CompanysBean;
-import com.qwb.view.base.model.ScanBean;
-import com.qwb.utils.SPUtils;
-import com.qwb.view.common.model.TabEntity;
-import com.qwb.view.tab.parsent.PXMain;
-import com.qwb.view.base.ui.XApplyActivity;
+import com.qwb.utils.MyDataUtils;
+import com.qwb.utils.MyGlideUtil;
+import com.qwb.utils.MyRecyclerViewUtil;
 import com.qwb.utils.MyStringUtil;
+import com.qwb.utils.SPUtils;
+import com.qwb.utils.ToastUtils;
+import com.qwb.view.base.model.ApplyBean;
+import com.qwb.view.tab.adapter.ApplyAdapter2;
+import com.qwb.view.tab.adapter.CategroyAdapter;
+import com.qwb.view.tab.model.ApplyBean2;
+import com.qwb.view.tab.parsent.PXMain;
 import com.chiyong.t3.R;
-
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-
 import butterknife.BindView;
-import butterknife.OnClick;
-import cn.droidlover.xdroidmvp.base.XFragmentAdapter;
+import cn.bingoogolapple.bgabanner.BGABanner;
 import cn.droidlover.xdroidmvp.event.BusProvider;
+import cn.droidlover.xdroidmvp.log.XLog;
 import cn.droidlover.xdroidmvp.mvp.XFragment;
 import io.reactivex.functions.Consumer;
 
@@ -49,17 +47,6 @@ import io.reactivex.functions.Consumer;
  * tab:首页
  */
 public class XMainFragment extends XFragment<PXMain> {
-
-    private String[] mTitles = {"工作台", "应用模块"};
-    /*未选择时的icon*/
-    private int[] mIconUnselectIds = {R.mipmap.home_gzt_g, R.mipmap.home_yun_g};
-    /*选择时的icon*/
-    private int[] mIconSelectIds = {R.mipmap.home_gzt_b, R.mipmap.home_yun_b};
-    private ArrayList<CustomTabEntity> mTabEntities = new ArrayList<>();
-    private ArrayList<Fragment> mFragments = new ArrayList<>();
-
-    public XMainFragment() {
-    }
 
     @Override
     public int getLayoutId() {
@@ -76,241 +63,234 @@ public class XMainFragment extends XFragment<PXMain> {
         return true;
     }
 
-    private void initEvent() {
-        //切换公司
-        BusProvider.getBus().toFlowable(CreateCompanyEvent.class)
-                .subscribe(new Consumer<CreateCompanyEvent>() {
-                    @Override
-                    public void accept(CreateCompanyEvent event) throws Exception {
-                        if (event.getTag() == ConstantUtils.Event.TAG_CREATE_COMPANY) {
-                            //重新登录，重新获取应用列表
-                            getP().queryDataLogin(context, SPUtils.getSValues(ConstantUtils.Sp.USER_MOBILE), SPUtils.getSValues(ConstantUtils.Sp.PASSWORD));
-                        }
-                    }
-                });
-        //切换公司
-        BusProvider.getBus().toFlowable(ChangeCompanyEvent.class)
-                .subscribe(new Consumer<ChangeCompanyEvent>() {
-                    @Override
-                    public void accept(ChangeCompanyEvent event) throws Exception {
-                        //备注：改变公司名称；应用列表
-                        doCompany();
-                    }
-                });
-    }
-
     @Override
     public void initData(Bundle savedInstanceState) {
         initEvent();
         initUI();
     }
 
-    @BindView(R.id.commonTabLayout)
-    CommonTabLayout mCommonTabLayout;
-    @BindView(R.id.vp)
-    ViewPager mViewPager;
+    private void initEvent(){
+        BusProvider.getBus().toFlowable(CategroyMessageEvent.class)
+                .subscribe(new Consumer<CategroyMessageEvent>() {
+                    @Override
+                    public void accept(CategroyMessageEvent event) throws Exception {
+                        initAdapterDataMessage();
+                    }
+                });
+    }
 
     public void initUI() {
         initHead();
-        initTab();
-        initViewPager();
+        initBanner();
+        initAdapter();
+        initAdapterData();
+        initAdapterMessage();
+        initAdapterDataMessage();
+        initReceiver();
     }
 
-    @BindView(R.id.tv_company_name)
-    TextView mTvCompanyName;
-
+    @BindView(R.id.tv_head_left)
+    TextView mTvHeadLeft;
     private void initHead() {
-        doCompany();
+        mTvHeadLeft.setText("首页");
     }
 
-
-    XGztFragment3 gztFragment3 = null;
-    XYunFragment3 yunFragment3 = null;
-
-    private void initTab() {
-        for (int i = 0; i < mTitles.length; i++) {
-            mTabEntities.add(new TabEntity(mTitles[i], mIconSelectIds[i], mIconUnselectIds[i]));
-        }
-        mCommonTabLayout.setTabData(mTabEntities);
-
-        if (null == gztFragment3) {
-            gztFragment3 = new XGztFragment3();
-        }
-        if (null == yunFragment3) {
-            yunFragment3 = new XYunFragment3();
-        }
-        mFragments.add(gztFragment3);
-        mFragments.add(yunFragment3);
-
-        mCommonTabLayout.setTabData(mTabEntities);
-        mCommonTabLayout.setOnTabSelectListener(new OnTabSelectListener() {
+    @BindView(R.id.banner)
+    BGABanner mBanner;
+    private void initBanner() {
+        mBanner.setAdapter(new BGABanner.Adapter<ImageView, String>() {
             @Override
-            public void onTabSelect(int position) {
-                mViewPager.setCurrentItem(position);
-            }
-
-            @Override
-            public void onTabReselect(int position) {
-                if (position == 0) {
-                }
+            public void fillBannerItem(BGABanner banner, ImageView itemView, String model, int position) {
+                MyGlideUtil.getInstance().displayImageSquere(model, itemView, false);
             }
         });
-    }
-
-    private void initViewPager() {
-        mViewPager.setAdapter(new XFragmentAdapter(getChildFragmentManager(), mFragments, mTitles));
-        mViewPager.setCurrentItem(0);
-        mViewPager.setOffscreenPageLimit(2);
-        mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+        mBanner.setData(Arrays.asList(
+                "https://img.tukuppt.com/bg_grid/00/18/09/6zZkcqhZwo.jpg!/fh/350",
+                "https://img.tukuppt.com/bg_grid/00/06/42/pO6xd1Zevl.jpg!/fh/350",
+                "https://img.tukuppt.com/bg_grid/00/03/31/VKMsak12jv.jpg!/fh/350"
+        ),null);
+        mBanner.setDelegate(new BGABanner.Delegate<ImageView, String>() {
             @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-                mCommonTabLayout.setCurrentTab(position);
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
+            public void onBannerItemClick(BGABanner banner, ImageView itemView, String model, int position) {
+                ToastUtils.showCustomToast(model);
             }
         });
-    }
-
-    /**
-     * 点击事件
-     */
-    @OnClick({R.id.layout_company, R.id.layout_span, R.id.layout_apply})
-    public void onClickView(View v) {
-        switch (v.getId()) {
-            //切换公司
-            case R.id.layout_company:
-                String companys = SPUtils.getSValues(ConstantUtils.Sp.COMPANY_S);
-                if (!MyStringUtil.isEmpty(companys)) {
-                    List<CompanysBean> companyList = JSON.parseArray(companys, CompanysBean.class);
-                    if (companyList != null && companyList.size() > 1) {
-                        //多公司才弹出
-                        showDialogChangeCompany();
-                    }
-                }
-                break;
-            //扫一扫
-            case R.id.layout_span:
-                scan();
-                break;
-            //编辑应用
-            case R.id.layout_apply:
-                ActivityManager.getInstance().jumpActivity(context, XApplyActivity.class);
-                break;
+        int count = mBanner.getItemCount();
+        if (count == 1){
+            mBanner.setAutoPlayAble(false);
+        }else {
+            mBanner.setAutoPlayAble(true);
         }
     }
 
-    //TODO*******************************切换公司:start***********************************
-    //处理：公司名称；公司列表数据(dialog用到)
-    private void doCompany() {
-        String companys = SPUtils.getSValues(ConstantUtils.Sp.COMPANY_S);
-        String companyId = SPUtils.getSValues(ConstantUtils.Sp.COMPANY_ID);
-        mTvCompanyName.setText("直购猫");
-        if (!TextUtils.isEmpty(companys) && !TextUtils.isEmpty(companyId)) {
-            List<CompanysBean> companyList = JSON.parseArray(companys, CompanysBean.class);
-            if (companyList != null && companyList.size() > 0) {
-                baseItems.clear();
-                for (CompanysBean bean : companyList) {
-                    DialogMenuItem item = new DialogMenuItem(bean.getCompanyName(), bean.getCompanyId());
-                    baseItems.add(item);
-                    if (companyId.equals(String.valueOf(bean.getCompanyId()))) {
-                        String companyName = bean.getCompanyName();
-                        SPUtils.setValues(ConstantUtils.Sp.COMPANY_NAME, companyName);
-                        mTvCompanyName.setText(companyName);
-                    }
-                }
-            }
-        }
+    @BindView(R.id.recyclerView)
+    RecyclerView mRecyclerView;
+    ApplyAdapter2 mAdapter;
+    private void initAdapter() {
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(context));
+        mAdapter = new ApplyAdapter2(context);
+        mRecyclerView.setAdapter(mAdapter);
     }
 
-    //dialog:切换公司
-    private ArrayList<DialogMenuItem> baseItems = new ArrayList<>();
-
-    private void showDialogChangeCompany() {
-        NormalListDialog dialog = new NormalListDialog(context, baseItems);
-        dialog.title("切换公司")
-                .show();
-        dialog.setOnOperItemClickL(new OnOperItemClickL() {
-            @Override
-            public void onOperItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String loginBaseUrl = SPUtils.getSValues(ConstantUtils.Sp.LOGIN_BASE_URL);
-                if (MyStringUtil.isNotEmpty(loginBaseUrl)) {
-                    getP().queryJwt(context, loginBaseUrl, String.valueOf(baseItems.get(position).mResId));
-                } else {
-                    getP().queryDataChangeCompany(context, String.valueOf(baseItems.get(position).mResId));
-                }
-            }
-        });
-    }
-
-    //TODO*******************************切换公司:start***********************************
-
-
-    //TODO******************************扫描:start************************************
-    //扫描
-    public void scan() {
-//        ActivityManager.getInstance().jumpScanActivity(context, false);
-        //备注：不要采用上面方法跳转：不然Fragment中onActivityResult回调不了
-        Intent intent = new Intent(context,ScanActivity.class);
-        intent.putExtra(ScanActivity.EXTRAS_MULTIPLE, false);
-        startActivityForResult(intent, ConstantUtils.Intent.REQUEST_CODE_SCAN);
-    }
-
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+    private List<ApplyBean2> myItems = new ArrayList<>();
+    private void initAdapterData() {
         try {
-            if (resultCode == context.RESULT_OK){
-                //扫描二维码/条码回传
-                if (data != null && requestCode == ConstantUtils.Intent.REQUEST_CODE_SCAN) {
-                    String result = data.getStringExtra(ScanActivity.SCAN_RESULT);
-                    if (MyStringUtil.isNotEmpty(result)) {
-                        ScanBean scanBean = JSON.parseObject(result, ScanBean.class);
-                        dialogNormalStyleScan(scanBean);
+            myItems.clear();
+            //后台返回对的
+            String qwbList = SPUtils.getSValues(ConstantUtils.Sp.APP_LIST_NEW);
+            if (MyStringUtil.isNotEmpty(qwbList)) {
+                List<ApplyBean> list = JSON.parseArray(qwbList, ApplyBean.class);
+                for (ApplyBean bean : list) {
+                    List<ApplyBean> applyList2 = new ArrayList<>();
+                    List<ApplyBean> children = bean.getChildren();
+                    if (children != null && !children.isEmpty()) {
+                        for (ApplyBean child : children) {
+                            applyList2.add(child);
+                        }
+                        ApplyBean2 bean1 = new ApplyBean2();
+                        bean1.setLabel(bean.getApplyName());
+                        bean1.setApplys(applyList2);
+                        myItems.add(bean1);
                     }
                 }
             }
+
+            if (null != mAdapter) {
+                mAdapter.setNewData(myItems);
+            }
+
         } catch (Exception e) {
         }
     }
 
     /**
-     * dialog-扫描二维码
+     * 适配器
      */
-    private void dialogNormalStyleScan(final ScanBean scanBean) {
-        String content = "";
-        String btnText = "确定";
-        if (MyStringUtil.eq(ScanTypeEnum.FOLLOW.getType(), scanBean.getType())) {
-            content = "是否关注:" + scanBean.getCompanyName() + "?";
-            btnText = "关注";
-        } else if (MyStringUtil.eq(ScanTypeEnum.LOGIN.getType(), scanBean.getType())) {
-            content = "是否授权登录？";
-            btnText = "授权登录";
-            getP().doScaned(context, scanBean.getTicket());
-        }
-        NormalDialog dialog = new NormalDialog(context);
-        dialog.setCanceledOnTouchOutside(false);//外部点击不消失
-        dialog.content(content)
-                .btnText(btnText)
-                .show();
-        dialog.setOnBtnClickL(new OnBtnClickL() {
+    @BindView(R.id.recyclerView_message)
+    RecyclerView mRecyclerViewMessage;
+    CategroyAdapter mMessageAdapter;
+    private void initAdapterMessage() {
+        mMessageAdapter = new CategroyAdapter(context);
+        mMessageAdapter.setNewData(categoryList);
+        MyRecyclerViewUtil.init(context,mRecyclerViewMessage, mMessageAdapter);
+        mMessageAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
-            public void onBtnClick() {
-                if (MyStringUtil.eq(ScanTypeEnum.LOGIN.getType(), scanBean.getType())) {
-                    getP().doScanLogin(context, scanBean.getTicket(), 1);
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                try {
+                    DMessageBean item = (DMessageBean)adapter.getData().get(position);
+                    int bankuai = Integer.valueOf(item.getBankuai());
+                    switch (Integer.valueOf(item.getBankuai())){
+                        case ConstantUtils.Messeage.M_XTTZ://系统通知
+                            ActivityManager.getInstance().jumpToMessageActivity(context,ConstantUtils.Messeage.M_XTTZ,"系统通知");
+                            break;
+                        case ConstantUtils.Messeage.M_SP:// 审批
+                            ActivityManager.getInstance().jumpToMessageActivity(context,ConstantUtils.Messeage.M_SP,"审批");
+                            break;
+                        case ConstantUtils.Messeage.M_PL://点评
+                            ActivityManager.getInstance().jumpToMessageActivity(context,ConstantUtils.Messeage.M_PL,"点评");
+                            break;
+                        case ConstantUtils.Messeage.M_GT://沟通
+                            ActivityManager.getInstance().jumpToMessageActivity(context,ConstantUtils.Messeage.M_GT,"沟通");
+                            break;
+                        case ConstantUtils.Messeage.M_GZHB://工作汇报
+                            ActivityManager.getInstance().jumpToMessageActivity(context,ConstantUtils.Messeage.M_GZHB,"工作汇报");
+                            break;
+                        case ConstantUtils.Messeage.M_SC://商城订单
+                            ActivityManager.getInstance().jumpToMessageActivity(context,ConstantUtils.Messeage.M_SC,"商城订单");
+                            break;
+                        case ConstantUtils.Messeage.M_GG://公告
+                            ActivityManager.getInstance().jumpToMessageActivity(context,ConstantUtils.Messeage.M_GG,"公告");
+                            break;
+                    }
+
+                    delBadge(bankuai);
+                }catch (Exception e){
+                    e.printStackTrace();
                 }
-            }
-        }, new OnBtnClickL() {
-            @Override
-            public void onBtnClick() {
-                getP().doScan(context, scanBean);
             }
         });
     }
+
+
+    /**
+     * mark "bangkuai"+板块对应的数字 1 ：系统通知 2：审批 3：易推事板 4： 点评 5：真心话 6：沟通;10.工作汇报；11.商城订单
+     */
+    List<DMessageBean> categoryList =new ArrayList<>();
+    private void initAdapterDataMessage() {
+        categoryList.clear();
+        setCategoryList(String.valueOf(ConstantUtils.Messeage.M_XTTZ),"系统通知",R.mipmap.msg_xttz);
+        setCategoryList(String.valueOf(ConstantUtils.Messeage.M_GG),"公告",R.mipmap.msg_gg);
+        setCategoryList(String.valueOf(ConstantUtils.Messeage.M_SP),"审批",R.mipmap.msg_sp);
+        setCategoryList(String.valueOf(ConstantUtils.Messeage.M_PL),"点评",R.mipmap.msg_dp);
+        setCategoryList(String.valueOf(ConstantUtils.Messeage.M_GZHB),"工作汇报",R.mipmap.msg_gzhb);
+//        setCategoryList(String.valueOf(ConstantUtils.Messeage.M_SC),"商城订单",R.mipmap.msg_gt);
+        mMessageAdapter.setNewData(categoryList);
+    }
+
+    private void setCategoryList(String bankuai,String title,int imgResId){
+        List<DMessageBean> xttzList = MyDataUtils.getInstance().queryMessageByBankuai(bankuai);
+        int count1 = MyDataUtils.getInstance().queryCategroyMessageCount(bankuai);
+        DMessageBean item = new DMessageBean();
+        if(null != xttzList && !xttzList.isEmpty()){
+            item = xttzList.get(0);
+            item.setCount(count1);
+        }else {
+            item.setMsg("暂无消息");
+            item.setAddTime("");
+            item.setCount(0);
+        }
+        item.setBankuai(Integer.valueOf(bankuai));
+        item.setTitle(title);
+        item.setImgResId(imgResId);
+        categoryList.add(item);
+    }
+
+    //删除红点
+    private void delBadge(int bankuai){
+        int count = MyDataUtils.getInstance().updateCategroyMessageCount(String.valueOf(bankuai),false);
+        if(count > 0){
+            BusProvider.getBus().post(new CategroyMessageEvent());
+            //公告要通知首页公告红点
+            BusProvider.getBus().post(new CategroyMessageEvent());
+        }
+    }
+
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // 广播
+    private void initReceiver() {
+        IntentFilter intentFilter = new IntentFilter(Constans.Action_login);
+        intentFilter.addAction(Constans.UnRreadMsg);// res 未读消息 刷新广播
+        intentFilter.addAction(Constans.whitchbankuai);// 区别哪个板块对应显示红点
+        context.registerReceiver(myReceive, intentFilter);
+    }
+    private BroadcastReceiver myReceive = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if (Constans.whitchbankuai.equals(intent.getAction())) {
+                receviceRefreshAdapter();
+            }else if (Constans.UnRreadMsg.equals(intent.getAction())) {
+                receviceRefreshAdapter();
+            }
+        }
+    };
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        if (myReceive != null) {
+            context.unregisterReceiver(myReceive);
+        }
+    }
+    /**
+     * 再当前页面，收到信息；刷新列表
+     */
+    public void receviceRefreshAdapter(){
+        initAdapterDataMessage();
+    }
+
+
+
+
 
 }

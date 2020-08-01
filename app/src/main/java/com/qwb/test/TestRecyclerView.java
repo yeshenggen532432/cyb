@@ -71,7 +71,6 @@ public class TestRecyclerView {
 
     }
 
-
     /**
      * 刷新适配器
      */
@@ -95,4 +94,37 @@ public class TestRecyclerView {
             ToastUtils.showCustomToast("没有更多数据");
         }
     }
+
+
+//    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+//    android:id="@+id/refreshLayout"
+//    android:layout_marginTop="@dimen/dp_10"
+//    android:layout_width="match_parent"
+//    android:layout_height="wrap_content"
+//    app:srlEnableScrollContentWhenLoaded="true"
+//    app:srlEnableFooterFollowWhenLoadFinished="true">
+//        <!--srlAccentColor srlPrimaryColor 将会改变 Header 和 Footer 的主题颜色-->
+//        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+//    android:layout_width="match_parent"
+//    android:layout_height="wrap_content"
+//    app:srlAccentColor="@color/gray_6"
+//    app:srlPrimaryColor="@color/layout_bg"
+//    app:srlClassicsSpinnerStyle="FixedBehind"/>
+//        <!--FixedBehind可以让Header固定在内容的背后，下拉的时候效果同微信浏览器的效果-->
+//        <android.support.v7.widget.RecyclerView
+//    android:id="@+id/recyclerView"
+//    android:layout_width="match_parent"
+//    android:layout_height="match_parent"
+//    android:fadingEdge="none"/>
+//        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+//    android:layout_width="match_parent"
+//    android:layout_height="wrap_content"
+//    app:srlClassicsSpinnerStyle="Translate"/>
+//    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+
+
+
+
 }

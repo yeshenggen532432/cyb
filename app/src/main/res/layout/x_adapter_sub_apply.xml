@@ -8,14 +8,14 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_80"
+        android:layout_height="@dimen/dp_70"
         android:gravity="center"
         android:orientation="vertical">
 
         <RelativeLayout
             android:id="@+id/iv_layout"
-            android:layout_width="@dimen/dp_48"
-            android:layout_height="@dimen/dp_48">
+            android:layout_width="@dimen/dp_42"
+            android:layout_height="@dimen/dp_42">
 
             <ImageView
                 android:layout_centerInParent="true"
@@ -26,16 +26,14 @@
 
         </RelativeLayout>
 
-        <!--android:layout_marginTop="@dimen/y23"-->
         <TextView
+            style="@style/tv_cgray3_s13"
             android:id="@+id/tv_home_tab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="易办事"
             android:maxLines="1"
-            android:ellipsize="end"
-            android:textColor="@color/gray_3"
-            android:textSize="@dimen/sp_13" />
+            android:ellipsize="end"/>
 
     </LinearLayout>
 </LinearLayout>

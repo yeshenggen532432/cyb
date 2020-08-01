@@ -7,13 +7,13 @@
     android:background="@color/white"
     android:orientation="vertical" >
 
-    <com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout
-        android:id="@+id/es"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:contentView="@+id/content"
-        app:leftMenuView="@+id/left"
-        app:rightMenuView="@+id/right">
+<!--    <com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout-->
+<!--        android:id="@+id/es"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:contentView="@+id/content"-->
+<!--        app:leftMenuView="@+id/left"-->
+<!--        app:rightMenuView="@+id/right">-->
 
         <LinearLayout
             android:id="@+id/content"
@@ -219,7 +219,7 @@
 
         </LinearLayout>
 
-    </com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout>
+<!--    </com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout>-->
 
 
 

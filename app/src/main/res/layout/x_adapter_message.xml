@@ -9,21 +9,21 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_72">
+        android:layout_height="@dimen/dp_60">
 
         <!--左-->
         <LinearLayout
             android:id="@+id/left"
-            android:layout_width="@dimen/dp_72"
+            android:layout_width="@dimen/dp_60"
             android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="horizontal">
 
             <ImageView
                 android:id="@+id/item_iv"
-                android:layout_width="@dimen/dp_68"
-                android:layout_height="@dimen/dp_68"
-                android:padding="@dimen/dp_10"
+                android:layout_width="@dimen/dp_56"
+                android:layout_height="@dimen/dp_56"
+                android:padding="@dimen/dp_8"
                 android:src="@mipmap/home_tab_ybs" />
         </LinearLayout>
 
@@ -37,13 +37,12 @@
             android:orientation="horizontal">
 
             <TextView
+                style="@style/tv_cgray3_s13"
                 android:id="@+id/item_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="系统通知"
-                android:textColor="#ff2b2424"
-                android:textSize="@dimen/sp_16" />
+                android:text="系统通知" />
 
             <TextView
                 android:id="@+id/item_time"
@@ -61,10 +60,11 @@
             android:layout_alignParentBottom="true"
             android:layout_toRightOf="@+id/left"
             android:layout_marginBottom="@dimen/dp_12"
-            android:layout_marginRight="@dimen/dp_12"
+            android:layout_marginRight="@dimen/dp_10"
             android:orientation="horizontal">
 
             <com.xmsx.cnlife.widget.emoji.CCPTextView
+                style="@style/tv_cgray9_s11"
                 android:id="@+id/item_subTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

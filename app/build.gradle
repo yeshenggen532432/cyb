@@ -211,5 +211,6 @@ dependencies {
     implementation project(':citypickerview')
     implementation 'com.tencent.tbs.tbssdk:sdk:43903'
     implementation 'me.grantland:autofittextview:0.2.+'
+    implementation 'cn.bingoogolapple:bga-banner:2.2.7@aar'
 
 }

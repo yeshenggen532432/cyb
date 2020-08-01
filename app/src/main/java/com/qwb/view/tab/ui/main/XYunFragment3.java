@@ -246,7 +246,6 @@ public class XYunFragment3 extends XFragment  {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(context));
         mAdapter = new ApplyAdapter2(context);
         mRecyclerView.setAdapter(mAdapter);
-
     }
 
     //公共跳转界面方法

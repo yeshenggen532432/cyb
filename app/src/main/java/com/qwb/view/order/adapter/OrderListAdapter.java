@@ -35,7 +35,7 @@ public class OrderListAdapter extends BaseQuickAdapter<OrderBean,BaseViewHolder>
 //        helper.setText(R.id.tv_memberNm, item.getMemberNm());// 业务员名称
         helper.setText(R.id.tv_orderNo, "订单号:" + item.getOrderNo());// 订单号
 //        helper.setText(R.id.tv_orderZt, "状态:" + item.getOrderZt());// 订单状态（审核，未审核）
-        ImageView ivStatus = helper.getView(R.id.iv_status);//作废
+        ImageView ivStatus = helper.getView(R.id.iv_status);//状态
         TextView tvKhNm=helper.getView(R.id.tv_khNm);//客户名称
         TextView tvOrderNo=helper.getView(R.id.tv_orderNo);//订单号
         View viewTel=helper.getView(R.id.view_tel);//电话

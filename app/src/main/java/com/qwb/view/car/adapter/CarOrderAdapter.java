@@ -2,6 +2,7 @@ package com.qwb.view.car.adapter;
 
 
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -25,20 +26,20 @@ public class CarOrderAdapter extends BaseQuickAdapter<QueryDhorderBean.Rows, Bas
     private List<CarRecMastBean> carRecMastList = new ArrayList<>();
 
     public CarOrderAdapter() {
-        super(R.layout.x_adapter_car_order);
+//        super(R.layout.x_adapter_car_order);
+        super(R.layout.x_adapter_car_list2);
     }
 
     @Override
     protected void convert(BaseViewHolder helper, QueryDhorderBean.Rows item) {
-        helper.addOnClickListener(R.id.item_sb_zc);
+//        helper.addOnClickListener(R.id.item_sb_zc);
         helper.addOnClickListener(R.id.content).addOnClickListener(R.id.tv_cancel);
 
         helper.setText(R.id.tv_khNm, item.getKhNm());// 客户名称
         helper.setText(R.id.tv_memberNm, item.getMemberNm());// 业务员名称
         helper.setText(R.id.tv_orderNo, "订单号:" + item.getOrderNo());// 订单号
-        helper.setText(R.id.tv_orderZt, "状态:" + item.getOrderZt());// 订单状态（审核，未审核）
-        LinearLayout llNum = helper.getView(R.id.ll_num);
-        LinearLayout llDdje = helper.getView(R.id.ll_ddje);
+//        helper.setText(R.id.tv_orderZt, "状态:" + item.getOrderZt());// 订单状态（审核，未审核）
+        ImageView ivStatus = helper.getView(R.id.iv_status);//状态
         TextView tvTel = helper.getView(R.id.tv_tel);//电话
         TextView tvJinE = helper.getView(R.id.tv_jine);//金额
         TextView tvOrderTime = helper.getView(R.id.tv_orderTime);// 订单时间
@@ -46,8 +47,15 @@ public class CarOrderAdapter extends BaseQuickAdapter<QueryDhorderBean.Rows, Bas
         StateButton sbZc = helper.getView(R.id.item_sb_zc);// 收款
         TextView tvCancel = helper.getView(R.id.tv_cancel);// 作废
 
-        llNum.setVisibility(View.VISIBLE);
-        llDdje.setVisibility(View.VISIBLE);
+        //状态
+        if (MyStringUtil.eq("已作废", item.getOrderZt())) {
+            ivStatus.setImageResource(R.mipmap.ic_status_zf);
+        }else if (MyStringUtil.eq("审核", item.getOrderZt())) {
+            ivStatus.setImageResource(R.mipmap.ic_status_sp);
+        }else{
+            ivStatus.setImageResource(R.mipmap.ic_status_wsp);
+        }
+
         //电话
         if (!MyUtils.isEmptyString(item.getTel())) {
             tvTel.setVisibility(View.GONE);
@@ -78,7 +86,7 @@ public class CarOrderAdapter extends BaseQuickAdapter<QueryDhorderBean.Rows, Bas
         tvOrderTime.setText(sb.toString());
 
         //去收款
-        sbZc.setVisibility(View.GONE);
+//        sbZc.setVisibility(View.GONE);
         if(1 == item.getIsMe() && !isContain(item.getId())){
             sbZc.setVisibility(View.VISIBLE);
         }

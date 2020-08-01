@@ -25,6 +25,7 @@ import com.qwb.view.order.ui.OrderListActivity;
 import com.qwb.view.plan.ui.PlanLineMapActivity;
 import com.qwb.view.step.ui.Step5Activity;
 import com.qwb.view.shop.ui.ShopStepActivity;
+import com.qwb.view.tab.ui.message.XMessageActivity;
 import com.qwb.view.table.ui.TableActivity4;
 import com.qwb.view.web.ui.WebX5Activity;
 import com.qwb.view.call.ui.CallQueryActivity;
@@ -841,6 +842,17 @@ public class ActivityManager {
                 .putInt(ConstantUtils.Intent.ORDER_TYPE, typeEnum.getType())//7:添加；8：修改
                 .putString(ConstantUtils.Intent.ORDER_NO, orderNo)
                 .to(CarOrderActivity.class)
+                .launch();
+    }
+
+    /**
+     * 消息
+     */
+    public void jumpToMessageActivity(Activity context, int banKuai,String title){
+        Router.newIntent(context)
+                .to(XMessageActivity.class)
+                .putString(ConstantUtils.Intent.BANKUAI,"" + banKuai)
+                .putString(ConstantUtils.Intent.TITLE,title)
                 .launch();
     }
 
