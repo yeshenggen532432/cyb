@@ -15,11 +15,12 @@
 
         <TextView
             android:id="@+id/tv_head_left"
-            style="@style/tv_cgray3_s13"
+            style="@style/tv_cgray3_s15"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/dp_15"
             android:layout_marginRight="@dimen/dp_15"
+            android:textStyle="bold"
             tools:text="首页"/>
 
     </LinearLayout>

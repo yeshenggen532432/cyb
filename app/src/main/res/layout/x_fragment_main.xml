@@ -61,9 +61,10 @@
                     app:normalBackgroundColor="@color/green"/>
 
                 <TextView
-                    style="@style/tv_cgray3_s13"
+                    style="@style/tv_cgray3_s15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textStyle="bold"
                     android:text="消息中心"/>
 
             </LinearLayout>
