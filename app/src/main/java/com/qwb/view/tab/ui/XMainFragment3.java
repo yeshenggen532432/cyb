@@ -78,7 +78,7 @@ public class XMainFragment3 extends XFragment<PXMain3> {
     }
 
     private void initEvent() {
-        //切换公司
+        //创建公司
         BusProvider.getBus().toFlowable(CreateCompanyEvent.class)
                 .subscribe(new Consumer<CreateCompanyEvent>() {
                     @Override
@@ -232,7 +232,6 @@ public class XMainFragment3 extends XFragment<PXMain3> {
 
     //dialog:切换公司
     private ArrayList<DialogMenuItem> baseItems = new ArrayList<>();
-
     private void showDialogChangeCompany() {
         NormalListDialog dialog = new NormalListDialog(context, baseItems);
         dialog.title("切换公司")

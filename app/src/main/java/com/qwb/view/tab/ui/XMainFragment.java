@@ -7,25 +7,34 @@ import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.alibaba.fastjson.JSON;
 import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.lidroid.xutils.view.annotation.event.OnStartTrackingTouch;
-import com.lljjcoder.Constant;
+import com.flyco.dialog.entity.DialogMenuItem;
+import com.flyco.dialog.listener.OnOperItemClickL;
+import com.flyco.dialog.widget.NormalListDialog;
 import com.qwb.db.DMessageBean;
+import com.qwb.event.ApplyYunEvent;
 import com.qwb.event.CategroyMessageEvent;
+import com.qwb.event.ChangeCompanyEvent;
+import com.qwb.event.CreateCompanyEvent;
 import com.qwb.utils.ActivityManager;
 import com.qwb.utils.Constans;
 import com.qwb.utils.ConstantUtils;
+import com.qwb.utils.MyCollectionUtil;
 import com.qwb.utils.MyDataUtils;
 import com.qwb.utils.MyGlideUtil;
 import com.qwb.utils.MyRecyclerViewUtil;
 import com.qwb.utils.MyStringUtil;
+import com.qwb.utils.MyUtils;
 import com.qwb.utils.SPUtils;
-import com.qwb.utils.ToastUtils;
 import com.qwb.view.base.model.ApplyBean;
+import com.qwb.view.base.model.NewApplyComparator;
+import com.qwb.view.company.model.CompanysBean;
 import com.qwb.view.tab.adapter.ApplyAdapter2;
 import com.qwb.view.tab.adapter.CategroyAdapter;
 import com.qwb.view.tab.model.ApplyBean2;
@@ -33,6 +42,7 @@ import com.qwb.view.tab.model.BannerBean;
 import com.qwb.view.tab.parsent.PXMain;
 import com.chiyong.t3.R;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import butterknife.BindView;
 import cn.bingoogolapple.bgabanner.BGABanner;
@@ -80,6 +90,36 @@ public class XMainFragment extends XFragment<PXMain> {
                         initAdapterDataMessage();
                     }
                 });
+        //编辑应用列表后更新适配器
+        BusProvider.getBus().toFlowable(ApplyYunEvent.class)
+                .subscribe(new Consumer<ApplyYunEvent>() {
+                    @Override
+                    public void accept(ApplyYunEvent event) throws Exception {
+                        //更新应用列表
+                        initAdapterData();
+                    }
+                });
+        //创建公司
+        BusProvider.getBus().toFlowable(CreateCompanyEvent.class)
+                .subscribe(new Consumer<CreateCompanyEvent>() {
+                    @Override
+                    public void accept(CreateCompanyEvent event) throws Exception {
+                        if (event.getTag() == ConstantUtils.Event.TAG_CREATE_COMPANY) {
+                            //重新登录，重新获取应用列表
+                            getP().queryDataLogin(context, SPUtils.getSValues(ConstantUtils.Sp.USER_MOBILE), SPUtils.getSValues(ConstantUtils.Sp.PASSWORD));
+                        }
+                    }
+                });
+        //切换公司
+        BusProvider.getBus().toFlowable(ChangeCompanyEvent.class)
+                .subscribe(new Consumer<ChangeCompanyEvent>() {
+                    @Override
+                    public void accept(ChangeCompanyEvent event) throws Exception {
+                        //备注：改变公司名称；应用列表
+                        doCompany();
+                        initAdapterData();
+                    }
+                });
     }
 
     public void initUI() {
@@ -96,6 +136,20 @@ public class XMainFragment extends XFragment<PXMain> {
     TextView mTvHeadLeft;
     private void initHead() {
         mTvHeadLeft.setText("首页");
+        doCompany();
+        mTvHeadLeft.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String companys = SPUtils.getSValues(ConstantUtils.Sp.COMPANY_S);
+                if (!MyStringUtil.isEmpty(companys)) {
+                    List<CompanysBean> companyList = JSON.parseArray(companys, CompanysBean.class);
+                    if (companyList != null && companyList.size() > 1) {
+                        //多公司才弹出
+                        showDialogChangeCompany();
+                    }
+                }
+            }
+        });
     }
 
     @BindView(R.id.banner)
@@ -114,7 +168,6 @@ public class XMainFragment extends XFragment<PXMain> {
         mBanner.setDelegate(new BGABanner.Delegate<ImageView, String>() {
             @Override
             public void onBannerItemClick(BGABanner banner, ImageView itemView, String model, int position) {
-                ToastUtils.showCustomToast(model);
             }
         });
         int count = mBanner.getItemCount();
@@ -138,29 +191,31 @@ public class XMainFragment extends XFragment<PXMain> {
     private void initAdapterData() {
         try {
             myItems.clear();
-            //后台返回对的
-            String qwbList = SPUtils.getSValues(ConstantUtils.Sp.APP_LIST_NEW);
-            if (MyStringUtil.isNotEmpty(qwbList)) {
-                List<ApplyBean> list = JSON.parseArray(qwbList, ApplyBean.class);
-                for (ApplyBean bean : list) {
-                    List<ApplyBean> applyList2 = new ArrayList<>();
-                    List<ApplyBean> children = bean.getChildren();
-                    if (children != null && !children.isEmpty()) {
-                        for (ApplyBean child : children) {
-                            applyList2.add(child);
+            //自定义的
+            String childrenStr = SPUtils.getSValues(ConstantUtils.Sp.APP_LIST_CHILDREN);
+            List<ApplyBean> applyList0 = new ArrayList<>();
+            if (!MyUtils.isEmptyString(childrenStr)) {
+                List<ApplyBean> children = JSON.parseArray(childrenStr, ApplyBean.class);
+                Collections.sort(children, new NewApplyComparator());//排序
+                if (MyCollectionUtil.isNotEmpty(children)) {
+                    for (ApplyBean child : children) {
+                        //快捷菜单（已修改）
+                        if (MyStringUtil.eq("1", child.getIsMeApply())) {
+                            applyList0.add(child);
                         }
-                        ApplyBean2 bean1 = new ApplyBean2();
-                        bean1.setLabel(bean.getApplyName());
-                        bean1.setApplys(applyList2);
-                        myItems.add(bean1);
                     }
                 }
             }
 
+            applyList0.add(new ApplyBean(R.mipmap.home_tab_tj, ConstantUtils.Apply.TJ_NEW, "添加", 10000));
+            Collections.sort(applyList0, new NewApplyComparator());
+            ApplyBean2 bean0 = new ApplyBean2();
+            bean0.setApplys(applyList0);
+            myItems.add(bean0);
+
             if (null != mAdapter) {
                 mAdapter.setNewData(myItems);
             }
-
         } catch (Exception e) {
         }
     }
@@ -291,7 +346,45 @@ public class XMainFragment extends XFragment<PXMain> {
         initAdapterDataMessage();
     }
 
+    private void doCompany() {
+        String companys = SPUtils.getSValues(ConstantUtils.Sp.COMPANY_S);
+        String companyId = SPUtils.getSValues(ConstantUtils.Sp.COMPANY_ID);
+        mTvHeadLeft.setText("直购猫");
+        if (!TextUtils.isEmpty(companys) && !TextUtils.isEmpty(companyId)) {
+            List<CompanysBean> companyList = JSON.parseArray(companys, CompanysBean.class);
+            if (companyList != null && companyList.size() > 0) {
+                baseItems.clear();
+                for (CompanysBean bean : companyList) {
+                    DialogMenuItem item = new DialogMenuItem(bean.getCompanyName(), bean.getCompanyId());
+                    baseItems.add(item);
+                    if (companyId.equals(String.valueOf(bean.getCompanyId()))) {
+                        String companyName = bean.getCompanyName();
+                        SPUtils.setValues(ConstantUtils.Sp.COMPANY_NAME, companyName);
+                        mTvHeadLeft.setText(companyName);
+                    }
+                }
+            }
+        }
+    }
 
+    //dialog:切换公司
+    private ArrayList<DialogMenuItem> baseItems = new ArrayList<>();
+    private void showDialogChangeCompany() {
+        NormalListDialog dialog = new NormalListDialog(context, baseItems);
+        dialog.title("切换公司")
+                .show();
+        dialog.setOnOperItemClickL(new OnOperItemClickL() {
+            @Override
+            public void onOperItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String loginBaseUrl = SPUtils.getSValues(ConstantUtils.Sp.LOGIN_BASE_URL);
+                if (MyStringUtil.isNotEmpty(loginBaseUrl)) {
+                    getP().queryJwt(context, loginBaseUrl, String.valueOf(baseItems.get(position).mResId));
+                } else {
+                    getP().queryDataChangeCompany(context, String.valueOf(baseItems.get(position).mResId));
+                }
+            }
+        });
+    }
 
 
 

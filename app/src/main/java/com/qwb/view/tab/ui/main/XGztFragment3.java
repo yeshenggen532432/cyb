@@ -15,6 +15,7 @@ import com.qwb.event.ChangeCompanyEvent;
 import com.qwb.utils.ConstantUtils;
 import com.qwb.utils.MyDataUtils;
 import com.qwb.utils.Constans;
+import com.qwb.utils.MyStringUtil;
 import com.qwb.utils.MyUtils;
 import com.qwb.utils.SPUtils;
 import com.qwb.view.tab.adapter.ApplyAdapter2;
@@ -105,13 +106,6 @@ public class XGztFragment3 extends XFragment{
     private void initAdapterData() {
         try {
             myItems.clear();
-//            1.订货下单
-//            2.考勤
-//            3.我的客户--客户管理
-//            4.我的拜访--拜访查询
-//            5.员工在线--拜访地图
-//            6.审批
-//            7.商品展区--商品信息
             //自定义的
             String childrenStr = SPUtils.getSValues(ConstantUtils.Sp.APP_LIST_CHILDREN);
             String label0 = "快捷菜单";
@@ -120,10 +114,10 @@ public class XGztFragment3 extends XFragment{
                 List<ApplyBean> children = JSON.parseArray(childrenStr, ApplyBean.class);
                 Collections.sort(children, new NewApplyComparator());//排序
                 if (children != null && !children.isEmpty()) {
-                    Boolean isNormal = SPUtils.getBoolean(ConstantUtils.Sp.APP_LIST_CHILDREN_NORMAL);//快捷菜单是否默认
+                    Boolean isChangeNormal = SPUtils.getBoolean(ConstantUtils.Sp.APP_LIST_CHILDREN_NORMAL);//快捷菜单是否默认
                     for (ApplyBean child : children) {
-                        if(isNormal == null || !isNormal){
-                            //默认快捷菜单
+                        //是否改变默认应用了
+                        if(isChangeNormal == null || !isChangeNormal){
                             if (ConstantUtils.Apply.DHXD_NEW.equals(child.getApplyCode())) {// 订货下单
                                 child.setMeApplySort(1);
                                 applyList0.add(child);
@@ -174,11 +168,10 @@ public class XGztFragment3 extends XFragment{
                             }
                         }else{
                             //快捷菜单（已修改）
-                            if (child.isMeApply()) {
+                            if (MyStringUtil.eq("1", child.getIsMeApply())) {
                                 applyList0.add(child);
                             }
                         }
-
                     }
                 }
             }

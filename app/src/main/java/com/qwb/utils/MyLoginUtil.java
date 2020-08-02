@@ -244,7 +244,7 @@ public class MyLoginUtil {
                                     apply.setSort(oldApply.getSort());
                                     apply.setMe(oldApply.isMe());
                                     apply.setMeApplySort(oldApply.getMeApplySort());
-                                    apply.setMeApply(oldApply.isMeApply());
+                                    apply.setIsMeApply(oldApply.getIsMeApply());
                                     oldApplyList.set(j,apply);
                                     tempList.add(apply);
                                     break;
@@ -255,7 +255,7 @@ public class MyLoginUtil {
                             apply.setSort((oldApplyList.get(oldApplyList.size()-1).getSort()) + 1);
                             apply.setMe(true);
                             apply.setMeApplySort((oldApplyList.get(oldApplyList.size()-1).getSort()) + 1);
-                            apply.setMeApply(false);
+                            apply.setIsMeApply("0");
                             tempList.add(apply);
                         }
                     }
@@ -287,10 +287,15 @@ public class MyLoginUtil {
             List<ApplyBean> newChildren = new ArrayList<>();
 
             if(null != newApplyList && !newApplyList.isEmpty()){
-                String oldApplyStr = SPUtils.getSValues(ConstantUtils.Sp.APP_LIST_NEW);
-                String oldChildStr = SPUtils.getSValues(ConstantUtils.Sp.APP_LIST_CHILDREN);
+                Boolean isChangeNormal = SPUtils.getBoolean(ConstantUtils.Sp.APP_LIST_CHILDREN_NORMAL);//快捷菜单是否默认
+                String oldApplyStr = null;
+                String oldChildStr = null;
+                if (isChangeNormal){
+                    oldApplyStr = SPUtils.getSValues(ConstantUtils.Sp.APP_LIST_NEW);
+                    oldChildStr = SPUtils.getSValues(ConstantUtils.Sp.APP_LIST_CHILDREN);
+                }
 
-                if(MyStringUtil.isEmpty(oldApplyStr) || "[]".equals(oldApplyStr)|| MyStringUtil.isEmpty(oldChildStr) || "[]".equals(oldChildStr)){
+                if(MyStringUtil.isEmpty(oldApplyStr) || "[]".equals(oldApplyStr) || MyStringUtil.isEmpty(oldChildStr) || "[]".equals(oldChildStr)){
                     int count = 0;
                     for (ApplyBean parentBean : newApplyList){
                         List<ApplyBean> children = parentBean.getChildren();
@@ -304,8 +309,6 @@ public class MyLoginUtil {
                     SPUtils.setValues(ConstantUtils.Sp.APP_LIST_CHILDREN, JSON.toJSONString(newChildren));
                 }else{
                     List<ApplyBean> oldChildren = JSON.parseArray(oldChildStr, ApplyBean.class);
-//                    Collections.sort(newApplyList, new ApplyComparator());
-//                    Collections.sort(oldApplyList, new ApplyComparator());
                     //1.先取出旧列表中第二层所有数据
                     //2.遍历新列表的第二层与第1步比较
                     for (ApplyBean newBean: newApplyList){
@@ -317,7 +320,7 @@ public class MyLoginUtil {
                                     childBean.setSort(oldChildBean.getSort());
                                     childBean.setMe(oldChildBean.isMe());
                                     childBean.setMeApplySort(oldChildBean.getMeApplySort());
-                                    childBean.setMeApply(oldChildBean.isMeApply());
+                                    childBean.setIsMeApply(oldChildBean.getIsMeApply());
                                     break;
                                 }
                             }

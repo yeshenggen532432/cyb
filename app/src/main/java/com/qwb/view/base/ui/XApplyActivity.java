@@ -8,12 +8,12 @@ import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.alibaba.fastjson.JSON;
 import com.qwb.event.ApplyEvent;
 import com.qwb.event.ApplyYunEvent;
 import com.qwb.utils.ActivityManager;
 import com.qwb.utils.ConstantUtils;
+import com.qwb.utils.MyStringUtil;
 import com.qwb.utils.MyUtils;
 import com.qwb.utils.SPUtils;
 import com.qwb.view.base.adapter.EditApplyAdapter;
@@ -22,11 +22,9 @@ import com.qwb.utils.MyStatusBarUtil;
 import com.qwb.widget.channel.ItemDragHelperCallback;
 import com.qwb.view.base.model.ApplyBean;
 import com.chiyong.t3.R;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
 import butterknife.BindView;
 import cn.droidlover.xdroidmvp.event.BusProvider;
 import cn.droidlover.xdroidmvp.mvp.XActivity;
@@ -157,58 +155,13 @@ public class XApplyActivity extends XActivity {
                     for (ApplyBean child:children) {
                         Boolean isNormal = SPUtils.getBoolean(ConstantUtils.Sp.APP_LIST_CHILDREN_NORMAL);//快捷菜单是否默认
                         if((isNormal == null || !isNormal) || resetNormal){
-                            //默认快捷菜单
-                            if (ConstantUtils.Apply.DHXD_NEW.equals(child.getApplyCode())) {// 订货下单
-                                child.setMeApplySort(1);
-                                items.add(child);
-                            } else if (ConstantUtils.Apply.KQ_NEW.equals(child.getApplyCode())) {// 考勤
-                                child.setMeApplySort(2);
-                                items.add(child);
-                            } else if (ConstantUtils.Apply.KHGL_NEW.equals(child.getApplyCode())) {// 我的客户--客户管理
-                                child.setMeApplySort(3);
-                                items.add(child);
-                            } else if (ConstantUtils.Apply.BFCX_NEW.equals(child.getApplyCode())) {// 我的拜访--拜访查询
-                                child.setMeApplySort(4);
-                                items.add(child);
-                            }
-                            else if (ConstantUtils.Apply.SP_NEW.equals(child.getApplyCode())) {// 审批
-                                child.setMeApplySort(6);
-                                items.add(child);
-                            } else if (ConstantUtils.Apply.SPZQ_NEW.equals(child.getApplyCode())) {//商品展区--商品信息
-                                child.setMeApplySort(7);
-                                items.add(child);
-                            }else if (ConstantUtils.Apply.GZHB_NEW.equals(child.getApplyCode())) {//工作汇报
-                                child.setMeApplySort(8);
-                                items.add(child);
-                            }else if (ConstantUtils.Apply.JSKC_NEW.equals(child.getApplyCode())) {//即使库存
-                                child.setMeApplySort(9);
-                                items.add(child);
-                            }else if (ConstantUtils.Apply.GG_NEW.equals(child.getApplyCode())) {//企微社区--公告
-                                child.setMeApplySort(10);
-                                items.add(child);
-                            }else if (ConstantUtils.Apply.TJBB_NEW.equals(child.getApplyCode())) {//拜访报表--统计报表
-                                child.setMeApplySort(11);
-                                items.add(child);
-                            }else if (ConstantUtils.Apply.LDDK_NEW.equals(child.getApplyCode())) {//流动打卡
-                                child.setMeApplySort(12);
-                                items.add(child);
-                            }else if (ConstantUtils.Apply.DKCX_NEW.equals(child.getApplyCode())) {//打卡查询
-                                child.setMeApplySort(13);
-                                items.add(child);
-                            }else if (ConstantUtils.Apply.XSFP_NEW.equals(child.getApplyCode())) {//销售发票
-                                child.setMeApplySort(14);
-                                items.add(child);
-                            }else if (ConstantUtils.Apply.WDDW_NEW.equals(child.getApplyCode())) {//我的单位（创建公司）
-                                child.setMeApplySort(15);
-                                items.add(child);
-                            }else if (ConstantUtils.Apply.CONTACT.equals(child.getApplyCode())) {// 联系客服
-                                child.setMeApplySort(16);
+                            if(MyStringUtil.eq("1", child.getIsMeApply())){
                                 items.add(child);
                             }else{
                                 otherItems.add(child);
                             }
                         }else{
-                            if(child.isMeApply()){
+                            if(MyStringUtil.eq("1", child.getIsMeApply())){
                                 items.add(child);
                             }else{
                                 otherItems.add(child);
@@ -265,46 +218,13 @@ public class XApplyActivity extends XActivity {
      * 保存修改后的数据
      */
     private void saveChangeData() {
-//        applyList.clear();
-//        List<ApplyBean> myItems = mAdapter.getmMyChannelItems();
-//        if(null != myItems && !myItems.isEmpty()){
-//            for(int i = 0;i < myItems.size(); i++){
-//                ApplyBean myBean = myItems.get(i);
-//                if(2 == mType){
-//                    myBean.setMeApply(true);
-//                    myBean.setMeApplySort(i);
-//                }else{
-//                    myBean.setMe(true);
-//                    myBean.setSort(i);
-//                }
-//            }
-//            applyList.addAll(myItems);
-//        }
-//        List<ApplyBean> otherItems = mAdapter.getmOtherChannelItems();
-//        if(null != otherItems && !otherItems.isEmpty()){
-//            for(int i = 0; i < otherItems.size(); i++){
-//                ApplyBean otherBean = otherItems.get(i);
-//                if(2 == mType){
-//                    otherBean.setMeApply(false);
-//                    otherBean.setMeApplySort(i);
-//                }else{
-//                    otherBean.setMe(false);
-//                    otherBean.setSort(i);
-//                }
-//            }
-//            applyList.addAll(otherItems);
-//        }
-//        SPUtils.setValues(ConstantUtils.Sp.APP_LIST, JSON.toJSONString(applyList));
-
-        //1.把“我的”和“其他”临时合并
-        //遍历应用列表与临时合并的对比
         List<ApplyBean> tempList = new ArrayList<>();
         List<ApplyBean> myItems = mAdapter.getmMyChannelItems();
         if(null != myItems && !myItems.isEmpty()){
             for(int i = 0;i < myItems.size(); i++){
                 ApplyBean myBean = myItems.get(i);
                 if(2 == mType){
-                    myBean.setMeApply(true);
+                    myBean.setIsMeApply("1");
                     myBean.setMeApplySort(i);
                 }else{
                     myBean.setMe(true);
@@ -318,7 +238,7 @@ public class XApplyActivity extends XActivity {
             for(int i = 0; i < otherItems.size(); i++){
                 ApplyBean otherBean = otherItems.get(i);
                 if(2 == mType){
-                    otherBean.setMeApply(false);
+                    otherBean.setIsMeApply("0");
                     otherBean.setMeApplySort(i);
                 }else{
                     otherBean.setMe(false);
@@ -328,28 +248,6 @@ public class XApplyActivity extends XActivity {
             tempList.addAll(otherItems);
         }
         SPUtils.setValues(ConstantUtils.Sp.APP_LIST_CHILDREN, JSON.toJSONString(tempList));
-
-
-//        String childrenStr = SPUtils.getSValues(ConstantUtils.Sp.APP_LIST_CHILDREN);
-//        if (!MyUtils.isEmptyString(childrenStr)) {
-//            List<ApplyBean> children = JSON.parseArray(childrenStr, ApplyBean.class);
-//            Collections.sort(children, new ApplyComparator());
-//            for (ApplyBean child :children) {
-//                for(ApplyBean tempBean : tempList){
-//                    if(child.getId() == tempBean.getId()){
-//                        if(2 == mType){
-//                            child.setMeApply(tempBean.isMeApply());
-//                            child.setMeApplySort(tempBean.getMeApplySort());
-//                        }else{
-//                            child.setMe(tempBean.getMe());
-//                            child.setSort(tempBean.getSort());
-//                        }
-//                       break;
-//                    }
-//                }
-//            }
-//            SPUtils.setValues(ConstantUtils.Sp.APP_LIST_CHILDREN, JSON.toJSONString(children));
-//        }
-
     }
+
 }

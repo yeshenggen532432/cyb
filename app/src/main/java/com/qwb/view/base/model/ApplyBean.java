@@ -15,7 +15,7 @@ public class ApplyBean implements Serializable {
 	 */
 	private static final long serialVersionUID = 5747050065823171203L;
 	private boolean isMe = true;//是否是我的应用(默认true)
-	private boolean isMeApply = false;//是否是"自定义管理"(默认false)
+	private String isMeApply;//1: 默认菜单；；是否是"自定义管理"(默认false)
 	private int meApplySort = 1000;//"自定义管理"排序(默认往后)
 	public int sort;//排序
 	public int count;//未读消息数量
@@ -77,16 +77,16 @@ public class ApplyBean implements Serializable {
 		this.applyName = applyName;
 	}
 
-	public Boolean getMe() {
-		return isMe;
-	}
-
-	public boolean isMeApply() {
+	public String getIsMeApply() {
 		return isMeApply;
 	}
 
-	public void setMeApply(boolean meApply) {
-		isMeApply = meApply;
+	public void setIsMeApply(String isMeApply) {
+		this.isMeApply = isMeApply;
+	}
+
+	public Boolean getMe() {
+		return isMe;
 	}
 
 	public int getId() {

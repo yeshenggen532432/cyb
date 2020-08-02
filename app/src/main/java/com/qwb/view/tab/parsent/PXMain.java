@@ -451,7 +451,6 @@ public class PXMain extends XPresent<XMainFragment>{
             BannerResult bean = JSON.parseObject(response, BannerResult.class);
             if (MyRequestUtil.isSuccess(bean)) {
                 getV().doBanner(bean.getRows());
-                ToastUtils.showLongCustomToast(bean.getMsg());
             } else {
                 ToastUtils.showLongCustomToast(bean.getMsg());
             }
