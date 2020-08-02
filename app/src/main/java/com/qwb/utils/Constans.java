@@ -759,6 +759,7 @@ public class Constans {
     //---------------------------新的-------------------------
     public static String sumPageStat = ROOTHOST + "sumPageStat";//
     public static String queryShopinfo = ROOTHOST + "queryShopinfo";//
+    public static String getBanners = ROOTHOST + "getBanners";//
 
 
 }

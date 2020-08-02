@@ -21,6 +21,7 @@ import com.qwb.utils.MyUtils;
 import com.qwb.utils.SPUtils;
 import com.qwb.utils.ToastUtils;
 import com.qwb.view.base.model.ScanBean;
+import com.qwb.view.tab.model.BannerResult;
 import com.qwb.view.tab.ui.XMainFragment;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.MyHttpCallback;
@@ -38,6 +39,28 @@ public class PXMain extends XPresent<XMainFragment>{
 
     private Activity context;
     private String phone;
+    /**
+     * 切换公司
+     */
+    public void queryBanner(Activity context) {
+        OkHttpUtils
+                .post()
+                .url(Constans.getBanners)
+                .addParams("token", SPUtils.getTK())
+                .id(1)
+                .build()
+                .execute(new MyHttpCallback(context) {
+                    @Override
+                    public void myOnError(Call call, Exception e, int id) {
+
+                    }
+
+                    @Override
+                    public void myOnResponse(String response, int id) {
+                        parseJson10(response);
+                    }
+                });
+    }
 
     /**
      * 切换公司
@@ -413,6 +436,21 @@ public class PXMain extends XPresent<XMainFragment>{
         try {
             BaseBean bean = JSON.parseObject(response, BaseBean.class);
             if (MyRequestUtil.isSuccess(bean)) {
+                ToastUtils.showLongCustomToast(bean.getMsg());
+            } else {
+                ToastUtils.showLongCustomToast(bean.getMsg());
+            }
+        } catch (Exception e) {
+            ToastUtils.showError(e);
+        }
+    }
+
+    //解析数据-扫描授权登录
+    private void parseJson10(String response) {
+        try {
+            BannerResult bean = JSON.parseObject(response, BannerResult.class);
+            if (MyRequestUtil.isSuccess(bean)) {
+                getV().doBanner(bean.getRows());
                 ToastUtils.showLongCustomToast(bean.getMsg());
             } else {
                 ToastUtils.showLongCustomToast(bean.getMsg());

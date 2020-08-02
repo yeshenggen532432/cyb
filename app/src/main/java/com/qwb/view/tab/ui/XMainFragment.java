@@ -12,6 +12,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import com.alibaba.fastjson.JSON;
 import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.lidroid.xutils.view.annotation.event.OnStartTrackingTouch;
+import com.lljjcoder.Constant;
 import com.qwb.db.DMessageBean;
 import com.qwb.event.CategroyMessageEvent;
 import com.qwb.utils.ActivityManager;
@@ -27,10 +29,10 @@ import com.qwb.view.base.model.ApplyBean;
 import com.qwb.view.tab.adapter.ApplyAdapter2;
 import com.qwb.view.tab.adapter.CategroyAdapter;
 import com.qwb.view.tab.model.ApplyBean2;
+import com.qwb.view.tab.model.BannerBean;
 import com.qwb.view.tab.parsent.PXMain;
 import com.chiyong.t3.R;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import butterknife.BindView;
 import cn.bingoogolapple.bgabanner.BGABanner;
@@ -64,6 +66,12 @@ public class XMainFragment extends XFragment<PXMain> {
         initUI();
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        getP().queryBanner(null);
+    }
+
     private void initEvent(){
         BusProvider.getBus().toFlowable(CategroyMessageEvent.class)
                 .subscribe(new Consumer<CategroyMessageEvent>() {
@@ -93,17 +101,16 @@ public class XMainFragment extends XFragment<PXMain> {
     @BindView(R.id.banner)
     BGABanner mBanner;
     private void initBanner() {
-        mBanner.setAdapter(new BGABanner.Adapter<ImageView, String>() {
+        mBanner.setAdapter(new BGABanner.Adapter<ImageView, BannerBean>() {
             @Override
-            public void fillBannerItem(BGABanner banner, ImageView itemView, String model, int position) {
-                MyGlideUtil.getInstance().displayImageSquere(model, itemView, false);
+            public void fillBannerItem(BGABanner banner, ImageView itemView, BannerBean model, int position) {
+                MyGlideUtil.getInstance().displayImageSquere(Constans.ROOT + model.getImageUrl(), itemView, false);
             }
         });
-        mBanner.setData(Arrays.asList(
-                "https://img.tukuppt.com/bg_grid/00/18/09/6zZkcqhZwo.jpg!/fh/350",
-                "https://img.tukuppt.com/bg_grid/00/06/42/pO6xd1Zevl.jpg!/fh/350",
-                "https://img.tukuppt.com/bg_grid/00/03/31/VKMsak12jv.jpg!/fh/350"
-        ),null);
+    }
+
+    public void doBanner(List<BannerBean> dataList){
+        mBanner.setData(dataList,null);
         mBanner.setDelegate(new BGABanner.Delegate<ImageView, String>() {
             @Override
             public void onBannerItemClick(BGABanner banner, ImageView itemView, String model, int position) {
