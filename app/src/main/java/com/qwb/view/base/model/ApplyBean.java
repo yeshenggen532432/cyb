@@ -37,7 +37,7 @@ public class ApplyBean implements Serializable {
 	private String createBy;
 	private String isUse;
 	private String dataTp;//数据类型 1 全部 2 部门及子部门 3 个人 4自定义
-	private String menuNm;////qwb：企微宝  qwfw：企微服务
+	private String menuNm;//
 	private String sgtjz;//用来区分统计报表 1：业务拜访统计表，2：客户拜访统计表，3：产品订单统计表，4：销售订单统计表
 	private String mids;//当dataTp=4时，返回自定义ids
 

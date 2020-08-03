@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/layout_bg_white"
@@ -71,7 +72,7 @@
                 android:layout_weight="1"
                 android:maxLines="1"
                 android:ellipsize="end"
-                android:text="企微宝V2.0上线啦！！！"
+                tools:text="驰用宝V2.0上线啦！！！"
                 android:textColor="#9F9F9F"
                 android:textSize="@dimen/sp_13" />
 

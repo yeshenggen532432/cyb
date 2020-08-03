@@ -64,25 +64,6 @@ public class MyLoginUtil {
 
     }
 
-
-//                {
-//                        "msg": "登录成功",
-//                        "isUnitmng": "",
-//                        "msgmodel": "2",
-//                        "tpNm": "快消",
-//                        "token": "6cd2e35aac15b907093a1652cc26ed83",
-//                        "companyId": 285,
-//                        "memberNm": "叶生根",
-//                        "memberHead": "publicplat/member/1524747171026.jpg",
-//                        "rzState": 0,
-//                        "datasource": "xmqwbwlkjyxgs285",
-//                        "companys": "[{\"companyId\":590,\"companyName\":\"小帅集团\"},{\"companyId\":139,\"companyName\":\"鹭百川\"},{\"companyId\":285,\"companyName\":\"厦门企微宝网络科技有限公司\"},{\"companyId\":137,\"companyName\":\"思迅网络科技\"}]",
-//                        "state": true,
-//                        "memberMobile": "13950104779",
-//                        "memId": 195,
-//                        "cid": 0
-//                }
-
     public static void login(LoginBean loginBean,String pwd,boolean check){
         try {
             SPUtils.setBoolean(ConstantUtils.Sp.INIT_PASSWORD, true);
@@ -349,7 +330,7 @@ public class MyLoginUtil {
         ConstantUtils.Sp.APP_LIST_NEW = "appList_new" + SPUtils.getID() + "_" + SPUtils.getCompanyId();
         ConstantUtils.Sp.APP_LIST_CHILDREN = "appList_children" + SPUtils.getID() + "_" + SPUtils.getCompanyId();
         ConstantUtils.Sp.APP_LIST_CHILDREN_NORMAL = "appList_children_normal" + SPUtils.getID() + "_" + SPUtils.getCompanyId();//应用列表_子(快捷菜单默认)
-        ConstantUtils.Sp.APPLY_QWB_LIST = "qwbList"+ SPUtils.getID() + "_" + SPUtils.getCompanyId();;//应用列表-企微宝-工作台
+        ConstantUtils.Sp.APPLY_QWB_LIST = "qwbList"+ SPUtils.getID() + "_" + SPUtils.getCompanyId();;//应用列表-工作台
         ConstantUtils.Sp.APPLY_QWBFW_LIST = "qwfwList"+SPUtils.getID() + "_" + SPUtils.getCompanyId();//应用列表-企微服务-微生活
         ConstantUtils.Sp.TRACK_UPDATE_TYPE = "track_update_type"+SPUtils.getID() + "_" + SPUtils.getCompanyId();//轨迹上传类型
         ConstantUtils.Sp.FRAME_MEMBER_IDS_MAP = "memberIds_map"+SPUtils.getID() + "_" + SPUtils.getCompanyId();//结构图（部门及员工）-拜访地图

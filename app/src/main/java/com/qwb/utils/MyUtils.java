@@ -1380,7 +1380,6 @@ public class MyUtils {
 
 	/**
 	 * 当dataTp=4,自定义获取mids
-	 * tp-1:企微宝 2：企微服务
 	 * apply:模块的编码
 	 */
 	public static String getMids(int tp, String apply) {

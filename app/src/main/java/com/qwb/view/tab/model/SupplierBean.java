@@ -7,14 +7,6 @@ import com.qwb.view.base.model.BaseBean;
  * 我的供货商
  */
 public class SupplierBean extends BaseBean{
-//		"fdId": 3,
-//		"companyId": 285,
-//		"outTime": "",
-//		"memberId": 1456,
-//		"memberNm": "测试会员",
-//		"memberMobile": "13950104773",
-//		"memberCompany": "厦门企微宝网络科技有限公司",
-//		"inTime": "2018-44-16"
     private int fdId;
     private int companyId;
     private int memberId;

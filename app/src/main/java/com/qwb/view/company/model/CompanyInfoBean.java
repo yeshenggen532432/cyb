@@ -18,18 +18,6 @@ public class CompanyInfoBean extends BaseBean {
     }
 
     public class CompanyInfo{
-//        "id": 285,
-//                "name": "企微宝666",
-//                "industryId": "176055675691995136",
-//                "categoryId": "176055680502861824",
-//                "brand": "1231",
-//                "leader": "123",
-//                "tel": "123",
-//                "email": "1231",
-//                "employeeCount": 1,
-//                "salesmanCount": 1,
-//                "bizLicenseNumber": "1123123",
-//                "bizLicensePic": "/upload/xmqwbwlkjyxgs285/logo/1569033093523.jpg"
         private int id;
         private String name;
         private String industryId;//行业id

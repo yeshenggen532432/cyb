@@ -179,7 +179,7 @@ public class XRegisterActivity extends XActivity<PXRegister> {
         NormalDialog normalDialog = new NormalDialog(context);
         normalDialog
                 .content("您的初始化密码是123456")
-                .btnText("进入企微宝","完善信息")
+                .btnText("进入驰用宝","完善信息")
                 .show();
         normalDialog.setOnBtnClickL(new OnBtnClickL() {
                                         @Override

@@ -34,7 +34,6 @@
         <!--验证码-->
         <include layout="@layout/x_layout_login_code"/>
 
-        <!--进入企微宝-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp_44"
@@ -44,7 +43,7 @@
                 android:id="@+id/btn_submit"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="进入企微宝"
+                android:text="进入驰用宝"
                 android:textSize="@dimen/sp_18"
                 app:radius="@dimen/dp_2"
                 app:animationDuration="200"

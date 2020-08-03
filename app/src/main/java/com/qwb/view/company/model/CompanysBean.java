@@ -6,8 +6,6 @@ package com.qwb.view.company.model;
  */
 public class CompanysBean {
 
-//			"companys":"[{"companyId":285,"companyName":"厦门企微宝网络科技有限公司"}]",
-
 	private int companyId ;//公司id
 	private String companyName ;//公司名称
 

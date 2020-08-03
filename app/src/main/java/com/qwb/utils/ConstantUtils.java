@@ -62,7 +62,7 @@ public class ConstantUtils {
         public static String  APP_LIST_NEW = "appList_new"+BASE;//应用列表(新的)
         public static String  APP_LIST_CHILDREN = "appList_children"+BASE;//应用列表_子
         public static String  APP_LIST_CHILDREN_NORMAL = "appList_children_normal"+BASE;//应用列表_子(快捷菜单默认)
-        public static String  APPLY_QWB_LIST = "qwbList"+BASE;//应用列表-企微宝-工作台
+        public static String  APPLY_QWB_LIST = "qwbList"+BASE;//应用列表--工作台
         public static String  APPLY_QWBFW_LIST = "qwfwList"+BASE;//应用列表-企微服务-微生活
         public static String  TRACK_UPDATE_TYPE = "track_update_type"+BASE;//轨迹上传类型
         public static String  FRAME_MEMBER_IDS_MAP = "memberIds_map"+BASE;//结构图（部门及员工）-拜访地图

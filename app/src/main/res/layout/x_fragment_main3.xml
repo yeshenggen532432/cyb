@@ -12,7 +12,6 @@
         android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_119"
-        android:background="@mipmap/home_banner"
         android:scaleType="fitXY"/>
 
     <com.flyco.tablayout.CommonTabLayout

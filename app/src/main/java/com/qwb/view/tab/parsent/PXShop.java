@@ -171,7 +171,7 @@ public class PXShop extends XPresent<XShopFragment> {
                     List<HotShopBean> dataList = parseObject.getObj();
                     String normalShopCompanyId = SPUtils.getSValues(ConstantUtils.Sp.NORMAL_SHOP_COMPANY_ID);
                     String normalShopCompanyName = SPUtils.getSValues(ConstantUtils.Sp.NORMAL_SHOP_COMPANY_NAME);
-                    //默认商城没有时：为企微宝
+                    //默认商城没有时：
                     if (MyStringUtil.isEmpty(normalShopCompanyId)) {
                         boolean flag = true;
                         //TODO 默认遍历本公司的
@@ -184,7 +184,6 @@ public class PXShop extends XPresent<XShopFragment> {
                                 break;
                             }
                         }
-                        //TODO 没有遍历‘企微宝’
                         if (flag) {
                             normalShopCompanyId = "285";
                             for (HotShopBean bean : dataList) {

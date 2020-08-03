@@ -42,7 +42,7 @@
                 android:textSize="@dimen/sp_13"
                 android:maxLines="1"
                 android:ellipsize="end"
-                tools:text="厦门企微宝网络科技有限公司" />
+                tools:text="驰用宝" />
 
             <TextView
                 android:visibility="gone"

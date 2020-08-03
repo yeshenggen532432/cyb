@@ -101,7 +101,7 @@
                     android:layout_height="@dimen/dp_30"
                     android:layout_marginLeft="@dimen/dp_10"
                     android:gravity="center_vertical"
-                    tools:text="企微宝有限公司"
+                    tools:text="驰用宝"
                     android:textColor="@color/x_main_color"
                     android:textSize="@dimen/sp_15" />
 

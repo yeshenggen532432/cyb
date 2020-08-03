@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/dp_10"
-        tools:text="企微宝"
+        tools:text="驰用宝"
         android:textColor="@color/gray_3"
         android:textSize="@dimen/sp_13"/>
 
