@@ -7,9 +7,9 @@ import java.io.Serializable;
  */
 public class StkCheckBean implements Serializable {
 
-	// "staff": "叶生根",
+	// "staff": "",
 //		 "checkTimeStr": "2019-05-31 11:38:00",
-//		 "operator": "叶生根",
+//		 "operator": "",
 //		 "stkId": 8,
 //		 "stkName": "旧货仓",
 //		 "totalAmt": 0,

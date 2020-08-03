@@ -212,7 +212,7 @@ public class XMainFragment3 extends XFragment<PXMain3> {
     private void doCompany() {
         String companys = SPUtils.getSValues(ConstantUtils.Sp.COMPANY_S);
         String companyId = SPUtils.getSValues(ConstantUtils.Sp.COMPANY_ID);
-        mTvCompanyName.setText("直购猫");
+        mTvCompanyName.setText("驰用宝");
         if (!TextUtils.isEmpty(companys) && !TextUtils.isEmpty(companyId)) {
             List<CompanysBean> companyList = JSON.parseArray(companys, CompanysBean.class);
             if (companyList != null && companyList.size() > 0) {

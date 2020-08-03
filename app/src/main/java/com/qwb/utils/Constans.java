@@ -14,31 +14,10 @@ import java.util.List;
 
 @SuppressLint("UseSparseArrays")
 public class Constans {
-//  public static String ROOT = "http://v.dev.skadoosh.cn/";//由后台节点控制
-//	public static String ROOT = "http://www.7weib.com:8082/cnlife/";//鹭百川内测
-//	public static String ROOT = "http://192.168.1.4:8080/";//小郭-本地内测
-//	public static String ROOT = "http://192.168.31.226:8080/";//叶生根-本地内测（公司）
-//	public static String ROOT = "http://v.dev.skadoosh.cn/";//哲敏
-//  public static String ROOT = "http://192.168.1.145/";//哲敏
-//	public static String ROOT = "http://zg.dev.skadoosh.cn/";//曾贵
-//	public static String ROOT = "http://192.168.1.35:8080/";//曾贵
-//	public static String ROOT = "http://zzx.dev.skadoosh.cn/";//族祥
-//	public static String ROOT = "http://192.168.31.48:8080/";//族祥
-//	public static String ROOT = "http://zrg.dev.skadoosh.cn/";//张仁贵
-//	public static String ROOT = "http://jieon.dev.skadoosh.cn/";//郭建荣
-//	public static String ROOT = "http://192.168.0.100:8080/";//叶生根-本地内测（家里）
-//	public static String ROOT = "http://192.168.1.2:8082/qweib-client/";//叶生根-本地内测
-//	public static String ROOT = "http://192.168.31.24:8080/qweib-client/";//张仁贵-本地内测
-//  public static String ROOT = "http://beta.t.qweib.com/";//叶生根-本地内测（公司）
-//  public static String ROOT = "http://beta.qweib.com/";//鹭百川内测
-//  public static String ROOT = "http://rc.qweib.com/";//由后台节点控制
-//    public static String ROOT = "http://ysg.dev.skadoosh.cn/";//叶生根-本地内测（公司）
-    public static String ROOT = "http://47.107.141.109:8080/";//叶生根-本地内测（公司）
-
-//    public static String ROOT = "http://mp.qweib.com/";//由后台节点控制
+    public static String ROOT = "http://47.107.141.109:8080/";//-本地内测（公司）
 
     //TODO 正式-测试修改：ISDEBUG，ROOT，AppDownUrl
-    public static String AppDownUrl = "https://www.wwwpgyer.com/QAOX";//鹭百川蒲公英的下载地址
+    public static String AppDownUrl = "https://www.wwwpgyer.com/QAOX";//蒲公英的下载地址
     public static boolean ISDEBUG = true;//是否是调试阶段
 
 //    public static String AppDownUrl = "https://www.pgyer.com/05W5";//正式蒲公英的下载地址
@@ -49,7 +28,6 @@ public class Constans {
 
     public static String H5_BASE_URL = ROOT + "h5/?";//h5域名
 
-//    public static String H5_BASE_URL = "http://h5.t.qweib.com/?";//鹭百川内测
     /**
      * 本应用的文件图片都放到这个路径
      */
@@ -303,7 +281,7 @@ public class Constans {
     public static String updateMsgmodelURL = ROOTHOST + "updateMsgmodel";
 
     /**
-     * TODO 叶生根--添加
+     * TODO --添加
      */
     public static Boolean isDelModel = false;// 图片是否处于删除状态
     public static Boolean isDelModel2 = false;// 图片是否处于删除状态

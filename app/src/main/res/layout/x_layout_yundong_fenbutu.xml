@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/shape_bg_yuanjiao_member_fbt"
         android:padding="2dp"
-        android:text="叶生根"
+        android:text=""
         android:textSize="10sp"
         android:textColor="@color/white"/>
 

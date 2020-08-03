@@ -13,7 +13,7 @@ public class ShopAddressInfo extends BaseBean{
 //		"memId": 1458,
 //		"longitude": "118.12552357497869",
 //		"latitude": "24.48331650314069",
-//		"mobile": "叶生根",
+//		"mobile": "",
 //		"hyId": 5,
 //		"createTime": "Fri Sep 14 17:34:07 CST 2018",
 //		"linkman": "13950104779"

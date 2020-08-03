@@ -17,7 +17,7 @@ import java.util.List;
 
 /**
  * 文 件 名: ChooseNearClientAdapter
- * 创 建 人: 叶生根
+ * 创 建 人:
  * 创建日期: 18/05/14
  * 修改时间：
  * 修改备注：

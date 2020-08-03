@@ -59,7 +59,6 @@ public class AuditTabSendAuditFragment extends XFragment<PAuditTabSendAudit> {
 	private void initNormalData() {
 		mNormalModelList.add(new AuditModelBean(-5, R.mipmap.home_tab_qj, "请假"));
 		mNormalModelList.add(new AuditModelBean(-3, R.mipmap.home_tab_cc, "出差"));
-//		//鹭百川公司不要"报销"，"物品领用"，"通用审批"
 //		if(!"139".equals(SPUtils.getCompanyId())){
 //			mNormalModelList.add(new AuditModelBean(-4, R.mipmap.home_tab_bx, "报销"));
 //			mNormalModelList.add(new AuditModelBean(-2, R.mipmap.home_tab_wply, "物品领用"));

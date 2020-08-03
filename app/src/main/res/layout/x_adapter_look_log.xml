@@ -27,7 +27,7 @@
                 android:gravity="center"
                 android:textColor="@color/white"
                 android:textSize="@dimen/sp_10"
-                android:text="叶生根" />
+                android:text="" />
             <TextView
                 android:id="@+id/tv_memNm"
                 android:layout_width="wrap_content"
@@ -38,7 +38,7 @@
                 android:textColor="@color/gray_3"
                 android:textSize="@dimen/sp_15"
                 android:textStyle="bold"
-                android:text="叶生根" />
+                android:text="" />
 
             <TextView
                 android:id="@+id/tv_time"

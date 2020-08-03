@@ -30,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/dp_15"
                 android:layout_marginRight="@dimen/dp_15"
-                android:text="直购猫"
+                android:text="驰用宝"
                 android:textStyle="bold"
                 android:textColor="@color/gray_3"
                 android:textSize="@dimen/sp_17" />

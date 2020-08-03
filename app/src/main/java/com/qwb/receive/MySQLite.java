@@ -255,7 +255,7 @@ public class MySQLite extends SQLiteOpenHelper {
 		// "jlkm": "0.0"
 		// "qdtpNm": "连锁",
 		// "xsjdNm": "意向签约",
-		// "memberNm": "叶生根",
+		// "memberNm": "",
 		// "branchName": "技术部",
 
 		// mid--用来区分

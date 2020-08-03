@@ -212,11 +212,7 @@ public class ApplyAdapter2 extends BaseQuickAdapter<ApplyBean2, BaseViewHolder> 
                             String applyUrl = item.getApplyUrl();
                             if (MyStringUtil.isNotEmpty(applyUrl)) {
                                 String url;
-                                if (applyUrl.startsWith("http://erp.7weib.com") || applyUrl.startsWith("https://erp.7weib.com")) {
-                                    //鹭百川协议
-//                                  String url = "http://erp.7weib.com:8099/rfjxc/mobile/login.jsp?from=qwb&userId=195";
-                                    url = applyUrl + SPUtils.getID();
-                                } else if (applyUrl.startsWith("http") && applyUrl.contains("#")) {
+                                if (applyUrl.startsWith("http") && applyUrl.contains("#")) {
                                     //客服
                                     String replaceStr = "?token=" + SPUtils.getTK() + "&type=qwb";
                                     StringBuffer sb = new StringBuffer(item.getApplyUrl());

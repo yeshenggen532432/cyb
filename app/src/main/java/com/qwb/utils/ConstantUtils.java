@@ -503,7 +503,6 @@ public class ConstantUtils {
         public static final String  SPTRFYGL_NEW = "sptrfygl_new";//销售投入费用设置
         public static final String  QYXXSZ_NEW = "qyxxsz_new";//企业信息设置
 
-        public static final String  LBCXY_NEW = "lbcxy_new";//鹭百川协议
         public static final String  SERVICE_MESSAGE = "service_message";//客服
 
         //库位管理

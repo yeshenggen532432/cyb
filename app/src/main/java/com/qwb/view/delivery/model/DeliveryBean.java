@@ -16,7 +16,7 @@ public class DeliveryBean {
 //		"ddNum": 2,
 //		"mid": 1990,
 //		"discount": 0,
-//		"operator": "叶生根",
+//		"operator": "",
 //		"khNm": "test",
 //		"epCustomerName": "",
 //		"epCustomerId": "",
