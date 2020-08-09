@@ -271,11 +271,11 @@
                         android:text="清除拍照图片" />
                 </RelativeLayout>
 
-<!--                <include layout="@layout/line0_1"/>-->
+                <include layout="@layout/line0_1"/>
 
                 <!--打开自启动管理设置-->
                 <RelativeLayout
-                    android:visibility="gone"
+                    android:visibility="visible"
                     android:id="@+id/view_open_zqd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -295,11 +295,11 @@
                         android:text="打开自启动管理设置" />
                 </RelativeLayout>
 
-<!--                <include layout="@layout/line0_1"/>-->
+                <include layout="@layout/line0_1"/>
 
                 <!--打开电量设置-->
                 <RelativeLayout
-                    android:visibility="gone"
+                    android:visibility="visible"
                     android:id="@+id/view_open_dl"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -319,11 +319,11 @@
                         android:text="打开电量设置" />
                 </RelativeLayout>
 
-<!--                <include layout="@layout/line0_1"/>-->
+                <include layout="@layout/line0_1"/>
 
                 <!-- 开启开单小单位参考-->
                 <RelativeLayout
-                    android:visibility="gone"
+                    android:visibility="visible"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"

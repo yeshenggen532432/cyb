@@ -4,8 +4,8 @@ ext {
             buildToolsVersion: "27.0.2",
             minSdkVersion    : 19,
             targetSdkVersion : 27,
-            versionCode      : 10006,
-            versionName      : '1.0.6',
+            versionCode      : 10007,
+            versionName      : '1.0.7',
 
             VSupportSdk      : '27.1.1',
             VRetrofitSdk     : "2.2.0",
