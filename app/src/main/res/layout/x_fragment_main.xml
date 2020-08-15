@@ -8,77 +8,36 @@
 
     <include layout="@layout/x_layout_head_left"/>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
-        <LinearLayout
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <cn.bingoogolapple.bgabanner.BGABanner
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_119"
+            app:banner_pageChangeDuration="3000"
+            app:banner_pointAutoPlayAble="true"
+            app:banner_pointContainerBackground="@android:color/transparent"
+            app:banner_pointDrawable="@drawable/bga_banner_selector_point_hollow"
+            app:banner_pointTopBottomMargin="15dp"
+            app:banner_transitionEffect="alpha" />
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_marginTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-<!--            <ImageView-->
-<!--                android:visibility="visible"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="@dimen/dp_119"-->
-<!--                android:background="@mipmap/home_banner"-->
-<!--                android:scaleType="fitXY"/>-->
+            android:background="@color/white"
+            android:fadingEdge="none"/>
 
-            <cn.bingoogolapple.bgabanner.BGABanner
-                android:id="@+id/banner"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_119"
-                app:banner_pageChangeDuration="3000"
-                app:banner_pointAutoPlayAble="true"
-                app:banner_pointContainerBackground="@android:color/transparent"
-                app:banner_pointDrawable="@drawable/bga_banner_selector_point_hollow"
-                app:banner_pointTopBottomMargin="15dp"
-                app:banner_transitionEffect="alpha" />
 
-            <android.support.v7.widget.RecyclerView
-                android:layout_marginTop="@dimen/dp_10"
-                android:paddingBottom="@dimen/dp_10"
-                android:id="@+id/recyclerView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:fadingEdge="none"/>
+    </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_35"
-                android:layout_marginTop="@dimen/dp_10"
-                android:gravity="center_vertical"
-                android:background="@color/white"
-                android:orientation="horizontal">
-                <com.deadline.statebutton.StateButton
-                    android:layout_width="@dimen/dp_5"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="@dimen/dp_10"
-                    android:layout_marginRight="@dimen/dp_10"
-                    android:layout_marginTop="@dimen/dp_5"
-                    android:layout_marginBottom="@dimen/dp_5"
-                    app:radius="@dimen/dp_5"
-                    app:normalBackgroundColor="@color/green"/>
 
-                <TextView
-                    style="@style/tv_cgray3_s15"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:text="消息中心"/>
-
-            </LinearLayout>
-
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/recyclerView_message"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:fadingEdge="none"/>
-        </LinearLayout>
-
-    </ScrollView>
-    
 
 
 

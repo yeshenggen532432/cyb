@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
@@ -223,10 +224,13 @@ public class XMainFragment extends XFragment<PXMain> {
     /**
      * 适配器
      */
-    @BindView(R.id.recyclerView_message)
+//    @BindView(R.id.recyclerView_message)
     RecyclerView mRecyclerViewMessage;
     CategroyAdapter mMessageAdapter;
     private void initAdapterMessage() {
+        View footView = LayoutInflater.from(context).inflate(R.layout.x_fragment_main_bottom, null);
+        mAdapter.setFooterView(footView);
+        mRecyclerViewMessage = footView.findViewById(R.id.recyclerView_message);
         mMessageAdapter = new CategroyAdapter(context);
         mMessageAdapter.setNewData(categoryList);
         MyRecyclerViewUtil.init(context,mRecyclerViewMessage, mMessageAdapter);
