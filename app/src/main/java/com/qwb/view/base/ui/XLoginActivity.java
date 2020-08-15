@@ -159,16 +159,16 @@ public class XLoginActivity extends XActivity<PXLogin> {
             return;
         }
 
-        //TODO 第一次初始密码123456可以登录，后面初始密码123456不可以登录
-        if(Constans.ISPASSWORD){
-        }else{
-            if (!SPUtils.getBoolean(ConstantUtils.Sp.INIT_PASSWORD)) {
-                if ("123456".equals(pwd)) {
-                    dialogNormalStyle();//初始密码123456修改提示
-                    return;
-                }
-            }
-        }
+//        //TODO 第一次初始密码123456可以登录，后面初始密码123456不可以登录
+//        if(Constans.ISPASSWORD){
+//        }else{
+//            if (!SPUtils.getBoolean(ConstantUtils.Sp.INIT_PASSWORD)) {
+//                if ("123456".equals(pwd)) {
+//                    dialogNormalStyle();//初始密码123456修改提示
+//                    return;
+//                }
+//            }
+//        }
         //记住密码 默认true
         getP().submit(context, phone, pwd, true, mType);
     }

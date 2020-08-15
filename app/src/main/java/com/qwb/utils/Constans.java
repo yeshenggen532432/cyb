@@ -14,7 +14,8 @@ import java.util.List;
 
 @SuppressLint("UseSparseArrays")
 public class Constans {
-    public static String ROOT = "http://47.107.141.109:8080/";//-本地内测（公司）
+//    public static String ROOT = "http://47.107.141.109:8080/";
+    public static String ROOT = "https://t3.cyecy.cn/";
 
     //TODO 正式-测试修改：ISDEBUG，ROOT，AppDownUrl
     public static String AppDownUrl = "https://www.wwwpgyer.com/QAOX";//蒲公英的下载地址
