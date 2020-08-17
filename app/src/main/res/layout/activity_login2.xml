@@ -57,7 +57,7 @@
                     android:padding="@dimen/dp_10"
                     app:x_clearDrawable="@mipmap/login_icon_close"
                     android:textColorHint="@color/gray_9"
-                    android:hint="请输入手机号"/>
+                    android:hint="请输入账号"/>
 
             </LinearLayout>
 
@@ -149,6 +149,7 @@
 
 
         <RelativeLayout
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp_40"
             android:paddingLeft="@dimen/dp_30"

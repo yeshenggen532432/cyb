@@ -12,6 +12,9 @@ import com.xmsx.cnlife.view.widget.CornersTransform;
 import com.chiyong.t3.R;
 import com.zhy.http.okhttp.utils.MyUrlUtil;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+
 /**
  * 显示图片
  */
@@ -63,10 +66,15 @@ public class MyGlideUtil {
     }
 
     public void displayImageSquere(String url, ImageView imageView){
-        url = MyUrlUtil.getUrl(url);
-        if(null != imageLoader && null != optionSquere){
-            imageLoader.displayImage(url, imageView, optionSquere);
+        try {
+            url = MyUrlUtil.getUrl(url);
+            if(null != imageLoader && null != optionSquere){
+                imageLoader.displayImage(url, imageView, optionSquere);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+
     }
     public void displayImageRound(String url, ImageView imageView){
         url = MyUrlUtil.getUrl(url);

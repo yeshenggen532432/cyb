@@ -165,12 +165,20 @@ public class XMainFragment extends XFragment<PXMain> {
     }
 
     public void doBanner(List<BannerBean> dataList){
-        mBanner.setData(dataList,null);
-        mBanner.setDelegate(new BGABanner.Delegate<ImageView, String>() {
-            @Override
-            public void onBannerItemClick(BGABanner banner, ImageView itemView, String model, int position) {
+        List<BannerBean> bannerList = new ArrayList<>();
+        if (MyCollectionUtil.isNotEmpty(dataList)) {
+            for (BannerBean bannerBean:dataList) {
+                if (MyStringUtil.isNotEmpty(bannerBean.getImageUrl())){
+                    bannerList.add(bannerBean);
+                }
             }
-        });
+        }
+        mBanner.setData(bannerList,null);
+//        mBanner.setDelegate(new BGABanner.Delegate<ImageView, BannerBean>() {
+//            @Override
+//            public void onBannerItemClick(BGABanner banner, ImageView itemView, BannerBean model, int position) {
+//            }
+//        });
         int count = mBanner.getItemCount();
         if (count == 1){
             mBanner.setAutoPlayAble(false);

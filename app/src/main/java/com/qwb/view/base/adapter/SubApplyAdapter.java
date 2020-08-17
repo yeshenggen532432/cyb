@@ -8,6 +8,7 @@ import android.widget.ImageView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
+import com.qwb.utils.Constans;
 import com.qwb.utils.ConstantUtils;
 import com.qwb.view.base.model.ApplyBean;
 import com.qwb.utils.MyGlideUtil;
@@ -41,7 +42,7 @@ public class SubApplyAdapter extends BaseQuickAdapter<ApplyBean,BaseViewHolder> 
         ImageView iv = helper.getView(R.id.iv_home_tab);
         String applyIcon = item.getApplyIcon();
         if(!MyStringUtil.isEmpty(applyIcon)){
-            MyGlideUtil.getInstance().displayImageSquere(applyIcon, iv);
+            MyGlideUtil.getInstance().displayImageSquere(Constans.ROOT + applyIcon, iv);
         }else{
             if("添加".equals(item.getApplyName())){
                 iv.setImageResource(R.mipmap.home_tab_tj);
