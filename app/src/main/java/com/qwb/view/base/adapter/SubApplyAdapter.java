@@ -42,12 +42,12 @@ public class SubApplyAdapter extends BaseQuickAdapter<ApplyBean,BaseViewHolder> 
         ImageView iv = helper.getView(R.id.iv_home_tab);
         String applyIcon = item.getApplyIcon();
         if(!MyStringUtil.isEmpty(applyIcon)){
-            MyGlideUtil.getInstance().displayImageSquere(Constans.ROOT + applyIcon, iv);
+            MyGlideUtil.getInstance().setHome(iv, Constans.ROOT + applyIcon);
         }else{
             if("添加".equals(item.getApplyName())){
-                iv.setImageResource(R.mipmap.home_tab_tj);
+                iv.setImageResource(R.mipmap.home_tab_add);
             }else{
-                iv.setImageResource(R.mipmap.home_tab_qycpk);
+                iv.setImageResource(R.mipmap.ic_home_normal);
             }
         }
 

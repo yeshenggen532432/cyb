@@ -55,6 +55,16 @@ public class MyGlideUtil {
                     .into(iv);
     }
 
+    public void setHome(ImageView iv, String url){
+        url = MyUrlUtil.getUrl(url);
+        Glide.with(MyApp.getI())
+                .load(url)
+                .placeholder(R.mipmap.ic_home_normal)
+                .error(R.mipmap.ic_home_normal)
+                .transform(new CornersTransform(MyApp.getI()))//圆角
+                .into(iv);
+    }
+
     public void setRadius(Context context, ImageView iv, String url, int radius){
         url = MyUrlUtil.getUrl(url);
         Glide.with(context)

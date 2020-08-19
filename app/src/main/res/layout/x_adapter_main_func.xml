@@ -15,8 +15,8 @@
                 android:gravity="center">
                 <ImageView
                     android:id="@+id/iv_icon"
-                    android:layout_width="@dimen/dp_20"
-                    android:layout_height="@dimen/dp_20"
+                    android:layout_width="@dimen/dp_32"
+                    android:layout_height="@dimen/dp_32"
                     android:src="@mipmap/ic_home_1"/>
 
                 <TextView
