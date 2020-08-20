@@ -16,11 +16,13 @@ import com.flyco.dialog.entity.DialogMenuItem;
 import com.flyco.dialog.listener.OnOperItemClickL;
 import com.flyco.dialog.widget.NormalListDialog;
 import com.qwb.utils.ActivityManager;
+import com.qwb.utils.Constans;
 import com.qwb.utils.MyCollectionUtil;
 import com.qwb.utils.MyDividerUtil;
 import com.qwb.utils.MyStatusBarUtil;
 import com.qwb.utils.MyStringUtil;
 import com.qwb.utils.MyTimeUtils;
+import com.qwb.utils.SPUtils;
 import com.qwb.utils.ToastUtils;
 import com.qwb.view.storehouse.model.StorehouseInBean;
 import com.qwb.view.tab.adapter.MainAdapter2;
@@ -204,7 +206,8 @@ public class XMainFragment2 extends XFragment<PXMain2> {
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
                 try {
                     MainFuncBean item = (MainFuncBean) adapter.getData().get(position);
-                    ActivityManager.getInstance().jumpToWebX5Activity(context, item.getUrl(), null);
+                    String url = Constans.H5_BASE_URL+ "token=" + SPUtils.getTK() + "#" + item.getUrl();
+                    ActivityManager.getInstance().jumpToWebX5Activity(context, url, null);
                 } catch (Exception e) {
                 }
             }
