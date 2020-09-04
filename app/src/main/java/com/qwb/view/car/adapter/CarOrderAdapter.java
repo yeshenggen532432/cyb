@@ -44,7 +44,7 @@ public class CarOrderAdapter extends BaseQuickAdapter<QueryDhorderBean.Rows, Bas
         TextView tvJinE = helper.getView(R.id.tv_jine);//金额
         TextView tvOrderTime = helper.getView(R.id.tv_orderTime);// 订单时间
         TextView tvNum = helper.getView(R.id.tv_num);// 数量
-        StateButton sbZc = helper.getView(R.id.item_sb_zc);// 收款
+//        StateButton sbZc = helper.getView(R.id.item_sb_zc);// 收款
         TextView tvCancel = helper.getView(R.id.tv_cancel);// 作废
 
         //状态
@@ -87,9 +87,9 @@ public class CarOrderAdapter extends BaseQuickAdapter<QueryDhorderBean.Rows, Bas
 
         //去收款
 //        sbZc.setVisibility(View.GONE);
-        if(1 == item.getIsMe() && !isContain(item.getId())){
-            sbZc.setVisibility(View.VISIBLE);
-        }
+//        if(1 == item.getIsMe() && !isContain(item.getId())){
+//            sbZc.setVisibility(View.VISIBLE);
+//        }
 
         //作废
         tvCancel.setVisibility(View.GONE);
