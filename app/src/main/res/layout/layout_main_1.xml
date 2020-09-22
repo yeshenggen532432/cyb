@@ -123,7 +123,7 @@
                 android:textStyle="bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="222"/>
+                android:text="0"/>
             <TextView
                 style="@style/tv_cred_s13"
                 android:layout_width="wrap_content"
@@ -148,7 +148,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/purple"
-                android:text="500"/>
+                android:text="0"/>
             <TextView
                 style="@style/tv_cred_s13"
                 android:layout_width="wrap_content"
@@ -172,7 +172,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/yellow"
-                android:text="222"/>
+                android:text="0"/>
             <TextView
                 style="@style/tv_cred_s13"
                 android:layout_width="wrap_content"
@@ -202,7 +202,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/green"
-                android:text="222"/>
+                android:text="0"/>
             <TextView
                 style="@style/tv_cred_s13"
                 android:layout_width="wrap_content"
@@ -227,7 +227,7 @@
                 android:textStyle="bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="500"/>
+                android:text="0"/>
             <TextView
                 style="@style/tv_cred_s13"
                 android:layout_width="wrap_content"
@@ -250,7 +250,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/blue"
-                android:text="222"/>
+                android:text="0"/>
             <TextView
                 style="@style/tv_cred_s13"
                 android:layout_width="wrap_content"

@@ -232,7 +232,6 @@ public class XMainFragment extends XFragment<PXMain> {
     /**
      * 适配器
      */
-//    @BindView(R.id.recyclerView_message)
     RecyclerView mRecyclerViewMessage;
     CategroyAdapter mMessageAdapter;
     private void initAdapterMessage() {

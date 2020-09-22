@@ -4,28 +4,39 @@ import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import com.alibaba.fastjson.JSON;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.deadline.statebutton.StateButton;
 import com.flyco.dialog.entity.DialogMenuItem;
 import com.flyco.dialog.listener.OnOperItemClickL;
 import com.flyco.dialog.widget.NormalListDialog;
+import com.qwb.db.DMessageBean;
 import com.qwb.utils.ActivityManager;
 import com.qwb.utils.Constans;
+import com.qwb.utils.ConstantUtils;
 import com.qwb.utils.MyCollectionUtil;
 import com.qwb.utils.MyDividerUtil;
+import com.qwb.utils.MyRecyclerViewUtil;
 import com.qwb.utils.MyStatusBarUtil;
 import com.qwb.utils.MyStringUtil;
 import com.qwb.utils.MyTimeUtils;
+import com.qwb.utils.MyUtils;
 import com.qwb.utils.SPUtils;
 import com.qwb.utils.ToastUtils;
+import com.qwb.view.base.model.ApplyBean;
+import com.qwb.view.base.model.NewApplyComparator;
 import com.qwb.view.storehouse.model.StorehouseInBean;
+import com.qwb.view.tab.adapter.ApplyAdapter2;
+import com.qwb.view.tab.adapter.CategroyAdapter;
 import com.qwb.view.tab.adapter.MainAdapter2;
+import com.qwb.view.tab.model.ApplyBean2;
 import com.qwb.view.tab.model.MainFuncBean;
 import com.qwb.view.tab.model.MainResult;
 import com.qwb.view.tab.model.ShopInfoBean;
@@ -34,6 +45,7 @@ import com.qwb.widget.MyDoubleDatePickerDialog;
 import com.chiyong.t3.R;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import butterknife.BindView;
@@ -82,18 +94,16 @@ public class XMainFragment2 extends XFragment<PXMain2> {
         mRadioGroup.check(R.id.rb_today);
     }
 
-
-
     private String mShopNo, mStartDate, mEndDate;
     public void queryData(){
         getP().query(context, mShopNo, mStartDate, mEndDate);
     }
 
-
     public void initUI() {
         initHead();
         initOther();
         initAdapter();
+        initAdapterMenu();
     }
 
     @BindView(R.id.tv_head_title)
@@ -198,7 +208,6 @@ public class XMainFragment2 extends XFragment<PXMain2> {
     private void initAdapter() {
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new GridLayoutManager(context, 3));
-//        mRecyclerView.addItemDecoration(MyDividerUtil.getH5CGray(context));
         mAdapter = new MainAdapter2();
         mRecyclerView.setAdapter(mAdapter);
         mAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
@@ -212,6 +221,48 @@ public class XMainFragment2 extends XFragment<PXMain2> {
                 }
             }
         });
+    }
+
+    /**
+     * 适配器
+     */
+    RecyclerView mRecyclerViewMenu;
+    ApplyAdapter2 mAdapterMenu;
+    private void initAdapterMenu() {
+        View footView = LayoutInflater.from(context).inflate(R.layout.x_fragment_main2_bottom, null);
+        mAdapter.setFooterView(footView);
+        mRecyclerViewMenu = footView.findViewById(R.id.recyclerView_menu);
+        mAdapterMenu = new ApplyAdapter2(context);
+        MyRecyclerViewUtil.init(context, mRecyclerViewMenu, mAdapterMenu);
+        initAdapterData();
+    }
+
+    private void initAdapterData() {
+        try {
+            List<ApplyBean2> myItems = new ArrayList<>();
+            String childrenStr = SPUtils.getSValues(ConstantUtils.Sp.APP_LIST_CHILDREN);
+            List<ApplyBean> applyList0 = new ArrayList<>();
+            if (MyStringUtil.isNotEmpty(childrenStr)) {
+                List<ApplyBean> children = JSON.parseArray(childrenStr, ApplyBean.class);
+                Collections.sort(children, new NewApplyComparator());//排序
+                if (MyCollectionUtil.isNotEmpty(children)) {
+                    for (ApplyBean child : children) {
+                        if (MyStringUtil.eq("986", ""+child.getPId())){
+                            applyList0.add(child);
+                        }
+                    }
+                }
+            }
+            Collections.sort(applyList0, new NewApplyComparator());
+            ApplyBean2 bean0 = new ApplyBean2();
+            bean0.setApplys(applyList0);
+            myItems.add(bean0);
+
+            if (null != mAdapterMenu) {
+                mAdapterMenu.setNewData(myItems);
+            }
+        } catch (Exception e) {
+        }
     }
 
     public void doUI(MainResult bean){
@@ -269,10 +320,6 @@ public class XMainFragment2 extends XFragment<PXMain2> {
         if (null == dataList) {
             return;
         }
-//        MainFuncBean moreBean = new MainFuncBean();
-//        moreBean.setFuncName("更多");
-//        moreBean.setImgRes(R.mipmap.ic_home_9);
-//        dataList.add(moreBean);
         mAdapter.setNewData(dataList);
     }
 
