@@ -27,5 +27,20 @@ public class MyMenuUtil {
 //		}
 	}
 
+	/**
+	 * tab首页：相关的菜单
+	 * 固定id:985
+	 */
+	public static boolean hasMenuTabMain(int pId){
+		return MyStringUtil.eq("985", String.valueOf(pId));
+	}
+	/**
+	 * tab报表：相关的菜单
+	 * 固定id:986
+	 */
+	public static boolean hasMenuTabTable(int pId){
+		return MyStringUtil.eq("986", String.valueOf(pId));
+	}
+
 
 }

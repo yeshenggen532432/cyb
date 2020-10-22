@@ -13,6 +13,7 @@ import com.qwb.event.ApplyEvent;
 import com.qwb.event.ApplyYunEvent;
 import com.qwb.utils.ActivityManager;
 import com.qwb.utils.ConstantUtils;
+import com.qwb.utils.MyMenuUtil;
 import com.qwb.utils.MyStringUtil;
 import com.qwb.utils.MyUtils;
 import com.qwb.utils.SPUtils;
@@ -154,17 +155,19 @@ public class XApplyActivity extends XActivity {
                     Collections.sort(children, new NewApplyComparator());//排序
                     for (ApplyBean child:children) {
                         Boolean isNormal = SPUtils.getBoolean(ConstantUtils.Sp.APP_LIST_CHILDREN_NORMAL);//快捷菜单是否默认
-                        if((isNormal == null || !isNormal) || resetNormal){
-                            if(MyStringUtil.eq("1", child.getIsMeApply())){
-                                items.add(child);
+                        if (MyMenuUtil.hasMenuTabMain(child.getPId())){
+                            if((isNormal == null || !isNormal) || resetNormal){
+                                if(MyStringUtil.eq("1", child.getIsMeApply())){
+                                    items.add(child);
+                                }else{
+                                    otherItems.add(child);
+                                }
                             }else{
-                                otherItems.add(child);
-                            }
-                        }else{
-                            if(MyStringUtil.eq("1", child.getIsMeApply())){
-                                items.add(child);
-                            }else{
-                                otherItems.add(child);
+                                if(MyStringUtil.eq("1", child.getIsMeApply())){
+                                    items.add(child);
+                                }else{
+                                    otherItems.add(child);
+                                }
                             }
                         }
                     }

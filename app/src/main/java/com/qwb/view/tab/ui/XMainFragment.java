@@ -29,6 +29,7 @@ import com.qwb.utils.ConstantUtils;
 import com.qwb.utils.MyCollectionUtil;
 import com.qwb.utils.MyDataUtils;
 import com.qwb.utils.MyGlideUtil;
+import com.qwb.utils.MyMenuUtil;
 import com.qwb.utils.MyRecyclerViewUtil;
 import com.qwb.utils.MyStringUtil;
 import com.qwb.utils.MyUtils;
@@ -208,9 +209,11 @@ public class XMainFragment extends XFragment<PXMain> {
                 Collections.sort(children, new NewApplyComparator());//排序
                 if (MyCollectionUtil.isNotEmpty(children)) {
                     for (ApplyBean child : children) {
-                        //快捷菜单（已修改）
-                        if (MyStringUtil.eq("1", child.getIsMeApply())) {
-                            applyList0.add(child);
+                        if (MyMenuUtil.hasMenuTabMain(child.getPId())){
+                            //快捷菜单（已修改）
+                            if (MyStringUtil.eq("1", child.getIsMeApply())) {
+                                applyList0.add(child);
+                            }
                         }
                     }
                 }
