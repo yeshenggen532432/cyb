@@ -80,14 +80,15 @@ public class ApplyAdapter2 extends BaseQuickAdapter<ApplyBean2, BaseViewHolder> 
         TextView tvLabel = helper.getView(R.id.item_tv_label);
         MyRecyclerView recyclerView = helper.getView(R.id.item_recyclerView);
 
-        if (MyStringUtil.isNotEmpty(item.getLabel())) {
-            tvLabel.setVisibility(View.VISIBLE);
-            tvLabel.setText(item.getLabel());
-        }else{
-            tvLabel.setVisibility(View.GONE);
-        }
+//        if (MyStringUtil.isNotEmpty(item.getLabel())) {
+//            tvLabel.setVisibility(View.VISIBLE);
+//            tvLabel.setText(item.getLabel());
+//        }else{
+//            tvLabel.setVisibility(View.GONE);
+//        }
 
-        recyclerView.setHasFixedSize(true);
+        tvLabel.setText(item.getLabel());
+
         recyclerView.setLayoutManager(new GridLayoutManager(mActivity, 4));
         SubApplyAdapter adapter = new SubApplyAdapter(mActivity);
         adapter.setNewData(item.getApplys());

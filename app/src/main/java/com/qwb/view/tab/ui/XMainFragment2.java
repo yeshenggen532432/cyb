@@ -44,6 +44,7 @@ import com.qwb.view.tab.model.ShopInfoBean;
 import com.qwb.view.tab.parsent.PXMain2;
 import com.qwb.widget.MyDoubleDatePickerDialog;
 import com.chiyong.t3.R;
+import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -234,33 +235,38 @@ public class XMainFragment2 extends XFragment<PXMain2> {
         mAdapter.setFooterView(footView);
         mRecyclerViewMenu = footView.findViewById(R.id.recyclerView_menu);
         mAdapterMenu = new ApplyAdapter2(context);
-        MyRecyclerViewUtil.init(context, mRecyclerViewMenu, mAdapterMenu);
+//        MyRecyclerViewUtil.init(context, mRecyclerViewMenu, mAdapterMenu);
+        mRecyclerViewMenu.setLayoutManager(new LinearLayoutManager(context));
+        mRecyclerViewMenu.setAdapter(mAdapterMenu);
         initAdapterData();
     }
 
     private void initAdapterData() {
         try {
-            List<ApplyBean2> myItems = new ArrayList<>();
+//            List<ApplyBean2> myItems = new ArrayList<>();
             String childrenStr = SPUtils.getSValues(ConstantUtils.Sp.APP_LIST_CHILDREN);
-            List<ApplyBean> applyList0 = new ArrayList<>();
+            List<ApplyBean2> applyList0 = new ArrayList<>();
             if (MyStringUtil.isNotEmpty(childrenStr)) {
                 List<ApplyBean> children = JSON.parseArray(childrenStr, ApplyBean.class);
                 Collections.sort(children, new NewApplyComparator());//排序
                 if (MyCollectionUtil.isNotEmpty(children)) {
                     for (ApplyBean child : children) {
                         if (MyMenuUtil.hasMenuTabTable(child.getPId())){
-                            applyList0.add(child);
+                            ApplyBean2 bean1 = new ApplyBean2();
+                            bean1.setLabel(child.getApplyName());
+                            bean1.setApplys(child.getChildren());
+                            applyList0.add(bean1);
                         }
                     }
                 }
             }
-            Collections.sort(applyList0, new NewApplyComparator());
-            ApplyBean2 bean0 = new ApplyBean2();
-            bean0.setApplys(applyList0);
-            myItems.add(bean0);
+//            Collections.sort(applyList0, new NewApplyComparator());
+//            ApplyBean2 bean0 = new ApplyBean2();
+//            bean0.setApplys(applyList0);
+//            myItems.add(bean0);
 
             if (null != mAdapterMenu) {
-                mAdapterMenu.setNewData(myItems);
+                mAdapterMenu.setNewData(applyList0);
             }
         } catch (Exception e) {
         }
