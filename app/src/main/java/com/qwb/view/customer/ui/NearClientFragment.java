@@ -26,6 +26,7 @@ import com.flyco.dialog.listener.OnOperItemClickL;
 import com.flyco.dialog.widget.NormalDialog;
 import com.flyco.dialog.widget.NormalListDialog;
 import com.qwb.common.ToStepEnum;
+import com.qwb.utils.MyCallUtil;
 import com.qwb.utils.MyCollectionUtil;
 import com.qwb.utils.MyDividerUtil;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
@@ -148,6 +149,11 @@ public class NearClientFragment extends XFragment<PNearClient> {
 				switch (view.getId()){
 					case R.id.view_nav://导航
 						ActivityManager.getInstance().jumpActivityNavMap(context, data.getLatitude(), data.getLongitude(), data.getAddress());
+						break;
+					case R.id.tv_mobile://打电话
+						if (MyStringUtil.isNotEmpty(data.getMobile())){
+							MyCallUtil.call(context, data.getMobile());
+						}
 						break;
 				}
 			}

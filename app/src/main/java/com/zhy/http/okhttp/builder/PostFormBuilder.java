@@ -1,5 +1,6 @@
 package com.zhy.http.okhttp.builder;
 
+import com.alibaba.fastjson.JSON;
 import com.qwb.utils.MyStringUtil;
 import com.qwb.utils.SPUtils;
 import com.zhy.http.okhttp.request.PostFormRequest;
@@ -11,6 +12,8 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
+import cn.droidlover.xdroidmvp.log.XLog;
+
 /**
  * Created by zhy on 15/12/14.
  */
@@ -21,6 +24,10 @@ public class PostFormBuilder extends OkHttpRequestBuilder<PostFormBuilder> imple
     public RequestCall build() {
         url = MyUrlUtil.getUrl(url);
         addToken();
+        XLog.e("RequestCall-url", url);
+        if (params != null){
+            XLog.e("RequestCall-params", JSON.toJSONString(params));
+        }
         return new PostFormRequest(url, tag, params, headers, files, id).build();
     }
 

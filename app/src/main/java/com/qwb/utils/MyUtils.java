@@ -1336,47 +1336,6 @@ public class MyUtils {
 		return "";
 	}
 
-	/**
-	 * 方法：发送网络请求，。在里面开启线程
-	 * @param location:定位点
-	 */
-	public static void sendRequest_location(final String location) {
-		new Thread(new Runnable() {
-			@Override
-			public void run() {
-				String uriAPI = Constans.postLocation;
-				/* 建立HTTP Post连线 */
-				HttpPost httpRequest = new HttpPost(uriAPI);
-				// Post运作传送变数必须用NameValuePair[]阵列储存
-				// 传参数 服务端获取的方法为request.getParameter("name")
-				List<NameValuePair> params = new ArrayList<NameValuePair>();
-				params.add(new BasicNameValuePair("company_id", SPUtils.getCompanyId()));
-				params.add(new BasicNameValuePair("user_id", SPUtils.getID()));
-				params.add(new BasicNameValuePair("location", location));
-				try {
-
-					// 发出HTTP request
-					httpRequest.setEntity(new UrlEncodedFormEntity(params, HTTP.UTF_8));
-					// 取得HTTP response
-					HttpResponse httpResponse = new DefaultHttpClient().execute(httpRequest);
-					// 若状态码为200 ok
-					if (httpResponse.getStatusLine().getStatusCode() == 200) {
-						// 取出回应字串
-						String strResult = EntityUtils.toString(httpResponse.getEntity());
-						Message message = new Message();
-						message.what = 1;
-						message.obj = strResult;
-					}
-				} catch (ClientProtocolException e) {
-					e.printStackTrace();
-				} catch (UnsupportedEncodingException e) {
-					e.printStackTrace();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-			}
-		}).start();// 这个start()方法不要忘记了
-	}
 
 	/**
 	 * 当dataTp=4,自定义获取mids

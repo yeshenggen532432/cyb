@@ -89,6 +89,7 @@
                     android:background="@null"
                     android:padding="@dimen/dp_10"
                     android:textColorHint="@color/gray_9"
+                    android:inputType="textPassword"
                     app:x_hidePwdDrawable="@mipmap/login_icon_bukejian"
                     app:x_showPwdDrawable="@mipmap/login_icon_kejian"
                     app:x_clearDrawable="@mipmap/login_icon_close"

@@ -96,44 +96,44 @@ public class CacheService extends Service {
     }
 
     public void sendData(String locStr) {
-        OkHttpUtils
-                .post()
-                .url(Constans.postLocation)
-                .addParams("company_id", SPUtils.getCompanyId())
-                .addParams("user_id", SPUtils.getID())
-                .addParams("location", locStr)
-                .id(1)
-                .build()
-                .execute(new MyHttpCallback(null) {
-                    @Override
-                    public void myOnError(Call call, Exception e, int id) {
-
-                    }
-
-                    @Override
-                    public void myOnResponse(String response, int id) {
-                        try {
-                            if (MyStringUtil.isEmpty(response) && response.startsWith("[")) {
-                                JSONArray parseArray = JSON.parseArray(response);
-                                if (parseArray != null && parseArray.size() > 0) {
-                                    for (int i = 0; i < parseArray.size(); i++) {
-                                        int code = -1;
-                                        JSONObject object = (JSONObject) parseArray.get(i);
-                                        if (object != null) {
-                                            code = object.getIntValue("code");
-                                            if (0 == code) {
-                                                //删除缓存数据
-                                                LitePal.deleteAll(CacheLocationBean.class, "location_time<=?", String.valueOf(mLocationTime));
-                                                return;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        } catch (Exception e) {
-                        }
-                    }
-                });
+//        OkHttpUtils
+//                .post()
+//                .url(Constans.postLocation)
+//                .addParams("company_id", SPUtils.getCompanyId())
+//                .addParams("user_id", SPUtils.getID())
+//                .addParams("location", locStr)
+//                .id(1)
+//                .build()
+//                .execute(new MyHttpCallback(null) {
+//                    @Override
+//                    public void myOnError(Call call, Exception e, int id) {
+//
+//                    }
+//
+//                    @Override
+//                    public void myOnResponse(String response, int id) {
+//                        try {
+//                            if (MyStringUtil.isEmpty(response) && response.startsWith("[")) {
+//                                JSONArray parseArray = JSON.parseArray(response);
+//                                if (parseArray != null && parseArray.size() > 0) {
+//                                    for (int i = 0; i < parseArray.size(); i++) {
+//                                        int code = -1;
+//                                        JSONObject object = (JSONObject) parseArray.get(i);
+//                                        if (object != null) {
+//                                            code = object.getIntValue("code");
+//                                            if (0 == code) {
+//                                                //删除缓存数据
+//                                                LitePal.deleteAll(CacheLocationBean.class, "location_time<=?", String.valueOf(mLocationTime));
+//                                                return;
+//                                            }
+//                                        }
+//                                    }
+//                                }
+//                            }
+//                        } catch (Exception e) {
+//                        }
+//                    }
+//                });
     }
 
 }

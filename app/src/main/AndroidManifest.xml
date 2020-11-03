@@ -79,7 +79,7 @@
         <!-- 发布 79LUktbh7gQATGcGNmpcOBmc5ua5tKLB -->
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="79LUktbh7gQATGcGNmpcOBmc5ua5tKLB" /> <!-- 百度定位服务 -->
+            android:value="Xs005bkPl5atfNlVLV80cCqK60o7tqtX" /> <!-- 百度定位服务 -->
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"

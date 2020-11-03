@@ -24,6 +24,7 @@ public class MineClientAdapter extends BaseQuickAdapter<MineClientInfo,BaseViewH
         //子view添加点击事件（tv_callonCount_mine：导航；tv_zr:编辑客户（转让，删除））
 //        helper.addOnClickListener(R.id.tv_callonCount_mine).addOnClickListener(R.id.tv_zr);
          helper.addOnClickListener(R.id.view_nav);
+         helper.addOnClickListener(R.id.tv_mobile);
 
 //        helper.setText(R.id.tv_branch_member, item.getMemberNm() + "/" + item.getBranchName());//业务员/部门
         helper.setText(R.id.tv_khNm, item.getKhNm());//客户名称

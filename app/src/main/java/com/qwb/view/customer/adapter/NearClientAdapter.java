@@ -24,6 +24,7 @@ public class NearClientAdapter extends BaseQuickAdapter<NearClientInfo,BaseViewH
     protected void convert(BaseViewHolder helper, NearClientInfo item) {
         //子item添加点击事件（tv_callonCount_mine：导航）
         helper.addOnClickListener(R.id.view_nav);
+        helper.addOnClickListener(R.id.tv_mobile);
 
 //        helper.setText(R.id.tv_branch_member, item.getMemberNm() + "/" + item.getBranchName());//业务员/部门
         helper.setText(R.id.tv_khNm, item.getKhNm());//客户名称
