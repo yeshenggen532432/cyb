@@ -239,7 +239,7 @@ public class XMainFragment extends XFragment<PXMain> {
     CategroyAdapter mMessageAdapter;
     private void initAdapterMessage() {
         View footView = LayoutInflater.from(context).inflate(R.layout.x_fragment_main_bottom, null);
-        mAdapter.setFooterView(footView);
+//        mAdapter.setFooterView(footView);
         mRecyclerViewMessage = footView.findViewById(R.id.recyclerView_message);
         mMessageAdapter = new CategroyAdapter(context);
         mMessageAdapter.setNewData(categoryList);
