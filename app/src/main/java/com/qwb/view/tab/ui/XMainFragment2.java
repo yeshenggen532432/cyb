@@ -51,6 +51,7 @@ import java.util.Collections;
 import java.util.List;
 
 import butterknife.BindView;
+import cn.droidlover.xdroidmvp.log.XLog;
 import cn.droidlover.xdroidmvp.mvp.XFragment;
 
 /**
@@ -217,8 +218,18 @@ public class XMainFragment2 extends XFragment<PXMain2> {
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
                 try {
                     MainFuncBean item = (MainFuncBean) adapter.getData().get(position);
-                    String url = Constans.H5_BASE_URL+ "token=" + SPUtils.getTK() + "#" + item.getUrl();
-                    ActivityManager.getInstance().jumpToWebX5Activity(context, url, null);
+                    StringBuffer url = new StringBuffer(Constans.H5_BASE_URL+ "token=" + SPUtils.getTK() + "#" + item.getUrl());
+                    if (MyStringUtil.isNotEmpty(mStartDate)){
+                        url.append("?sdate="+mStartDate);
+                    }
+                    if (MyStringUtil.isNotEmpty(mEndDate)){
+                        url.append("&edate="+mEndDate);
+                    }
+                    if (MyStringUtil.isNotEmpty(mShopNo)){
+                        url.append("&shopNo="+mShopNo);
+                    }
+                    XLog.e("url", url.toString());
+                    ActivityManager.getInstance().jumpToWebX5Activity(context, url.toString(), null);
                 } catch (Exception e) {
                 }
             }

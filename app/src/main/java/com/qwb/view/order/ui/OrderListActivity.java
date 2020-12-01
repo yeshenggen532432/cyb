@@ -313,6 +313,7 @@ public class OrderListActivity extends XActivity<POrderList> {
         }else{
             mTvBottomRed.setVisibility(View.GONE);
         }
+        mTvBottomRed.setVisibility(View.GONE);
         //订货下单
         findViewById(R.id.tv_bottom_order).setOnClickListener(new View.OnClickListener() {
             @Override

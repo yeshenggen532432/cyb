@@ -156,6 +156,7 @@
             android:background="@drawable/shape_line_green_w1_r3"/>
 
         <TextView
+            android:visibility="gone"
             android:id="@+id/tv_bottom_red"
             android:gravity="center"
             style="@style/tv_cwhite_s13"
