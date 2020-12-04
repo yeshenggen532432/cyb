@@ -14,7 +14,7 @@ import java.util.List;
 
 @SuppressLint("UseSparseArrays")
 public class Constans {
-//    public static String ROOT = "http://192.168.31.211:8089/";
+//    public static String ROOT = "http://192.168.0.111:8080/";
 //    public static String ROOT = "http://47.107.141.109:8080/";
 //    public static String ROOT = "https://t3.cyecy.cn:8888/";
     public static String ROOT = "http://t3.cyecy.cn:8888/";
